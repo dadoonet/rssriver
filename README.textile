@@ -1,0 +1,34 @@
+h1. RSS River for Elasticsearch
+
+h2. Getting Started
+
+h3. Installation
+
+* To be described
+
+h3. Creating a RSS river
+
+We create first an index to store all the @feed messages@ :
+
+<pre>
+curl -XPUT 'localhost:9200/lemonde/' -d '{}'
+</pre>
+
+We create the river with the following properties :
+
+* Feed URL : http://www.lemonde.fr/rss/une.xml
+
+* Update Rate : every 15 minutes (15 * 60 * 1000 = 900000 ms)
+
+<pre>
+curl -XPUT 'localhost:9200/_river/lemonde/_meta' -d '{
+  "type": "rss",
+  "rss": {
+    "url": "http://www.lemonde.fr/rss/une.xml",
+    "update_rate": 900000
+  }
+}'
+</pre>
+
+
+
