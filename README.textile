@@ -1,5 +1,7 @@
 h1. RSS River for Elasticsearch
 
+Welcome to the RSS River Plugin for "Elasticsearch":http://www.elasticsearch.org/ 
+
 h2. Getting Started
 
 h3. Installation
@@ -7,7 +9,7 @@ h3. Installation
 Just type :
 
 <pre>
-bin\plugin -install dadoonet/rssriver/0.0.1-SNAPSHOT
+$ bin\plugin -install dadoonet/rssriver/0.0.1-SNAPSHOT
 </pre>
 
 This will do the job...
@@ -24,17 +26,16 @@ h3. Creating a RSS river
 We create first an index to store all the @feed messages@ :
 
 <pre>
-curl -XPUT 'localhost:9200/lemonde/' -d '{}'
+$ curl -XPUT 'localhost:9200/lemonde/' -d '{}'
 </pre>
 
 We create the river with the following properties :
 
 * Feed URL : http://www.lemonde.fr/rss/une.xml
-
 * Update Rate : every 15 minutes (15 * 60 * 1000 = 900000 ms)
 
 <pre>
-curl -XPUT 'localhost:9200/_river/lemonde/_meta' -d '{
+$ curl -XPUT 'localhost:9200/_river/lemonde/_meta' -d '{
   "type": "rss",
   "rss": {
     "url": "http://www.lemonde.fr/rss/une.xml",
@@ -43,5 +44,62 @@ curl -XPUT 'localhost:9200/_river/lemonde/_meta' -d '{
 }'
 </pre>
 
+h3. Working with mappings
 
+When you create your index, you can specify the mapping you want to use as follow :
 
+<pre>
+$ curl -XPUT 'http://localhost:9200/lefigaro/' -d '
+
+$ curl -XPUT 'http://localhost:9200/lefigaro/page/_mapping' -d '{
+    "page" : {
+        "properties" : {
+            "title" : {"type" : "string", "analyzer" : "french"},
+            "description" : {"type" : "string", "analyzer" : "french"},
+            "author" : {"type" : "string"},
+            "link" : {"type" : "string"}
+        }
+    }
+}'
+</pre>
+
+Then, your feed will use it when you create the river :
+
+<pre>
+$ curl -XPUT 'localhost:9200/_river/lemonde/_meta' -d '{
+  "type": "rss",
+  "rss": {
+    "url": "http://rss.lefigaro.fr/lefigaro/laune"
+  }
+}'
+</pre>
+
+h2. Behind the scene
+
+RSS river downloads RSS feed every @update_rate@ milliseconds and check if there is new messages.
+
+At first, RSS river look at the @<channel>@ tag.
+It reads the optional @<pubDate>@ tag and store it in Elastic Search to compare it on next launch.
+
+Then, for each @<item>@ tag, RSS river creates a new document within @page@ type with the following properties :
+
+|_. XML Tag             |_. ES Mapping |
+| @<title>@             | title        |
+| @<description>@       | description  |
+| @<author>@            | author       |
+| @<link>@              | link         |
+
+@ID@ is generated from description using the "UUID":https://github.com/elasticsearch/elasticsearch/blob/master/modules/elasticsearch/src/main/java/org/elasticsearch/common/UUID.java generator. So, each message is indexed only once.
+
+Read "RSS 2.0 Specification":http://www.rssboard.org/rss-specification for more details about RSS channels.
+
+h1. To Do List
+
+Many many things to do :
+
+* As @<pubDate>@ tag is optional, we have to check if RSS River is working in that case and parse each feed message
+* Support more RSS @<channel>@ sub-elements, such as @<category>@, @<skipDays>@, @<skipHours>@
+* Support more RSS @<item>@ sub-elements, such as @<category>@, @<enclosure>@, @<pubDate>@
+* Support for multi-channel (one per language for instance)
+* Use @<ttl>@ to manage sleep time of the river
+* Use @<guid>@ as the text to encode to generate @ID@
