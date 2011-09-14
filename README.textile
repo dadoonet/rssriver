@@ -4,7 +4,20 @@ h2. Getting Started
 
 h3. Installation
 
-* To be described
+Just type :
+
+<pre>
+bin\plugin -install dadoonet/rssriver/0.0.1-SNAPSHOT
+</pre
+
+This will do the job...
+
+<pre>
+-> Installing dadoonet/rssriver/0.0.1-SNAPSHOT...
+Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.1-SNAPSHOT.zip...
+Downloading ...DONE
+Installed rssriver
+</pre>
 
 h3. Creating a RSS river
 
