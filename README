@@ -1,1 +1,13 @@
 This is the RSS River for Elasticsearch project
+
+// Creating index for lemonde RSS feed
+curl -XPUT 'localhost:9200/lemonde/' -d '{}'
+
+// Creating the river
+curl -XPUT 'localhost:9200/_river/lemonde/_meta' -d '{
+  "type": "rss",
+  "rss": {
+    "url": "http://www.lemonde.fr/rss/une.xml",
+    "update_rate": 10000
+  }
+}'
