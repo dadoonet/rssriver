@@ -8,7 +8,7 @@ Just type :
 
 <pre>
 bin\plugin -install dadoonet/rssriver/0.0.1-SNAPSHOT
-</pre
+</pre>
 
 This will do the job...
 
