@@ -84,7 +84,6 @@ public class RssRiverTest {
 							.endObject()
 							.startObject("author")
 								.field("type", "string")
-								.field("analyzer", "french")
 							.endObject()
 							.startObject("link")
 								.field("type", "string")
