@@ -11,7 +11,7 @@ body {
     letter-spacing: 0em;
     word-spacing: 0em;
     line-height: 1.4;
-    background: url({{ page.baseurl }}/images/main_bg.jpg) repeat-x 0 -26px #82b64a;
+    background: url(/rssriver/images/main_bg.jpg) repeat-x 0 -26px #82b64a;
 }
 
 /* General styles */
@@ -160,7 +160,7 @@ table td {
 #wrapper {
     height: auto;
     min-height: 101%; /* have scroll bar always there, so things won't jump around */
-    background: url('{{ page.baseurl }}/images/top.jpg') no-repeat 50% 0;
+    background: url('/rssriver/images/top.jpg') no-repeat 50% 0;
 }
 
 #all {
@@ -173,7 +173,7 @@ table td {
 /* Header */
 
 #header {
-    background: url('{{ page.baseurl }}/images/header.png') no-repeat 152px 10px;
+    background: url('/rssriver/images/header.png') no-repeat 152px 10px;
     height: 240px;
     position: relative;
 }
