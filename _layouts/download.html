@@ -1,0 +1,17 @@
+---
+layout: default
+title_in_header: false
+---
+
+<h2 class="download_link">
+{{ page.title }}: <a href="{{page.download_url}}">zip</a>
+{% if page.download_nix_url != null  %}
+/ <a href="{{page.download_nix_url}}">tar.gz</a>
+{% endif  %}
+/ <a href="https://github.com/elasticsearch/elasticsearch/issues?labels=v{{page.version}}&amp;sort=created&amp;direction=desc&amp;state=closed&amp;page=1">issues</a>
+</h2>
+
+{% if page.release_notes %}
+    <h1>Release Notes:</h1>
+    {{ content }}
+{% endif %}

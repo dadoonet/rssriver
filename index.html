@@ -1,83 +1,115 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
+---
+title: Open Source, Distributed, RESTful, Search Engine
+layout: default
+title_in_header: false
+---
+<div id="home">
+    <div class="img_right">
+        <img src="{{ page.baseurl }}/images/logo-icon.png" height="120px" alt="" />
+        <div class="text">
+            <h2>
+                Elasticsearch
+            </h2>
+            <p>
+               <b>Elasticsearch</b> is certainly the best search engine that cover all your needs
+               and many more ! RESTful, JSon standard, Distributed, Zero Conf and fast, blazing fast...
+            </p>
+            <p>
+                Project <a href="http://www.elasticsearch.org">documentation</a> is here and 
+                source code is on <a href="https://github.com/elasticsearch/elasticsearch">github</a>.
+            </p>
+            <p>
+               Download it, launch it and relax... Everything is here and just waiting for your
+               documents and searches.
+            </p>
 
-  <title>dadoonet/rssriver @ GitHub</title>
+        </div>
+    </div>
+    
+    <div class="img_left">
+        <img height="120px" src="{{ page.baseurl }}/images/set3/torrent1.png" alt="" />
+        <div class="text">
+            <h2>
+                Rivers
+            </h2>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #82b64a;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
+            <p>
+                <b>Elasticsearch</b> offers <a href="http://www.elasticsearch.org/guide/reference/river/">rivers</a> to 
+                help users to easily send documents from a source to <b>elasticsearch</b> cluster.
+            </p>
+            <p>
+                <b>Elasticsearch</b> offers some default rivers :
+            </p>
+            
+            	<ul>
+            		<li><a href="http://www.elasticsearch.org/guide/reference/river/couchdb.html">CouchDB</a>
+            		to push all database changes directly into <b>Elasticsearch</b></li>
+            		<li><a href="http://www.elasticsearch.org/guide/reference/river/rabbitmq.html">RabbitMQ</a>
+            		to push all messages stored in RabbitMQ queues into <b>Elasticsearch</b></li>
+            		<li><a href="http://www.elasticsearch.org/guide/reference/river/twitter.html">Twitter</a>
+            		to index your tweets as they arrive</li>
+            		<li><a href="http://www.elasticsearch.org/guide/reference/river/wikipedia.html">Wikipedia</a>
+            		to index all new articles</li>
+            	</ul>
+        </div>
+    </div>
+    
+    
+    <div class="img_right">
+        <img height="120px" src="{{ page.baseurl }}/images/set3/rss256.png" alt="" />
+        <div class="text">
+            <h2>
+                RSS River Plugin
+            </h2>
+
+            <p>
+                <b>RSS River Plugin</b> offers a simple way to index RSS feeds into <b>Elasticsearch</b>.
+            </p>
+            <p>
+                It reads your feeds with a regular period and index content.
+            </p>
+            <p>
+            	As all rivers, it's quite simple to create an RSS River :
+            </p>
+            <ul>
+            <li>Install the plugin and start Elasticsearch</li>
+            <li>Create your index (with mapping if needed)</li>
+            <li>Define the river</li>
+            <li>Search for RSS content</li>
+            </ul>
+            <pre class="prettyprint lang-bsh">
+            
+$ bin\plugin -install dadoonet/rssriver/0.0.2
+
+$ bin\elasticsearch
+
+$ curl -XPUT 'http://localhost:9200/lefigaro/' -d '{}'
+
+$ curl -XPUT 'http://localhost:9200/lefigaro/page/_mapping' -d '{
+  "page" : {
+    "properties" : {
+      "title" : {"type" : "string", "analyzer" : "french"},
+      "description" : {"type" : "string", "analyzer" : "french"},
+      "author" : {"type" : "string"},
+      "link" : {"type" : "string"}
     }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #7d49b5; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #7d49b5; }
-    h3 { text-align: center; color: #7d49b5; }
-    a { color: #7d49b5; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+  }
+}' 
 
-<body>
-  <a href="http://github.com/dadoonet/rssriver"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+$ curl -XPUT 'localhost:9200/_river/lefigaro/_meta' -d '{
+  "type": "rss",
+  "rss": {
+    "url": "http://rss.lefigaro.fr/lefigaro/laune",
+    "update_rate": 900000
+  }
+}'
 
-  <div id="container">
+$ curl -XGET 'http://localhost:9200/lefigaro/_search?q=taxe'
 
-    <div class="download">
-      <a href="http://github.com/dadoonet/rssriver/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/dadoonet/rssriver/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+</pre>
+        </div>
     </div>
 
-    <h1><a href="http://github.com/dadoonet/rssriver">rssriver</a>
-      <span class="small">by <a href="http://github.com/dadoonet">dadoonet</a></span></h1>
-
-    <div class="description">
-      ElasticSearch Rss River
-    </div>
-
-<h2>Contact</h2>
-<p>David Pilato - david (at) pilato.fr<br/>      </p>
+</div>
 
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/dadoonet/rssriver/zipball/master">zip</a> or
-      <a href="http://github.com/dadoonet/rssriver/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/dadoonet/rssriver</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/dadoonet/rssriver">dadoonet/rssriver</a>
-    </div>
-
-  </div>
-
-  <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-25719121-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-</body>
-</html>
