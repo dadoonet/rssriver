@@ -18,10 +18,20 @@
 		<developerConnection>scm:git:git@github.com:dadoonet/rssriver.git</developerConnection>
 	</scm>
 	
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/dadoonet/rssriver/issues/</url>
+	</issueManagement>
+	
 	<build>
 		<plugins>
 
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>2.6</version>
+			</plugin>
+      		<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.2.1</version>
@@ -108,6 +118,11 @@
 	</build>
 
 	<dependencies>
+		<dependency>
+			<groupId>rome</groupId>
+			<artifactId>rome</artifactId>
+			<version>1.0</version>
+		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>

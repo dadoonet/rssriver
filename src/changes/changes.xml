@@ -1,0 +1,17 @@
+<document xmlns="http://maven.apache.org/changes/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
+
+	<body>
+		<release date="2011-09-15" description="Use ROME project to parse RSS feeds" version="0.0.2">
+			<action issue="1" dev="dadoonet" due-to="Shay Banon" due-to-email="shay.banon@gmail.com" type="update">
+				Use ROME instead of internal classes to parse RSS Feeds.
+			</action>
+		</release>
+
+		<release date="2011-09-14" description="First public release (very alpha version)" version="0.0.1">
+		</release>
+
+	</body>
+
+</document>

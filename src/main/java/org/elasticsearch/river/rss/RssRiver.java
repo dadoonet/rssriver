@@ -24,10 +24,9 @@ import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.net.URL;
 import java.util.Date;
-import java.util.Locale;
+import java.util.Iterator;
 import java.util.Map;
 
 import org.elasticsearch.ExceptionsHelper;
@@ -46,9 +45,12 @@ import org.elasticsearch.river.AbstractRiverComponent;
 import org.elasticsearch.river.River;
 import org.elasticsearch.river.RiverName;
 import org.elasticsearch.river.RiverSettings;
-import org.elasticsearch.river.rss.support.Feed;
-import org.elasticsearch.river.rss.support.FeedMessage;
-import org.elasticsearch.river.rss.support.RssFeedParser;
+
+import com.sun.syndication.feed.synd.SyndEntryImpl;
+import com.sun.syndication.feed.synd.SyndFeed;
+import com.sun.syndication.io.FeedException;
+import com.sun.syndication.io.SyndFeedInput;
+import com.sun.syndication.io.XmlReader;
 
 /**
  * @author dadoonet (David Pilato)
@@ -69,8 +71,6 @@ public class RssRiver extends AbstractRiverComponent implements River {
 
 	private final int updateRate;
 
-	private final RssFeedParser parser;
-	
 	@SuppressWarnings({ "unchecked" })
 	@Inject
 	public RssRiver(RiverName riverName, RiverSettings settings, Client client)
@@ -90,8 +90,6 @@ public class RssRiver extends AbstractRiverComponent implements River {
 
 		if (logger.isInfoEnabled()) logger.info("creating rss stream river for [{}]", url);
 		
-		this.parser = new RssFeedParser(url);
-
 		if (settings.settings().containsKey("index")) {
 			Map<String, Object> indexSettings = (Map<String, Object>) settings
 					.settings().get("index");
@@ -141,28 +139,24 @@ public class RssRiver extends AbstractRiverComponent implements River {
 	}
 
 	
-	public static final SimpleDateFormat rfc822DateFormats[] = new SimpleDateFormat[] { 
-		new SimpleDateFormat("EEE, d MMM yy HH:mm:ss z", Locale.US), 
-		new SimpleDateFormat("EEE, d MMM yy HH:mm z", Locale.US), 
-		new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss z", Locale.US), 
-		new SimpleDateFormat("EEE, d MMM yyyy HH:mm z", Locale.US), 
-		new SimpleDateFormat("d MMM yy HH:mm z", Locale.US), 
-		new SimpleDateFormat("d MMM yy HH:mm:ss z", Locale.US), 
-		new SimpleDateFormat("d MMM yyyy HH:mm z", Locale.US), 
-		new SimpleDateFormat("d MMM yyyy HH:mm:ss z", Locale.US)};
-	
-	public static Date parseRfc822(String rfcDate) throws ParseException {
-		for (int i = 0; i < rfc822DateFormats.length; i++) {
-			try {
-				Date feedDate = rfc822DateFormats[i].parse(rfcDate);
-				return feedDate;
-			} catch (ParseException e) {
-			}
+	private SyndFeed getFeed(String url) {
+		try {
+			URL feedUrl = new URL(url);
+			SyndFeedInput input = new SyndFeedInput();
+			SyndFeed feed = input.build(new XmlReader(feedUrl));
+			return feed;
+		} catch (MalformedURLException e) {
+			logger.error("RSS Url is incorrect : [{}].", url);
+		} catch (IllegalArgumentException e) {
+			logger.error("Feed from [{}] is incorrect.", url);
+		} catch (FeedException e) {
+			logger.error("Can not parse feed from [{}].", url);
+		} catch (IOException e) {
+			logger.error("Can not read feed from [{}].", url);
 		}
-		throw new ParseException("Can not parse RFC822 date", 0);
+		
+		return null;
 	}
-	
-	
 	
 	private class RSSParser implements Runnable {
 
@@ -176,18 +170,9 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				}
 				
 				// Let's call the Rss flow
-				Feed feed = parser.readFeed();
-				String strDate = feed.getPubDate();
-				logger.debug("Feed publish date is {}", strDate);
-
-				Date feedDate = null;
-				if (strDate != null) {
-					try {
-						feedDate = parseRfc822(strDate);
-					} catch (ParseException e) {
-						logger.warn("Can not parse date {}", strDate);
-					}
-				}
+				SyndFeed feed = getFeed(url);
+				Date feedDate = feed.getPublishedDate();
+				logger.debug("Feed publish date is {}", feedDate);
 
 				Date lastDate = null;
 				try {
@@ -220,9 +205,16 @@ public class RssRiver extends AbstractRiverComponent implements River {
 	                BulkRequestBuilder bulk = client.prepareBulk();
                     try {
                     	// We have now to send each feed to ES
-                		for (FeedMessage message : feed.getMessages()) {
+                    	for (Iterator<SyndEntryImpl> iterator = feed.getEntries().iterator(); iterator.hasNext();) {
+                    		SyndEntryImpl message = (SyndEntryImpl) iterator.next();
+							
+                    		String description = "";
+                    		if (message.getDescription() != null) {
+                    			description = message.getDescription().getValue();
+                    		}
+                    		
                 			// Let's define the rule for UUID generation
-                			String id = UUID.nameUUIDFromBytes(message.getDescription().getBytes()).toString();
+                			String id = UUID.nameUUIDFromBytes(description.getBytes()).toString();
                 			
                 			// Let's look if object already exists
         					GetResponse oldMessage =
