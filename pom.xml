@@ -4,7 +4,7 @@
 	<groupId>org.elasticsearch.plugin</groupId>
 	<artifactId>rssriver</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>RSS River Plugin for ElasticSearch</name>
 	<url>https://github.com/dadoonet/rssriver</url>
 	
