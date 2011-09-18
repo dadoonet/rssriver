@@ -21,6 +21,7 @@ package org.elasticsearch.river.rss;
 
 import static org.elasticsearch.client.Requests.indexRequest;
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
+import static org.elasticsearch.river.rss.RssToJson.toJson;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -221,13 +222,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
         							client.prepareGet(indexName, typeName, id).execute().actionGet();
                 			if (!oldMessage.exists()) {
                                 bulk.add(indexRequest(indexName).type(typeName).id(id)
-                                        .source(jsonBuilder()
-                                        	.startObject()
-                                        		.field("title", message.getTitle())
-                                        		.field("author", message.getAuthor())
-                                        		.field("description", message.getDescription())
-                                        		.field("link", message.getLink())
-                                        	.endObject()));
+                                        .source(toJson(message)));
                     			
                     			
                                 if (logger.isDebugEnabled()) logger.debug("FeedMessage is updated : {}", message);
