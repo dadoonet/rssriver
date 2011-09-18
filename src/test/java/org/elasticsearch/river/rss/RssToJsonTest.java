@@ -32,7 +32,7 @@ public class RssToJsonTest {
 			XContentBuilder xcb = toJson(message);
 			assertNotNull(xcb);
 			
-			System.out.println(xcb.string());
+			// System.out.println(xcb.string());
 		}
 	}
 
