@@ -14,7 +14,7 @@ public class RomeTest {
 
 	@Test
 	public void test() throws Exception {
-		String url = "http://www.lemonde.fr/rss/unerrrr.xml";
+		String url = "http://www.lemonde.fr/rss/une.xml";
 		URL feedUrl = new URL(url);
 
 		SyndFeedInput input = new SyndFeedInput();
