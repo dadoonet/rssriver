@@ -220,7 +220,9 @@ table td {
     font-family: 'Georgia', serif;
     z-index: 1000;
 }
-
+#top_left_menu li {
+    list-style: none;
+}
 #top_left_menu a {
     width: 90px;
     display: block;
