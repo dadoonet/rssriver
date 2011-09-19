@@ -37,16 +37,17 @@
 				<artifactId>downloads-maven-plugin</artifactId>
 				<version>0.1-SNAPSHOT</version>
 				<configuration>
-					<description>${project.version} release of ${project.name}</description>
+					<description>${project.name} download for ${project.version}</description>
 					<override>true</override>
 					<includeAttached>true</includeAttached>
+					<dryRun>false</dryRun>
 				</configuration>
 				<executions>
 					<execution>
 						<goals>
 							<goal>upload</goal>
 						</goals>
-						<phase>deploy</phase>
+						<phase>install</phase>
 					</execution>
 				</executions>
 			</plugin>
@@ -71,6 +72,33 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<phase>verify</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+						<phase>verify</phase>
+					</execution>
+				</executions>
+			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
