@@ -37,7 +37,7 @@ public class RssToJson {
         final Position position = geoRSSModule.getPosition();
         if (position != null) {
             latitude.put("lat", position.getLatitude());
-            latitude.put("long", position.getLongitude());
+            latitude.put("lon", position.getLongitude());
         }
         return latitude;
     }

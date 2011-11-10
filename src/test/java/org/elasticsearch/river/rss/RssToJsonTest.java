@@ -16,7 +16,7 @@ import com.sun.syndication.io.XmlReader;
 
 public class RssToJsonTest {
 
-    public static final String JSON = "{\"title\":\"title\",\"author\":\"\",\"description\":\"desc\",\"link\":\"http://link.com/abc\",\"publishedDate\":\"2011-11-10T06:29:02.000Z\",\"source\":null,\"location\":{\"long\":12.4839019775391,\"lat\":41.8947384616695}}";
+    public static final String JSON = "{\"title\":\"title\",\"author\":\"\",\"description\":\"desc\",\"link\":\"http://link.com/abc\",\"publishedDate\":\"2011-11-10T06:29:02.000Z\",\"source\":null,\"location\":{\"lon\":12.4839019775391,\"lat\":41.8947384616695}}";
 
     @Test /* this test should be moved somewhere else */
 	public void shouldParseRss() throws Exception {
