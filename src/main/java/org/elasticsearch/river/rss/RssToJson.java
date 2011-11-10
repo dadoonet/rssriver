@@ -34,10 +34,12 @@ public class RssToJson {
     private static Map<String, Object> getPosition(SyndEntryImpl message) {
         GeoRSSModule geoRSSModule = GeoRSSUtils.getGeoRSS(message);
         final Map<String, Object> latitude = new HashMap<String, Object>();
-        final Position position = geoRSSModule.getPosition();
-        if (position != null) {
-            latitude.put("lat", position.getLatitude());
-            latitude.put("lon", position.getLongitude());
+        if (geoRSSModule != null) {
+            final Position position = geoRSSModule.getPosition();
+            if (position != null) {
+                latitude.put("lat", position.getLatitude());
+                latitude.put("lon", position.getLongitude());
+            }
         }
         return latitude;
     }
