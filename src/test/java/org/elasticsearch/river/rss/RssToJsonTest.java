@@ -3,9 +3,9 @@ package org.elasticsearch.river.rss;
 import static org.junit.Assert.*;
 import static org.elasticsearch.river.rss.RssToJson.toJson;
 
-import java.net.URL;
-import java.util.Iterator;
+import java.io.IOException;
 
+import com.sun.syndication.io.FeedException;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.junit.Test;
 
@@ -16,24 +16,32 @@ import com.sun.syndication.io.XmlReader;
 
 public class RssToJsonTest {
 
-	@Test
-	public void testToJson() throws Exception {
-		String url = "http://www.lemonde.fr/rss/une.xml";
-		URL feedUrl = new URL(url);
+    public static final String JSON = "{\"title\":\"title\",\"author\":\"\",\"description\":\"desc\",\"link\":\"http://link.com/abc\",\"publishedDate\":\"2011-11-10T06:29:02.000Z\",\"source\":null,\"location\":{\"long\":12.4839019775391,\"lat\":41.8947384616695}}";
 
-		SyndFeedInput input = new SyndFeedInput();
-		SyndFeed feed = input.build(new XmlReader(feedUrl));
+    @Test /* this test should be moved somewhere else */
+	public void shouldParseRss() throws Exception {
+        SyndFeedInput input = new SyndFeedInput();
+        SyndFeed feed = input.build(new XmlReader(getClass().getResource("/rss.xml")));
 
-		assertNotNull(feed);
-		assertFalse(feed.getEntries().isEmpty());
-		
-    	for (Iterator<SyndEntryImpl> iterator = feed.getEntries().iterator(); iterator.hasNext();) {
-    		SyndEntryImpl message = (SyndEntryImpl) iterator.next();
-			XContentBuilder xcb = toJson(message);
-			assertNotNull(xcb);
-			
-			// System.out.println(xcb.string());
-		}
+        assertTrue(feed.getEntries().size() > 0);
+        for (Object o : feed.getEntries()) {
+            SyndEntryImpl message = (SyndEntryImpl) o;
+            XContentBuilder xcb = toJson(message);
+            assertNotNull(xcb);
+        }
 	}
+
+    @Test
+    public void shouldParseRssGeoInformation() throws Exception {
+        final SyndEntryImpl entry = buildEntry();
+        final XContentBuilder xContentBuilder = RssToJson.toJson(entry);
+        assertEquals(JSON, xContentBuilder.string());
+    }
+
+    private SyndEntryImpl buildEntry() throws FeedException, IOException {
+        SyndFeedInput input = new SyndFeedInput();
+        SyndFeed feed = input.build(new XmlReader(getClass().getResource("/rss.xml")));
+        return (SyndEntryImpl) feed.getEntries().get(0);
+    }
 
 }
