@@ -255,11 +255,6 @@
 
 	<repositories>
 		<repository>
-			<id>central</id>
-			<name>Maven central</name>
-			<url>http://repo1.maven.org/maven2/</url>
-		</repository>
-		<repository>
 			<id>sonatype</id>
 			<name>Sonatype Groups</name>
 			<url>https://oss.sonatype.org/content/groups/public/</url>
