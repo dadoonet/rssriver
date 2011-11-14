@@ -9,14 +9,14 @@ h3. Installation
 Just type :
 
 <pre>
-$ bin\plugin -install dadoonet/rssriver/0.0.2
+$ bin\plugin -install dadoonet/rssriver/0.0.3
 </pre>
 
 This will do the job...
 
 <pre>
--> Installing dadoonet/rssriver/0.0.2...
-Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.2.zip...
+-> Installing dadoonet/rssriver/0.0.3...
+Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.3.zip...
 Downloading ...DONE
 Installed rssriver
 </pre>
@@ -88,6 +88,7 @@ Then, for each @<item>@ tag, RSS river creates a new document within @page@ type
 | @<description>@       | description  |
 | @<author>@            | author       |
 | @<link>@              | link         |
+| @<geo:lat>@ @<geo:long>@ | location         |
 
 @ID@ is generated from description using the "UUID":https://github.com/elasticsearch/elasticsearch/blob/master/modules/elasticsearch/src/main/java/org/elasticsearch/common/UUID.java generator. So, each message is indexed only once.
 
