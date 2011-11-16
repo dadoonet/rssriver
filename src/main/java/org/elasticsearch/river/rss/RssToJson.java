@@ -30,7 +30,7 @@ public class RssToJson {
             out.field("location", latitude);
         }
         if (riverName != null) {
-            out.field("river");
+            out.field("river", riverName);
         }
         return out.endObject();
 	}
