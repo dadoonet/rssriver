@@ -267,5 +267,9 @@
 			<name>Sonatype Groups</name>
 			<url>https://oss.sonatype.org/content/groups/public/</url>
 		</pluginRepository>
+		<pluginRepository>
+			<id>oss-sonatype-snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</pluginRepository>
 	</pluginRepositories>
 </project>
