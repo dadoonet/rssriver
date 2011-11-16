@@ -222,7 +222,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
         							client.prepareGet(indexName, typeName, id).execute().actionGet();
                 			if (!oldMessage.exists()) {
                                 bulk.add(indexRequest(indexName).type(typeName).id(id)
-                                        .source(toJson(message)));
+                                        .source(toJson(message, riverName.getName())));
                     			
                     			
                                 if (logger.isDebugEnabled()) logger.debug("FeedMessage is updated : {}", message);

@@ -12,9 +12,10 @@ import com.sun.syndication.feed.module.georss.geometries.Position;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 
 import com.sun.syndication.feed.synd.SyndEntryImpl;
+import org.elasticsearch.river.RiverName;
 
 public class RssToJson {
-	public static XContentBuilder toJson(SyndEntryImpl message) throws IOException {
+	public static XContentBuilder toJson(SyndEntryImpl message, String riverName) throws IOException {
         XContentBuilder out = jsonBuilder()
 	    	.startObject()
 	    		.field("title", message.getTitle())
@@ -27,6 +28,9 @@ public class RssToJson {
         final Map<String, Object> latitude = getPosition(message);
         if (latitude.size() > 0) {
             out.field("location", latitude);
+        }
+        if (riverName != null) {
+            out.field("river");
         }
         return out.endObject();
 	}
