@@ -27,9 +27,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.Map;
 
+import com.sun.syndication.feed.synd.SyndEntry;
 import org.elasticsearch.ExceptionsHelper;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.get.GetResponse;
@@ -47,7 +47,6 @@ import org.elasticsearch.river.River;
 import org.elasticsearch.river.RiverName;
 import org.elasticsearch.river.RiverSettings;
 
-import com.sun.syndication.feed.synd.SyndEntryImpl;
 import com.sun.syndication.feed.synd.SyndFeed;
 import com.sun.syndication.io.FeedException;
 import com.sun.syndication.io.SyndFeedInput;
@@ -164,8 +163,8 @@ public class RssRiver extends AbstractRiverComponent implements River {
 		@SuppressWarnings("unchecked")
 		@Override
 		public void run() {
-
-			while (true) {
+			try {
+            while (true) {
 				if (closed) {
 					return;
 				}
@@ -175,29 +174,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				Date feedDate = feed.getPublishedDate();
 				logger.debug("Feed publish date is {}", feedDate);
 
-				Date lastDate = null;
-				try {
-					// Do something
-					if (logger.isDebugEnabled()) logger.debug("Starting to parse RSS feed");
-					client.admin().indices().prepareRefresh("_river").execute().actionGet();
-					GetResponse lastSeqGetResponse =
-							client.prepareGet("_river", riverName().name(), "_lastupdate").execute().actionGet();
-					if (lastSeqGetResponse.exists()) {
-						Map<String, Object> rssState = (Map<String, Object>) lastSeqGetResponse
-								.sourceAsMap().get("rss");
-						
-						if (rssState != null) {
-							String strLastDate = rssState.get("_lastupdate").toString();
-							lastDate = ISODateTimeFormat.dateOptionalTimeParser().parseDateTime(strLastDate).toDate();
-						}
-					} else {
-						// First call
-						if (logger.isDebugEnabled()) logger.debug("_lastupdate doesn't exist");
-					}
-				} catch (Exception e) {
-					logger.warn("failed to get _lastupdate, throttling....", e);
-				}
-
+                Date lastDate = getLastDateFromRiver();
 				// Comparing dates to see if we have something to do or not
 				if (lastDate == null || (feedDate != null && feedDate.after(lastDate))) {
 					// We have to send results to ES
@@ -206,33 +183,25 @@ public class RssRiver extends AbstractRiverComponent implements River {
 	                BulkRequestBuilder bulk = client.prepareBulk();
                     try {
                     	// We have now to send each feed to ES
-                    	for (Iterator<SyndEntryImpl> iterator = feed.getEntries().iterator(); iterator.hasNext();) {
-                    		SyndEntryImpl message = (SyndEntryImpl) iterator.next();
-							
-                    		String description = "";
-                    		if (message.getDescription() != null) {
-                    			description = message.getDescription().getValue();
-                    		}
-                    		
-                			// Let's define the rule for UUID generation
-                			String id = UUID.nameUUIDFromBytes(description.getBytes()).toString();
-                			
-                			// Let's look if object already exists
-        					GetResponse oldMessage =
-        							client.prepareGet(indexName, typeName, id).execute().actionGet();
-                			if (!oldMessage.exists()) {
-                                bulk.add(indexRequest(indexName).type(typeName).id(id)
-                                        .source(toJson(message, riverName.getName())));
-                    			
-                    			
+                        for (SyndEntry message : (Iterable<SyndEntry>) feed.getEntries()) {
+                            String description = "";
+                            if (message.getDescription() != null) {
+                                description = message.getDescription().getValue();
+                            }
+
+                            // Let's define the rule for UUID generation
+                            String id = UUID.nameUUIDFromBytes(description.getBytes()).toString();
+
+                            // Let's look if object already exists
+                            GetResponse oldMessage = client.prepareGet(indexName, typeName, id).execute().actionGet();
+                            if (!oldMessage.exists()) {
+                                bulk.add(indexRequest(indexName).type(typeName).id(id).source(toJson(message, riverName.getName())));
+
                                 if (logger.isDebugEnabled()) logger.debug("FeedMessage is updated : {}", message);
-                			} else {
-                				if (logger.isTraceEnabled()) logger.trace("FeedMessage {} already exist. Ignoring", id);
-                			}
-        					
-        					
-                		}
-                    	
+                            } else {
+                                if (logger.isTraceEnabled()) logger.trace("FeedMessage {} already exist. Ignoring", id);
+                            }
+                        }
                     	
                         if (logger.isTraceEnabled()) {
                             logger.trace("processing [_seq  ]: [{}]/[{}]/[{}], last_seq [{}]", indexName, riverName.name(), "_lastupdate", feedDate);
@@ -259,27 +228,40 @@ public class RssRiver extends AbstractRiverComponent implements River {
 					if (logger.isDebugEnabled()) logger.debug("Nothing new in the feed... Relaxing...");
 				}
 				
-				
-				
 				try {
 					if (logger.isDebugEnabled()) logger.debug("Rss river is going to sleep for {} ms", updateRate);
 					Thread.sleep(updateRate);
-					continue;
 				} catch (InterruptedException e1) {
-					if (closed) {
-						return;
-					}
-				}
-
-				
-				try {
-				} catch (Exception e) {
-					if (closed) {
-						return;
-					}
-					logger.error("failed to parse stream", e);
 				}
 			}
+            } catch (Exception e) {
+                logger.info("XXX234 Something terribly wrong closing...", e);
+            }
 		}
-	}
+
+        private Date getLastDateFromRiver() {
+            Date lastDate = null;
+            try {
+                // Do something
+                if (logger.isDebugEnabled()) logger.debug("Starting to parse RSS feed");
+                client.admin().indices().prepareRefresh("_river").execute().actionGet();
+                GetResponse lastSeqGetResponse =
+                        client.prepareGet("_river", riverName().name(), "_lastupdate").execute().actionGet();
+                if (lastSeqGetResponse.exists()) {
+                    Map<String, Object> rssState = (Map<String, Object>) lastSeqGetResponse.sourceAsMap().get("rss");
+
+                    if (rssState != null) {
+                        String strLastDate = rssState.get("_lastupdate").toString();
+                        lastDate = ISODateTimeFormat.dateOptionalTimeParser().parseDateTime(strLastDate).toDate();
+                    }
+                } else {
+                    // First call
+                    if (logger.isDebugEnabled()) logger.debug("_lastupdate doesn't exist");
+                }
+            } catch (Exception e) {
+                logger.warn("failed to get _lastupdate, throttling....", e);
+            }
+            return lastDate;
+        }
+    }
 }
