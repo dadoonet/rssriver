@@ -163,7 +163,6 @@ public class RssRiver extends AbstractRiverComponent implements River {
 		@SuppressWarnings("unchecked")
 		@Override
 		public void run() {
-			try {
             while (true) {
 				if (closed) {
 					return;
@@ -171,72 +170,70 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				
 				// Let's call the Rss flow
 				SyndFeed feed = getFeed(url);
-				Date feedDate = feed.getPublishedDate();
-				logger.debug("Feed publish date is {}", feedDate);
+                if (feed != null) {
+                    Date feedDate = feed.getPublishedDate();
+                    logger.debug("Feed publish date is {}", feedDate);
 
-                Date lastDate = getLastDateFromRiver();
-				// Comparing dates to see if we have something to do or not
-				if (lastDate == null || (feedDate != null && feedDate.after(lastDate))) {
-					// We have to send results to ES
-					if (logger.isDebugEnabled()) logger.debug("Feed is updated : {}", feed);
-					
-	                BulkRequestBuilder bulk = client.prepareBulk();
-                    try {
-                    	// We have now to send each feed to ES
-                        for (SyndEntry message : (Iterable<SyndEntry>) feed.getEntries()) {
-                            String description = "";
-                            if (message.getDescription() != null) {
-                                description = message.getDescription().getValue();
+                    Date lastDate = getLastDateFromRiver();
+                    // Comparing dates to see if we have something to do or not
+                    if (lastDate == null || (feedDate != null && feedDate.after(lastDate))) {
+                        // We have to send results to ES
+                        if (logger.isDebugEnabled()) logger.debug("Feed is updated : {}", feed);
+
+                        BulkRequestBuilder bulk = client.prepareBulk();
+                        try {
+                            // We have now to send each feed to ES
+                            for (SyndEntry message : (Iterable<SyndEntry>) feed.getEntries()) {
+                                String description = "";
+                                if (message.getDescription() != null) {
+                                    description = message.getDescription().getValue();
+                                }
+
+                                // Let's define the rule for UUID generation
+                                String id = UUID.nameUUIDFromBytes(description.getBytes()).toString();
+
+                                // Let's look if object already exists
+                                GetResponse oldMessage = client.prepareGet(indexName, typeName, id).execute().actionGet();
+                                if (!oldMessage.exists()) {
+                                    bulk.add(indexRequest(indexName).type(typeName).id(id).source(toJson(message, riverName.getName())));
+
+                                    if (logger.isDebugEnabled()) logger.debug("FeedMessage is updated : {}", message);
+                                } else {
+                                    if (logger.isTraceEnabled()) logger.trace("FeedMessage {} already exist. Ignoring", id);
+                                }
                             }
 
-                            // Let's define the rule for UUID generation
-                            String id = UUID.nameUUIDFromBytes(description.getBytes()).toString();
-
-                            // Let's look if object already exists
-                            GetResponse oldMessage = client.prepareGet(indexName, typeName, id).execute().actionGet();
-                            if (!oldMessage.exists()) {
-                                bulk.add(indexRequest(indexName).type(typeName).id(id).source(toJson(message, riverName.getName())));
-
-                                if (logger.isDebugEnabled()) logger.debug("FeedMessage is updated : {}", message);
-                            } else {
-                                if (logger.isTraceEnabled()) logger.trace("FeedMessage {} already exist. Ignoring", id);
+                            if (logger.isTraceEnabled()) {
+                                logger.trace("processing [_seq  ]: [{}]/[{}]/[{}], last_seq [{}]", indexName, riverName.name(), "_lastupdate", feedDate);
                             }
+                            // We store the lastupdate date
+                            bulk.add(indexRequest("_river").type(riverName.name()).id("_lastupdate")
+                                    .source(jsonBuilder().startObject().startObject("rss").field("_lastupdate", feedDate).endObject().endObject()));
+                        } catch (IOException e) {
+                            logger.warn("failed to add feed message entry to bulk indexing");
                         }
-                    	
-                        if (logger.isTraceEnabled()) {
-                            logger.trace("processing [_seq  ]: [{}]/[{}]/[{}], last_seq [{}]", indexName, riverName.name(), "_lastupdate", feedDate);
+
+                        try {
+                            BulkResponse response = bulk.execute().actionGet();
+                            if (response.hasFailures()) {
+                                // TODO write to exception queue?
+                                logger.warn("failed to execute" + response.buildFailureMessage());
+                            }
+                        } catch (Exception e) {
+                            logger.warn("failed to execute bulk", e);
                         }
-                        // We store the lastupdate date
-                        bulk.add(indexRequest("_river").type(riverName.name()).id("_lastupdate")
-                                .source(jsonBuilder().startObject().startObject("rss").field("_lastupdate", feedDate).endObject().endObject()));
-                    } catch (IOException e) {
-                        logger.warn("failed to add feed message entry to bulk indexing");
+
+                    } else {
+                        // Nothing new... Just relax !
+                        if (logger.isDebugEnabled()) logger.debug("Nothing new in the feed... Relaxing...");
                     }
-
-	                try {
-	                    BulkResponse response = bulk.execute().actionGet();
-	                    if (response.hasFailures()) {
-	                        // TODO write to exception queue?
-	                        logger.warn("failed to execute" + response.buildFailureMessage());
-	                    }
-	                } catch (Exception e) {
-	                    logger.warn("failed to execute bulk", e);
-	                }
-					
-				} else {
-					// Nothing new... Just relax !
-					if (logger.isDebugEnabled()) logger.debug("Nothing new in the feed... Relaxing...");
-				}
-				
+                }
 				try {
 					if (logger.isDebugEnabled()) logger.debug("Rss river is going to sleep for {} ms", updateRate);
 					Thread.sleep(updateRate);
 				} catch (InterruptedException e1) {
 				}
 			}
-            } catch (Exception e) {
-                logger.info("XXX234 Something terribly wrong closing...", e);
-            }
 		}
 
         private Date getLastDateFromRiver() {
@@ -251,8 +248,11 @@ public class RssRiver extends AbstractRiverComponent implements River {
                     Map<String, Object> rssState = (Map<String, Object>) lastSeqGetResponse.sourceAsMap().get("rss");
 
                     if (rssState != null) {
-                        String strLastDate = rssState.get("_lastupdate").toString();
-                        lastDate = ISODateTimeFormat.dateOptionalTimeParser().parseDateTime(strLastDate).toDate();
+                        Object lastupdate = rssState.get("_lastupdate");
+                        if (lastupdate != null) {
+                            String strLastDate = lastupdate.toString();
+                            lastDate = ISODateTimeFormat.dateOptionalTimeParser().parseDateTime(strLastDate).toDate();
+                        }
                     }
                 } else {
                     // First call
