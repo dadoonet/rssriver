@@ -26,7 +26,7 @@ public class RssToJsonTest {
         assertTrue(feed.getEntries().size() > 0);
         for (Object o : feed.getEntries()) {
             SyndEntryImpl message = (SyndEntryImpl) o;
-            XContentBuilder xcb = toJson(message);
+            XContentBuilder xcb = toJson(message, null);
             assertNotNull(xcb);
         }
 	}
@@ -34,7 +34,7 @@ public class RssToJsonTest {
     @Test
     public void shouldParseRssGeoInformation() throws Exception {
         final SyndEntryImpl entry = buildEntry();
-        final XContentBuilder xContentBuilder = RssToJson.toJson(entry);
+        final XContentBuilder xContentBuilder = RssToJson.toJson(entry, null);
         assertEquals(JSON, xContentBuilder.string());
     }
 
