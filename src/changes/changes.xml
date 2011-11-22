@@ -3,6 +3,21 @@
           xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
 
 	<body>
+		<release date="2011-11-22" description="Bug fix" version="0.0.4">
+			<action issue="5" dev="managr" due-to="Marcin Naglik" type="fix">
+				River is hanging with NPE.
+			</action>
+		</release>
+
+		<release date="2011-11-10" description="Support for geo lat/long" version="0.0.3">
+			<action issue="4" dev="managr" due-to="Marcin Naglik" type="add">
+				Adding support for geo rss.
+			</action>
+			<action issue="3" dev="dadoonet" due-to="Tanguy Leroux" type="fix">
+				pom.xml : Automatic upload to github of ZIP file doesn't seems to work.
+			</action>
+		</release>
+
 		<release date="2011-09-15" description="Use ROME project to parse RSS feeds" version="0.0.2">
 			<action issue="1" dev="dadoonet" due-to="Shay Banon" due-to-email="shay.banon@gmail.com" type="update">
 				Use ROME instead of internal classes to parse RSS Feeds.

@@ -19,6 +19,21 @@
 		-->
 	</properties>
 
+	<developers>
+		<developer>
+			<id>dadoonet</id>
+			<name>David Pilato</name>
+			<email>david+github@pilato.fr</email>
+			<url>http://dev.david.pilato.fr/</url>
+			<timezone>UMT+1</timezone>
+		</developer>
+		<developer>
+			<id>managr</id>
+			<name>Marcin Naglik</name>
+			<url>http://managr.github.com</url>
+		</developer>
+	</developers>
+	
 	<scm>
 		<connection>scm:git:git@github.com:dadoonet/rssriver.git</connection>
 		<url>scm:git:git@github.com:dadoonet/rssriver.git</url>
