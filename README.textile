@@ -9,14 +9,14 @@ h3. Installation
 Just type :
 
 <pre>
-$ bin\plugin -install dadoonet/rssriver/0.0.3
+$ bin\plugin -install dadoonet/rssriver/0.0.4
 </pre>
 
 This will do the job...
 
 <pre>
--> Installing dadoonet/rssriver/0.0.3...
-Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.3.zip...
+-> Installing dadoonet/rssriver/0.0.4...
+Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.4.zip...
 Downloading ...DONE
 Installed rssriver
 </pre>
