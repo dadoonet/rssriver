@@ -63,13 +63,13 @@ $ curl -XPUT 'localhost:9200/_river/actus/_meta' -d '{
   "type": "rss",
   "rss": {
     "feeds" : [ {
-    		"name": "lemonde",
-    		"url": "http://www.lemonde.fr/rss/une.xml",
-    		"update_rate": 900000
+			"name": "lemonde",
+			"url": "http://www.lemonde.fr/rss/une.xml",
+			"update_rate": 900000
     	}, {
-   		 	"name": "lefigaro",
-    	    "url": "http://rss.lefigaro.fr/lefigaro/laune",
-    		"update_rate" : 1800000
+			"name": "lefigaro",
+			"url": "http://rss.lefigaro.fr/lefigaro/laune",
+			"update_rate" : 1800000
     	}
     ]
   }
