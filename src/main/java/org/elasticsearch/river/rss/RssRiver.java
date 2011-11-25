@@ -59,8 +59,6 @@ public class RssRiver extends AbstractRiverComponent implements River {
 
 	private final Client client;
 
-	private final String url;
-
 	private final String indexName;
 
 	private final String typeName;
@@ -69,7 +67,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
 
 	private volatile boolean closed = false;
 
-	private final int updateRate;
+	private final RssRiverFeedDefinition feedDefinition;
 
 	@SuppressWarnings({ "unchecked" })
 	@Inject
@@ -78,14 +76,19 @@ public class RssRiver extends AbstractRiverComponent implements River {
 		super(riverName, settings);
 		this.client = client;
 
+		String url;
+		int updateRate;
+
 		if (settings.settings().containsKey("rss")) {
 			Map<String, Object> rssSettings = (Map<String, Object>) settings.settings().get("rss");
 			url = XContentMapValues.nodeStringValue(rssSettings.get("url"), null);
 			updateRate  = XContentMapValues.nodeIntegerValue(rssSettings.get("update_rate"), 15 * 60 * 1000);
+			feedDefinition = new RssRiverFeedDefinition(url, updateRate);
 		} else {
 			url = "http://www.lemonde.fr/rss/une.xml";
 			logger.warn("You didn't define the rss url. Switching to defaults : [{}]", url);
 			updateRate = 15 * 60 * 1000;
+			feedDefinition = new RssRiverFeedDefinition(url, updateRate);
 		}
 
 		if (logger.isInfoEnabled()) logger.info("creating rss stream river for [{}]", url);
@@ -169,7 +172,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				}
 				
 				// Let's call the Rss flow
-				SyndFeed feed = getFeed(url);
+				SyndFeed feed = getFeed(feedDefinition.getUrl());
                 if (feed != null) {
                     Date feedDate = feed.getPublishedDate();
                     logger.debug("Feed publish date is {}", feedDate);
@@ -229,8 +232,8 @@ public class RssRiver extends AbstractRiverComponent implements River {
                     }
                 }
 				try {
-					if (logger.isDebugEnabled()) logger.debug("Rss river is going to sleep for {} ms", updateRate);
-					Thread.sleep(updateRate);
+					if (logger.isDebugEnabled()) logger.debug("Rss river is going to sleep for {} ms", feedDefinition.getUpdateRate());
+					Thread.sleep(feedDefinition.getUpdateRate());
 				} catch (InterruptedException e1) {
 				}
 			}
