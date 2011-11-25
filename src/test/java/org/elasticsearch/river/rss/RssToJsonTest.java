@@ -16,7 +16,7 @@ import com.sun.syndication.io.XmlReader;
 
 public class RssToJsonTest {
 
-    public static final String JSON = "{\"title\":\"title\",\"author\":\"\",\"description\":\"desc\",\"link\":\"http://link.com/abc\",\"publishedDate\":\"2011-11-10T06:29:02.000Z\",\"source\":null,\"location\":{\"lon\":12.4839019775391,\"lat\":41.8947384616695}}";
+    public static final String JSON = "{\"source\":null,\"title\":\"title\",\"author\":\"\",\"description\":\"desc\",\"link\":\"http://link.com/abc\",\"publishedDate\":\"2011-11-10T06:29:02.000Z\",\"source\":null,\"location\":{\"lon\":12.4839019775391,\"lat\":41.8947384616695}}";
 
     @Test /* this test should be moved somewhere else */
 	public void shouldParseRss() throws Exception {
@@ -26,7 +26,7 @@ public class RssToJsonTest {
         assertTrue(feed.getEntries().size() > 0);
         for (Object o : feed.getEntries()) {
             SyndEntryImpl message = (SyndEntryImpl) o;
-            XContentBuilder xcb = toJson(message, null);
+            XContentBuilder xcb = toJson(message, null, null);
             assertNotNull(xcb);
         }
 	}
@@ -34,7 +34,7 @@ public class RssToJsonTest {
     @Test
     public void shouldParseRssGeoInformation() throws Exception {
         final SyndEntryImpl entry = buildEntry();
-        final XContentBuilder xContentBuilder = RssToJson.toJson(entry, null);
+        final XContentBuilder xContentBuilder = RssToJson.toJson(entry, null, null);
         assertEquals(JSON, xContentBuilder.string());
     }
 

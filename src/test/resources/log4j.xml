@@ -10,9 +10,12 @@
 	</appender>
 
 	<logger name="org.elasticsearch">
-		<level value="debug" />
+		<level value="info" />
 	</logger>
 
+	<logger name="org.elasticsearch.river.rss">
+		<level value="debug" />
+	</logger>
 	<logger name="org.elasticsearch.plugin.river.rss">
 		<level value="debug" />
 	</logger>

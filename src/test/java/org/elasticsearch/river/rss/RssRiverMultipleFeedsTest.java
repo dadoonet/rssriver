@@ -26,7 +26,7 @@ import org.elasticsearch.common.xcontent.XContentBuilder;
 /**
  * @author dadoonet (David Pilato)
  */
-public class RssRiverTest extends AbstractRssRiverTest {
+public class RssRiverMultipleFeedsTest extends AbstractRssRiverTest {
 	/**
 	 * Overriding mapping with french content
 	 */
@@ -61,26 +61,28 @@ public class RssRiverTest extends AbstractRssRiverTest {
 	}
 
 	/**
-	 * 1 RSS feed :
+	 * 2 RSS feeds :
 	 * <ul>
 	 *   <li>http://www.lemonde.fr/rss/une.xml every 10 seconds
+	 *   <li>http://rss.lefigaro.fr/lefigaro/laune every 15 seconds
 	 * </ul>
 	 */
 	@Override
 	public XContentBuilder rssRiver() throws Exception {
-		// We create a rss feed on lemonde with a refresh every ten minutes
-		// int updateRate = 10 * 60 * 1000;
-		
-		String url = "http://www.lemonde.fr/rss/une.xml";
-		int updateRate = 10 * 1000;
 		XContentBuilder xb = jsonBuilder()
 				.startObject()
 					.field("type", "rss")
 					.startObject("rss")
 						.startArray("feeds")
 							.startObject()
-								.field("url", url)
-								.field("update_rate", updateRate)
+								.field("name", "lemonde")
+								.field("url", "http://www.lemonde.fr/rss/une.xml")
+								.field("update_rate", 10 * 1000)
+							.endObject()
+							.startObject()
+								.field("name", "lefigaro")
+								.field("url", "http://rss.lefigaro.fr/lefigaro/laune")
+								.field("update_rate", 15 * 1000)
 							.endObject()
 						.endArray()
 					.endObject()

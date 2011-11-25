@@ -13,9 +13,10 @@ import java.util.Map;
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 public class RssToJson {
-	public static XContentBuilder toJson(SyndEntry message, String riverName) throws IOException {
+	public static XContentBuilder toJson(SyndEntry message, String riverName, String feedname) throws IOException {
         XContentBuilder out = jsonBuilder()
 	    	.startObject()
+	    		.field("feedname", feedname)
 	    		.field("title", message.getTitle())
 	    		.field("author", message.getAuthor())
 	    		.field("description", message.getDescription() != null ? message.getDescription().getValue() : null)

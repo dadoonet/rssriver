@@ -9,14 +9,14 @@ h3. Installation
 Just type :
 
 <pre>
-$ bin\plugin -install dadoonet/rssriver/0.0.4
+$ bin\plugin -install dadoonet/rssriver/0.0.5
 </pre>
 
 This will do the job...
 
 <pre>
--> Installing dadoonet/rssriver/0.0.4...
-Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.4.zip...
+-> Installing dadoonet/rssriver/0.0.5...
+Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.5.zip...
 Downloading ...DONE
 Installed rssriver
 </pre>
@@ -38,11 +38,44 @@ We create the river with the following properties :
 $ curl -XPUT 'localhost:9200/_river/lemonde/_meta' -d '{
   "type": "rss",
   "rss": {
-    "url": "http://www.lemonde.fr/rss/une.xml",
-    "update_rate": 900000
+    "feeds" : [ {
+    	"name": "lemonde",
+    	"url": "http://www.lemonde.fr/rss/une.xml",
+    	"update_rate": 900000
+    	}
+    ]
   }
 }'
 </pre>
+
+If you need to get multiple feeds, you can add them :
+
+* Feed1 URL : http://www.lemonde.fr/rss/une.xml
+* Update Rate1 : every 15 minutes (15 * 60 * 1000 = 900000 ms)
+
+* Feed2 URL : http://www.lemonde.fr/rss/une.xml
+* Update Rate2 : every 30 minutes (30 * 60 * 1000 = 900000 ms)
+
+<pre>
+$ curl -XPUT 'localhost:9200/actus/' -d '{}'
+
+$ curl -XPUT 'localhost:9200/_river/actus/_meta' -d '{
+  "type": "rss",
+  "rss": {
+    "feeds" : [ {
+    		"name": "lemonde",
+    		"url": "http://www.lemonde.fr/rss/une.xml",
+    		"update_rate": 900000
+    	}, {
+   		 	"name": "lefigaro",
+    	    "url": "http://rss.lefigaro.fr/lefigaro/laune",
+    		"update_rate" : 1800000
+    	}
+    ]
+  }
+}'
+</pre>
+
 
 h3. Working with mappings
 
@@ -54,6 +87,7 @@ $ curl -XPUT 'http://localhost:9200/lefigaro/' -d '
 $ curl -XPUT 'http://localhost:9200/lefigaro/page/_mapping' -d '{
     "page" : {
         "properties" : {
+            "feedname" : {"type" : "string"},
             "title" : {"type" : "string", "analyzer" : "french"},
             "description" : {"type" : "string", "analyzer" : "french"},
             "author" : {"type" : "string"},
@@ -69,7 +103,10 @@ Then, your feed will use it when you create the river :
 $ curl -XPUT 'localhost:9200/_river/lefigaro/_meta' -d '{
   "type": "rss",
   "rss": {
-    "url": "http://rss.lefigaro.fr/lefigaro/laune"
+    "feeds" : [ {
+		    "url": "http://rss.lefigaro.fr/lefigaro/laune"
+	    }
+    ]
   }
 }'
 </pre>
