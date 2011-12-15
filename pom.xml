@@ -9,7 +9,7 @@
 	<url>https://github.com/dadoonet/rssriver</url>
 	
 	<properties>
-		<elasticsearch.version>0.18.4</elasticsearch.version>
+		<elasticsearch.version>0.18.5</elasticsearch.version>
 		
 		<!-- Some properties for github that you have to define in your settings.xml -->
 		<!-- 
