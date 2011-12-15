@@ -79,7 +79,7 @@ title_in_header: false
             </ul>
             <pre class="prettyprint lang-bsh">
             
-$ bin\plugin -install dadoonet/rssriver/0.0.4
+$ bin\plugin -install dadoonet/rssriver/0.0.5
 
 $ bin\elasticsearch
 
@@ -99,14 +99,41 @@ $ curl -XPUT 'http://localhost:9200/lefigaro/page/_mapping' -d '{
 $ curl -XPUT 'localhost:9200/_river/lefigaro/_meta' -d '{
   "type": "rss",
   "rss": {
-    "url": "http://rss.lefigaro.fr/lefigaro/laune",
-    "update_rate": 900000
+    "feeds" : [ {
+    	"name": "lefigaro",
+    	"url": "http://rss.lefigaro.fr/lefigaro/laune",
+    	"update_rate": 900000
+    	}
+    ]
   }
 }'
 
 $ curl -XGET 'http://localhost:9200/lefigaro/_search?q=taxe'
-
 </pre>
+
+<p>You can define multiple RSS feeds on the same river (same index) :</p>
+
+<pre class="prettyprint lang-bsh">
+$ curl -XPUT 'http://localhost:9200/newspapers/' -d '{}'
+
+$ curl -XPUT 'localhost:9200/_river/newspapers/_meta' -d '{
+  "type": "rss",
+  "rss": {
+    "feeds" : [ {
+    	"name": "lefigaro",
+    	"url": "http://rss.lefigaro.fr/lefigaro/laune",
+    	"update_rate": 900000
+    	}, {
+    	"name": "lemonde",
+    	"url": "http://www.lemonde.fr/rss/une.xml",
+    	"update_rate": 300000
+    	}
+    ]
+  }
+}'
+</pre>
+
+
         </div>
     </div>
 
