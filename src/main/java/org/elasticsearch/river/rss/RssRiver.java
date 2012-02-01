@@ -30,12 +30,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 
-import com.sun.syndication.feed.synd.SyndEntry;
 import org.elasticsearch.ExceptionsHelper;
+import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.Client;
-import org.elasticsearch.client.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.cluster.block.ClusterBlockException;
 import org.elasticsearch.common.UUID;
 import org.elasticsearch.common.inject.Inject;
@@ -48,6 +47,7 @@ import org.elasticsearch.river.River;
 import org.elasticsearch.river.RiverName;
 import org.elasticsearch.river.RiverSettings;
 
+import com.sun.syndication.feed.synd.SyndEntry;
 import com.sun.syndication.feed.synd.SyndFeed;
 import com.sun.syndication.io.FeedException;
 import com.sun.syndication.io.SyndFeedInput;
