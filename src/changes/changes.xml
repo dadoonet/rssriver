@@ -3,6 +3,12 @@
           xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
 
 	<body>
+		<release date="2012-02-07" description="[Breaking change] Update to ES 0.19.0.RC1" version="0.0.6">
+			<action issue="7" dev="dadoonet" type="update">
+				Update to Elasticsearch 0.19.0.RC1.
+			</action>
+		</release>
+
 		<release date="2011-12-15" description="Support for multiple feeds" version="0.0.5">
 			<action issue="6" dev="dadoonet" due-to="Sergio Panseri" due-to-email="spanseri@gmail.com" type="add">
 				Manage multiple RSS feeds within a single river.
