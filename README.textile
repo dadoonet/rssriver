@@ -6,7 +6,8 @@ Welcome to the RSS River Plugin for "Elasticsearch":http://www.elasticsearch.org
 h2. Versions
 
 |_. RSS River Plugin|_. ElasticSearch|
-|  master (0.0.6)   |  master (0.19) |
+|  master (0.0.7)   |  master (0.19) |
+|     0.0.6         |    0.19.0.RC1  |
 |     0.0.5         |     0.18       |
 |     0.0.4         |     0.18       |
 |     0.0.3         |     0.18       |
@@ -20,14 +21,14 @@ h3. Installation
 Just type :
 
 <pre>
-$ bin\plugin -install dadoonet/rssriver/0.0.5
+$ bin\plugin -install dadoonet/rssriver/0.0.6
 </pre>
 
 This will do the job...
 
 <pre>
--> Installing dadoonet/rssriver/0.0.5...
-Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.5.zip...
+-> Installing dadoonet/rssriver/0.0.6...
+Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.6.zip...
 Downloading ...DONE
 Installed rssriver
 </pre>
