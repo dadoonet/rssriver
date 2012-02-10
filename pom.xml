@@ -25,7 +25,7 @@
 			<name>David Pilato</name>
 			<email>david+github@pilato.fr</email>
 			<url>http://dev.david.pilato.fr/</url>
-			<timezone>UMT+1</timezone>
+			<timezone>+1</timezone>
 		</developer>
 		<developer>
 			<id>managr</id>
