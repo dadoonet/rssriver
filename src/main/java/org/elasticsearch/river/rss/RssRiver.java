@@ -216,6 +216,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				// Let's call the Rss flow
 				SyndFeed feed = getFeed(url);
                 if (feed != null) {
+                    if (logger.isDebugEnabled()) logger.debug("Reading feed from {}", url);
                     Date feedDate = feed.getPublishedDate();
                     if (logger.isDebugEnabled()) logger.debug("Feed publish date is {}", feedDate);
 
@@ -288,7 +289,6 @@ public class RssRiver extends AbstractRiverComponent implements River {
             Date lastDate = null;
             try {
                 // Do something
-                if (logger.isDebugEnabled()) logger.debug("Starting to parse RSS feed");
                 client.admin().indices().prepareRefresh("_river").execute().actionGet();
                 GetResponse lastSeqGetResponse =
                         client.prepareGet("_river", riverName().name(), lastupdateField).execute().actionGet();
