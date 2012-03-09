@@ -1,37 +1,28 @@
-/*
- * Licensed to Elastic Search and Shay Banon under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. Elastic Search licenses this
- * file to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-
 package org.elasticsearch.river.rss;
+
+import java.io.File;
 
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
+import org.elasticsearch.common.io.FileSystemUtils;
 import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.indices.IndexMissingException;
 import org.elasticsearch.node.Node;
 import org.elasticsearch.node.NodeBuilder;
+import org.junit.Before;
+import org.junit.BeforeClass;
 
-/**
- * @author dadoonet (David Pilato)
- */
 public abstract class AbstractRssRiverTest {
 
+	/**
+	 * Define a unique index name
+	 * @return The unique index name (could be this.getClass().getSimpleName())
+	 */
+	protected String indexName() {
+		return this.getClass().getSimpleName().toLowerCase();
+	}
+	
 	/**
 	 * Define a mapping if needed
 	 * @return The mapping to use
@@ -44,55 +35,80 @@ public abstract class AbstractRssRiverTest {
 	 */
 	abstract public XContentBuilder rssRiver() throws Exception;
 	
-	public void launchTest() throws Exception {
-		Node node = NodeBuilder
-				.nodeBuilder()
-				.settings(
-						ImmutableSettings.settingsBuilder()
-						.put("gateway.type", "local")
-						.put("path.data", "./target/es/data")		
-						.put("path.logs", "./target/es/logs")		
-						.put("path.work", "./target/es/work")		
-						).node();
-		
-		// We wait for one second to let ES start
-		Thread.sleep(1000);
-		try {
-			node.client().admin().indices()
-					.delete(new DeleteIndexRequest("_river")).actionGet();
-			// We wait for one second to let ES delete the river
-			Thread.sleep(1000);
-		} catch (IndexMissingException e) {
-			// Index does not exist... Fine
+	/**
+	 * Define the waiting time in seconds before launching a test
+	 * @return Waiting time (in seconds)
+	 */
+	abstract public long waitingTime() throws Exception;
+	
+	protected static Node node;
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		if (node == null) {
+			// First we delete old datas...
+			File dataDir = new File("./target/es/data");
+			if(dataDir.exists()) {
+				FileSystemUtils.deleteRecursively(dataDir, true);
+			}
+			
+			// Then we start our node for tests
+			node = NodeBuilder
+					.nodeBuilder()
+					.settings(
+							ImmutableSettings.settingsBuilder()
+							.put("gateway.type", "local")
+							.put("path.data", "./target/es/data")		
+							.put("path.logs", "./target/es/logs")		
+							.put("path.work", "./target/es/work")		
+							).node();
+			
+			// We wait now for the yellow (or green) status
+			node.client().admin().cluster().prepareHealth().setWaitForYellowStatus().execute().actionGet(); 
+			
+			// We clean existing rivers
+			try {
+				node.client().admin().indices()
+						.delete(new DeleteIndexRequest("_river")).actionGet();
+				// We wait for one second to let ES delete the river
+				Thread.sleep(1000);
+			} catch (IndexMissingException e) {
+				// Index does not exist... Fine
+			}
 		}
+	}
 
+	@Before
+	public void setUp() throws Exception {
+		// We delete the index before we start any test
 		try {
 			node.client().admin().indices()
-					.delete(new DeleteIndexRequest("rss")).actionGet();
+					.delete(new DeleteIndexRequest(indexName())).actionGet();
 			// We wait for one second to let ES delete the index
 			Thread.sleep(1000);
 		} catch (IndexMissingException e) {
 			// Index does not exist... Fine
 		}
-
+		
 		// Creating the index
-		node.client().admin().indices().create(new CreateIndexRequest("rss")).actionGet();
+		node.client().admin().indices().create(new CreateIndexRequest(indexName())).actionGet();
 		Thread.sleep(1000);
 
 		// If a mapping is defined, we will use it
 		if (mapping() != null) {
 			node.client().admin().indices()
-			.preparePutMapping("rss")
+			.preparePutMapping(indexName())
 			.setType("page")
 			.setSource(mapping())
 			.execute().actionGet();
 		}
 
 		if (rssRiver() == null) throw new Exception("Subclasses must provide an rss setup...");
-		node.client().prepareIndex("_river", "rss", "_meta").setSource(rssRiver())
+		node.client().prepareIndex("_river", indexName(), "_meta").setSource(rssRiver())
 				.execute().actionGet();
-
-		// Let's wait one hour 
-		Thread.sleep(1 * 60 * 60 * 1000);
+		
+		// Let's wait x seconds 
+		Thread.sleep(waitingTime() * 1000);
 	}
+
 }
