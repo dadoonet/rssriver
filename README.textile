@@ -65,8 +65,8 @@ If you need to get multiple feeds, you can add them :
 * Feed1 URL : http://www.lemonde.fr/rss/une.xml
 * Update Rate1 : every 15 minutes (15 * 60 * 1000 = 900000 ms)
 
-* Feed2 URL : http://www.lemonde.fr/rss/une.xml
-* Update Rate2 : every 30 minutes (30 * 60 * 1000 = 900000 ms)
+* Feed2 URL : http://rss.lefigaro.fr/lefigaro/laune
+* Update Rate2 : every 30 minutes (30 * 60 * 1000 = 1800000 ms)
 
 <pre>
 $ curl -XPUT 'localhost:9200/actus/' -d '{}'
