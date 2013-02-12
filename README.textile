@@ -21,7 +21,7 @@ h3. Installation
 Just type :
 
 <pre>
-$ bin\plugin -install dadoonet/rssriver/0.0.6
+$ bin/plugin -install rssriver -url http://cloud.github.com/downloads/dadoonet/rssriver/rssriver-0.0.6.zip
 </pre>
 
 This will do the job...
@@ -32,6 +32,13 @@ Trying https://github.com/downloads/dadoonet/rssriver/rssriver-0.0.6.zip...
 Downloading ...DONE
 Installed rssriver
 </pre>
+
+In a next version, RSS River will be sync'ed to Maven central so you will be able to do:
+
+<pre>
+$ bin/plugin -install dadoonet/rssriver/0.0.6
+</pre>
+
 
 h3. Creating a RSS river
 
