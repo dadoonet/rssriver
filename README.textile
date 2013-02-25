@@ -6,7 +6,7 @@ Welcome to the RSS River Plugin for "Elasticsearch":http://www.elasticsearch.org
 h2. Versions
 
 |_. RSS River Plugin|_. ElasticSearch|
-|  master (0.0.7)   |  master (0.19) |
+|  master (0.0.7)   |  master (0.21) |
 |     0.0.6         |    0.19.0.RC1  |
 |     0.0.5         |     0.18       |
 |     0.0.4         |     0.18       |

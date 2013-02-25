@@ -19,17 +19,11 @@
 
 package org.elasticsearch.river.rss;
 
-import static org.elasticsearch.client.Requests.indexRequest;
-import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
-import static org.elasticsearch.river.rss.RssToJson.toJson;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Map;
-
+import com.sun.syndication.feed.synd.SyndEntry;
+import com.sun.syndication.feed.synd.SyndFeed;
+import com.sun.syndication.io.FeedException;
+import com.sun.syndication.io.SyndFeedInput;
+import com.sun.syndication.io.XmlReader;
 import org.elasticsearch.ExceptionsHelper;
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.bulk.BulkResponse;
@@ -47,11 +41,16 @@ import org.elasticsearch.river.River;
 import org.elasticsearch.river.RiverName;
 import org.elasticsearch.river.RiverSettings;
 
-import com.sun.syndication.feed.synd.SyndEntry;
-import com.sun.syndication.feed.synd.SyndFeed;
-import com.sun.syndication.io.FeedException;
-import com.sun.syndication.io.SyndFeedInput;
-import com.sun.syndication.io.XmlReader;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Map;
+
+import static org.elasticsearch.client.Requests.indexRequest;
+import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
+import static org.elasticsearch.river.rss.RssToJson.toJson;
 
 /**
  * @author dadoonet (David Pilato)
@@ -241,7 +240,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
 
                                 // Let's look if object already exists
                                 GetResponse oldMessage = client.prepareGet(indexName, typeName, id).execute().actionGet();
-                                if (!oldMessage.exists()) {
+                                if (!oldMessage.isExists()) {
                                     bulk.add(indexRequest(indexName).type(typeName).id(id).source(toJson(message, riverName.getName(), feedname)));
 
                                     if (logger.isDebugEnabled()) logger.debug("FeedMessage update detected for source [{}]", feedname != null ? feedname : "undefined");
@@ -292,8 +291,8 @@ public class RssRiver extends AbstractRiverComponent implements River {
                 client.admin().indices().prepareRefresh("_river").execute().actionGet();
                 GetResponse lastSeqGetResponse =
                         client.prepareGet("_river", riverName().name(), lastupdateField).execute().actionGet();
-                if (lastSeqGetResponse.exists()) {
-                    Map<String, Object> rssState = (Map<String, Object>) lastSeqGetResponse.sourceAsMap().get("rss");
+                if (lastSeqGetResponse.isExists()) {
+                    Map<String, Object> rssState = (Map<String, Object>) lastSeqGetResponse.getSourceAsMap().get("rss");
 
                     if (rssState != null) {
                         Object lastupdate = rssState.get(lastupdateField);
