@@ -1,15 +1,44 @@
 <?xml version="1.0"?>
+<!-- Licensed to David Pilato (the "Author") under one or more contributor
+license agreements. See the NOTICE file distributed with this work for additional
+information regarding copyright ownership. Author licenses this file to you
+under the Apache License, Version 2.0 (the "License"); you may not use this
+file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+applicable law or agreed to in writing, software distributed under the License
+is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.elasticsearch.plugin</groupId>
+    <groupId>fr.pilato.elasticsearch.river</groupId>
 	<artifactId>rssriver</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.7-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<name>RSS River Plugin for ElasticSearch</name>
-	<url>https://github.com/dadoonet/rssriver</url>
-	
-	<properties>
-		<elasticsearch.version>0.21.0.Beta1-SNAPSHOT</elasticsearch.version>
+	<url>http://www.pilato.fr/rssriver</url>
+    <description>
+RSS River Plugin offers a simple way to index RSS feeds into Elasticsearch.
+See full documentation on Github: https://github.com/dadoonet/rssriver
+    </description>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <properties>
+		<elasticsearch.version>0.90.0.Beta1</elasticsearch.version>
 		
 		<!-- Some properties for github that you have to define in your settings.xml -->
 		<!-- 
@@ -23,7 +52,7 @@
 		<developer>
 			<id>dadoonet</id>
 			<name>David Pilato</name>
-			<email>david+github@pilato.fr</email>
+			<email>david@pilato.fr</email>
 			<url>http://dev.david.pilato.fr/</url>
 			<timezone>+1</timezone>
 		</developer>
@@ -54,12 +83,12 @@
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.16</version>
+            <version>1.2.17</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.11</version>
         </dependency>
         <dependency>
             <groupId>org.elasticsearch</groupId>
@@ -78,39 +107,30 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.8</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<phase>pre-site</phase>
-					</execution>
-				</executions>
+				<version>2.9</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>2.1.2</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>jar-no-fork</goal>
-						</goals>
-						<phase>pre-site</phase>
-					</execution>
-				</executions>
+				<version>2.2.1</version>
 			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-				<version>3.0</version>
-			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-changes-plugin</artifactId>
-				<version>2.6</version>
+				<version>2.8</version>
+
+                <configuration>
+                    <smtpHost>smtp.free.fr</smtpHost>
+                    <smtpPort implementation="java.lang.Integer">25</smtpPort>
+                    <fromDeveloperId>dadoonet</fromDeveloperId>
+                    <toAddresses>
+                        <toAddress implementation="java.lang.String">elasticsearch@googlegroups.com</toAddress>
+                        <toAddress implementation="java.lang.String">elasticsearch-fr@googlegroups.com</toAddress>
+                    </toAddresses>
+                    <template>es-announcement.vm</template>
+                    <templateDirectory>changes</templateDirectory>
+                </configuration>
 			</plugin>
       		<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -121,14 +141,14 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>2.4</version>
 			</plugin>
 			<!-- Copy dependencies into lib folder -->
 			<!-- To see full classpath use  mvn dependency:build-classpath -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.3</version>
+				<version>2.6</version>
 				<executions>
 					<execution>
 						<id>copy-dependencies</id>
@@ -146,7 +166,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.10</version>
+				<version>2.13</version>
 				<configuration>
 					<skipTests>true</skipTests>
 					<additionalClasspathElements>
@@ -159,7 +179,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.3</version>
+				<version>2.4</version>
 				<configuration>
 					<appendAssemblyId>false</appendAssemblyId>
 					<outputDirectory>${project.build.directory}/release/</outputDirectory>
@@ -180,7 +200,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.0</version>
 		        <configuration>
 					<source>1.6</source>
 					<target>1.6</target>
@@ -198,68 +218,4 @@
 		</resources>
 	</build>
 
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changes-plugin</artifactId>
-				<version>2.6</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>changes-report</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changelog-plugin</artifactId>
-				<version>2.2</version>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.8</version>
-			</plugin>			
-
-		</plugins>
-	</reporting>
-
-	<repositories>
-		<repository>
-			<id>sonatype</id>
-			<name>Sonatype Groups</name>
-			<url>https://oss.sonatype.org/content/groups/public/</url>
-		</repository>
-	</repositories>
-	
-	<pluginRepositories>
-	    <pluginRepository>
-	      <id>central</id>
-	      <name>Maven Plugin Repository</name>
-	      <url>http://repo1.maven.org/maven2</url>
-	    </pluginRepository>
-		<pluginRepository>
-			<id>sonatype</id>
-			<name>Sonatype Groups</name>
-			<url>https://oss.sonatype.org/content/groups/public/</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>oss-sonatype-snapshots</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-		</pluginRepository>
-	</pluginRepositories>
-
-	<!-- Just to make deploy not fail ! -->	
-	<distributionManagement>
-		<repository>
-			<id>local-tmp-repo</id>
-			<name>Local Temporary Reposioty</name>
-			<url>file:///tmp/local_tmp_repo/</url>
-		</repository>
-	</distributionManagement>
-	
 </project>

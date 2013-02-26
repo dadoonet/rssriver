@@ -3,7 +3,19 @@
           xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
 
 	<body>
-		<release date="2012-02-07" description="[Breaking change] Update to ES 0.19.0.RC1" version="0.0.6">
+        <release date="2013-02-26" description="Move to ES 0.90 and TTL" version="0.1.0">
+            <action issue="8" dev="dadoonet" type="add">
+                Use the ttl rss field to auto adjust feed refresh rate.
+            </action>
+            <action issue="9" dev="dadoonet" type="update">
+                Use JUnit tests instead of main() tests.
+            </action>
+            <action issue="12" dev="dadoonet" type="update">
+                Move to Elasticsearch 0.90.0.Beta1.
+            </action>
+        </release>
+
+        <release date="2012-02-07" description="[Breaking change] Update to ES 0.19.0.RC1" version="0.0.6">
 			<action issue="7" dev="dadoonet" type="update">
 				Update to Elasticsearch 0.19.0.RC1.
 			</action>
