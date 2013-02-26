@@ -44,8 +44,36 @@
 		<system>GitHub</system>
 		<url>https://github.com/dadoonet/rssriver/issues/</url>
 	</issueManagement>
-	
-	<build>
+
+    <dependencies>
+        <dependency>
+            <groupId>rome</groupId>
+            <artifactId>rome</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geonames</groupId>
+            <artifactId>georss-rome</artifactId>
+            <version>0.9.8</version>
+        </dependency>
+    </dependencies>
+
+    <build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -199,34 +227,6 @@
 
 		</plugins>
 	</reporting>
-  
-	<dependencies>
-		<dependency>
-			<groupId>rome</groupId>
-			<artifactId>rome</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.16</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.10</version>
-		</dependency>
-		<dependency>
-			<groupId>org.elasticsearch</groupId>
-			<artifactId>elasticsearch</artifactId>
-			<version>${elasticsearch.version}</version>
-		</dependency>
-        <dependency>
-            <groupId>org.geonames</groupId>
-            <artifactId>georss-rome</artifactId>
-            <version>0.9.8</version>
-        </dependency>
-	</dependencies>
 
 	<repositories>
 		<repository>

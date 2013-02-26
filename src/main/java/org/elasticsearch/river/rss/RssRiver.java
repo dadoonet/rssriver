@@ -19,6 +19,7 @@
 
 package org.elasticsearch.river.rss;
 
+import com.sun.syndication.feed.rss.Channel;
 import com.sun.syndication.feed.synd.SyndEntry;
 import com.sun.syndication.feed.synd.SyndFeed;
 import com.sun.syndication.io.FeedException;
@@ -88,7 +89,8 @@ public class RssRiver extends AbstractRiverComponent implements River {
 					String feedname = XContentMapValues.nodeStringValue(feed.get("name"), null);
 					String url = XContentMapValues.nodeStringValue(feed.get("url"), null);
 					int updateRate  = XContentMapValues.nodeIntegerValue(feed.get("update_rate"), 15 * 60 * 1000);
-					feedsDefinition.add(new RssRiverFeedDefinition(feedname, url, updateRate));
+                    boolean ignoreTtl = XContentMapValues.nodeBooleanValue(feed.get("ignore_ttl"), false);
+					feedsDefinition.add(new RssRiverFeedDefinition(feedname, url, updateRate, ignoreTtl));
 				}
 				
 			} else {
@@ -96,9 +98,10 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				logger.warn("See https://github.com/dadoonet/rssriver/issues/6 for more details...");
 				String url = XContentMapValues.nodeStringValue(rssSettings.get("url"), null);
 				int updateRate  = XContentMapValues.nodeIntegerValue(rssSettings.get("update_rate"), 15 * 60 * 1000);
-				
+                boolean ignoreTtl = XContentMapValues.nodeBooleanValue("ignore_ttl", false);
+
 				feedsDefinition = new ArrayList<RssRiverFeedDefinition>(1);
-				feedsDefinition.add(new RssRiverFeedDefinition(null, url, updateRate));
+				feedsDefinition.add(new RssRiverFeedDefinition(null, url, updateRate, ignoreTtl));
 			}
 			
 		} else {
@@ -106,7 +109,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
 			logger.warn("You didn't define the rss url. Switching to defaults : [{}]", url);
 			int updateRate = 15 * 60 * 1000;
 			feedsDefinition = new ArrayList<RssRiverFeedDefinition>(1);
-			feedsDefinition.add(new RssRiverFeedDefinition("lemonde", url, updateRate));
+			feedsDefinition.add(new RssRiverFeedDefinition("lemonde", url, updateRate, false));
 		}
 
 		
@@ -149,8 +152,8 @@ public class RssRiver extends AbstractRiverComponent implements River {
 		threads = new ArrayList<Thread>(feedsDefinition.size());
 		int threadNumber = 0;
 		for (RssRiverFeedDefinition feedDefinition : feedsDefinition) {
-			Thread thread = EsExecutors.daemonThreadFactory(settings.globalSettings(),
-					"rss_slurper_" + threadNumber).newThread(new RSSParser(feedDefinition.getFeedname(), feedDefinition.getUrl(), feedDefinition.getUpdateRate()));
+			Thread thread = EsExecutors.daemonThreadFactory(settings.globalSettings(), "rss_slurper_" + threadNumber)
+                    .newThread(new RSSParser(feedDefinition));
 			thread.start();
 			threads.add(thread);
 			threadNumber++;
@@ -177,6 +180,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
 		try {
 			URL feedUrl = new URL(url);
 			SyndFeedInput input = new SyndFeedInput();
+            input.setPreserveWireFeed(true);
 			SyndFeed feed = input.build(new XmlReader(feedUrl));
 			return feed;
 		} catch (MalformedURLException e) {
@@ -196,15 +200,25 @@ public class RssRiver extends AbstractRiverComponent implements River {
 		private String url;
 		private int updateRate;
 		private String feedname;
-		
-		public RSSParser(String feedname, String url, int updateRate) {
-			if (logger.isInfoEnabled()) logger.info("creating rss stream river [{}] for [{}] every [{}] ms", feedname, url, updateRate);
+        private boolean ignoreTtl;
+
+        public RSSParser(String feedname, String url, int updateRate, boolean ignoreTtl) {
 			this.feedname = feedname;
 			this.url = url;
 			this.updateRate = updateRate;
+            this.ignoreTtl = ignoreTtl;
+            if (logger.isInfoEnabled()) logger.info("creating rss stream river [{}] for [{}] every [{}] ms",
+                    feedname, url, updateRate);
 		}
-		
-		@SuppressWarnings("unchecked")
+
+        public RSSParser(RssRiverFeedDefinition feedDefinition) {
+            this(feedDefinition.getFeedname(),
+                    feedDefinition.getUrl(),
+                    feedDefinition.getUpdateRate(),
+                    feedDefinition.isIgnoreTtl());
+        }
+
+        @SuppressWarnings("unchecked")
 		@Override
 		public void run() {
             while (true) {
@@ -276,6 +290,19 @@ public class RssRiver extends AbstractRiverComponent implements River {
                     }
                 }
 				try {
+                    // #8 : Use the ttl rss field to auto adjust feed refresh rate
+                    if (!ignoreTtl && feed.originalWireFeed() != null && feed.originalWireFeed() instanceof Channel) {
+                        Channel channel = (Channel) feed.originalWireFeed();
+                        if (channel.getTtl() > 0) {
+                            int ms = channel.getTtl() * 60 * 1000;
+                            if (ms != updateRate) {
+                                updateRate = ms;
+                                if (logger.isInfoEnabled())
+                                    logger.info("Auto adjusting update rate with provided ttl: {} mn", channel.getTtl());
+                            }
+                        }
+                    }
+
 					if (logger.isDebugEnabled()) logger.debug("Rss river is going to sleep for {} ms", updateRate);
 					Thread.sleep(updateRate);
 				} catch (InterruptedException e1) {

@@ -9,14 +9,16 @@ public class RssRiverFeedDefinition {
 	private String feedname;
 	private String url;
 	private int updateRate;
+    private boolean ignoreTtl = false;
 	
 	public RssRiverFeedDefinition() {
 	}
 	
-	public RssRiverFeedDefinition(String feedname, String url, int updateRate) {
+	public RssRiverFeedDefinition(String feedname, String url, int updateRate, boolean ignoreTtl) {
 		this.feedname = feedname;
 		this.url = url;
 		this.updateRate = updateRate;
+        this.ignoreTtl = ignoreTtl;
 	}
 	
 	public String getFeedname() {
@@ -42,4 +44,12 @@ public class RssRiverFeedDefinition {
 	public void setUpdateRate(int updateRate) {
 		this.updateRate = updateRate;
 	}
+
+    public boolean isIgnoreTtl() {
+        return ignoreTtl;
+    }
+
+    public void setIgnoreTtl(boolean ignoreTtl) {
+        this.ignoreTtl = ignoreTtl;
+    }
 }
