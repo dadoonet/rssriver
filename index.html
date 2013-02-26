@@ -79,9 +79,9 @@ title_in_header: false
             </ul>
             <pre class="prettyprint lang-bsh">
             
-$ bin\plugin -install dadoonet/rssriver/0.0.6
+$ bin/plugin -install fr.pilato.elasticsearch.river/rssriver/0.1.0
 
-$ bin\elasticsearch
+$ bin/elasticsearch
 
 $ curl -XPUT 'http://localhost:9200/lefigaro/' -d '{}'
 
@@ -101,8 +101,7 @@ $ curl -XPUT 'localhost:9200/_river/lefigaro/_meta' -d '{
   "rss": {
     "feeds" : [ {
     	"name": "lefigaro",
-    	"url": "http://rss.lefigaro.fr/lefigaro/laune",
-    	"update_rate": 900000
+    	"url": "http://rss.lefigaro.fr/lefigaro/laune"
     	}
     ]
   }
@@ -121,18 +120,35 @@ $ curl -XPUT 'localhost:9200/_river/newspapers/_meta' -d '{
   "rss": {
     "feeds" : [ {
     	"name": "lefigaro",
-    	"url": "http://rss.lefigaro.fr/lefigaro/laune",
-    	"update_rate": 900000
+    	"url": "http://rss.lefigaro.fr/lefigaro/laune"
     	}, {
     	"name": "lemonde",
-    	"url": "http://www.lemonde.fr/rss/une.xml",
-    	"update_rate": 300000
+    	"url": "http://www.lemonde.fr/rss/une.xml"
     	}
     ]
   }
 }'
 </pre>
 
+<p>By default, <pre>update_rate</pre> (default to 15 minutes) will be replaced by the RSS ttl value if any.
+If you need to force updates, you can use the <pre>ignore_ttl</pre> field.</p>
+
+<pre class="prettyprint lang-bsh">
+$ curl -XPUT 'http://localhost:9200/newspapers/' -d '{}'
+
+$ curl -XPUT 'localhost:9200/_river/newspapers/_meta' -d '{
+  "type": "rss",
+  "rss": {
+    "feeds" : [ {
+    	"name": "lefigaro",
+    	"url": "http://rss.lefigaro.fr/lefigaro/laune",
+    	"update_rate": 900000,
+        "ignore_ttl": true
+    	}
+    ]
+  }
+}'
+</pre>
 
         </div>
     </div>
