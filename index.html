@@ -130,8 +130,8 @@ $ curl -XPUT 'localhost:9200/_river/newspapers/_meta' -d '{
 }'
 </pre>
 
-<p>By default, <pre>update_rate</pre> (default to 15 minutes) will be replaced by the RSS ttl value if any.
-If you need to force updates, you can use the <pre>ignore_ttl</pre> field.</p>
+<p>By default, <code>update_rate</code> (default to 15 minutes) will be replaced by the RSS ttl value if any.
+If you need to force updates, you can use the <code>ignore_ttl</code> field.</p>
 
 <pre class="prettyprint lang-bsh">
 $ curl -XPUT 'http://localhost:9200/newspapers/' -d '{}'
