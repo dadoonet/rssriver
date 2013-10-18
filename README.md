@@ -16,7 +16,11 @@ Versions
 	</thead>
 	<tbody>
 		<tr>
-			<td>master (0.2.0)</td>
+			<td>0.3.0-SNAPSHOT (master)</td>
+			<td>0.90.4</td>
+		</tr>
+		<tr>
+			<td>0.2.0</td>
 			<td>0.90.4</td>
 		</tr>
 		<tr>
@@ -63,16 +67,16 @@ Installation
 Just type :
 
 ```sh
-$ bin/plugin -install fr.pilato.elasticsearch.river/rssriver/0.1.0
+$ bin/plugin -install fr.pilato.elasticsearch.river/rssriver/0.2.0
 ```
 
 This will do the job...
 
 ```
--> Installing fr.pilato.elasticsearch.river/rssriver/0.1.0...
-Trying http://download.elasticsearch.org/fr.pilato.elasticsearch.river/rssriver/rssriver-0.1.0.zip...
-Trying http://search.maven.org/remotecontent?filepath=fr/pilato/elasticsearch/rssriver/rssriver/0.1.0/fsriver-0.1.0.zip...
-Trying https://oss.sonatype.org/service/local/repositories/releases/content/fr/pilato/elasticsearch/river/rssriver/0.1.0/rssriver-0.1.0.zip...
+-> Installing fr.pilato.elasticsearch.river/rssriver/0.2.0...
+Trying http://download.elasticsearch.org/fr.pilato.elasticsearch.river/rssriver/rssriver-0.2.0.zip...
+Trying http://search.maven.org/remotecontent?filepath=fr/pilato/elasticsearch/rssriver/rssriver/0.2.0/fsriver-0.2.0.zip...
+Trying https://oss.sonatype.org/service/local/repositories/releases/content/fr/pilato/elasticsearch/river/rssriver/0.2.0/rssriver-0.2.0.zip...
 Downloading ......DONE
 Installed rssriver
 ```
