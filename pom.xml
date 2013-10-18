@@ -38,7 +38,7 @@ See full documentation on Github: https://github.com/dadoonet/rssriver
     </licenses>
 
     <properties>
-		<elasticsearch.version>0.90.0.Beta1</elasticsearch.version>
+		<elasticsearch.version>0.90.5</elasticsearch.version>
 		
 		<!-- Some properties for github that you have to define in your settings.xml -->
 		<!-- 

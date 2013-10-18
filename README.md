@@ -17,11 +17,11 @@ Versions
 	<tbody>
 		<tr>
 			<td>master (0.2.0)</td>
-			<td>0.90</td>
+			<td>0.90.4</td>
 		</tr>
 		<tr>
 			<td>0.1.0</td>
-			<td>0.90</td>
+			<td>0.90.0-0.90.3</td>
 		</tr>
 		<tr>
 			<td>0.0.6</td>
