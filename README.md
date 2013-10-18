@@ -247,7 +247,7 @@ Then, for each `<item>` tag, RSS river creates a new document within `page` type
     </tbody>
 </table>
 
-`ID` is generated from description using the [UUID](https://github.com/elasticsearch/elasticsearch/blob/master/modules/elasticsearch/src/main/java/org/elasticsearch/common/UUID.java) generator. So, each message is indexed only once.
+`ID` is generated from description using the [UUID](http://docs.oracle.com/javase/7/docs/api/java/util/UUID.html) generator. So, each message is indexed only once.
 
 Read [RSS 2.0 Specification](http://www.rssboard.org/rss-specification) for more details about RSS channels.
 
