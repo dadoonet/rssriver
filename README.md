@@ -174,6 +174,26 @@ If you don't define an explicit mapping before starting RSS river, one will be c
       },
       "location" : {
         "type" : "geo_point"
+      },
+      "categories" : {
+        "type" : "string",
+        "index" : "not_analyzed"
+      },
+      "enclosures" : {
+        "properties" : {
+          "url" : {
+            "type" : "string",
+            "index" : "no"
+          },
+          "type" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "length" : {
+            "type" : "long",
+            "index" : "no"
+          }
+        }
       }
     }
   }
@@ -245,15 +265,19 @@ RSS river downloads RSS feed every `update_rate` milliseconds and check if there
 At first, RSS river look at the `<channel>` tag.
 It reads the optional `<pubDate>` tag and store it in Elastic Search to compare it on next launch.
 
-Then, for each `<item>` tag, RSS river creates a new document within `page` type with the following properties :
+Then, for each `<item>` tag, RSS river creates a new document with the following properties :
 
-|      XML Tag             | ES Mapping  |
-|--------------------------|-------------|
-| `<title>`                | title       |
-| `<description>`          | description |
-| `<author>`               | author      |
-| `<link>`                 | link        |
-| `<geo:lat>` `<geo:long>` | location    |
+|         XML Path         |     ES Mapping    |
+|--------------------------|-------------------|
+| `/title`                 | title             |
+| `/description`           | description       |
+| `/author`                | author            |
+| `/link`                  | link              |
+| `/category`              | category          |
+| `/geo:lat` `/geo:long`   | location          |
+| `/enclosures[@url]`      | enclosures.url    |
+| `/enclosures[@type]`     | enclosures.type   |
+| `/enclosures[@length]`   | enclosures.length |
 
 `ID` is generated from description using the [UUID](http://docs.oracle.com/javase/7/docs/api/java/util/UUID.html) generator. So, each message is indexed only once.
 

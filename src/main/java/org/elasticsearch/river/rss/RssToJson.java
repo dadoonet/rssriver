@@ -22,6 +22,8 @@ package org.elasticsearch.river.rss;
 import com.sun.syndication.feed.module.georss.GeoRSSModule;
 import com.sun.syndication.feed.module.georss.GeoRSSUtils;
 import com.sun.syndication.feed.module.georss.geometries.Position;
+import com.sun.syndication.feed.synd.SyndCategory;
+import com.sun.syndication.feed.synd.SyndEnclosure;
 import com.sun.syndication.feed.synd.SyndEntry;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 
@@ -38,11 +40,19 @@ public class RssToJson {
         public static final String LINK = "link";
         public static final String PUBLISHED_DATE = "publishedDate";
         public static final String SOURCE = "source";
+        public static final String CATEGORIES = "categories";
 
         public static final String LOCATION = "location";
         static public final class Location {
             public static final String LAT = "lat";
             public static final String LON = "lon";
+        }
+
+        public static final String ENCLOSURES = "enclosures";
+        static public final class Enclosures {
+            public static final String URL = "url";
+            public static final String TYPE = "type";
+            public static final String LENGTH = "length";
         }
     }
 
@@ -68,6 +78,32 @@ public class RssToJson {
             }
         }
 
+        if (message.getCategories() != null && message.getCategories().size() > 0) {
+            out.startArray(Rss.CATEGORIES);
+            for (Object oCategory : message.getCategories()) {
+                if (oCategory instanceof SyndCategory) {
+                    SyndCategory category = (SyndCategory) oCategory;
+                    out.value(category.getName());
+                }
+            }
+            out.endArray();
+        }
+
+        if (message.getEnclosures() != null && message.getEnclosures().size() > 0) {
+            out.startArray(Rss.ENCLOSURES);
+            for (Object oEnclosure : message.getEnclosures()) {
+                if (oEnclosure instanceof SyndEnclosure) {
+                    out.startObject();
+                    SyndEnclosure enclosure = (SyndEnclosure) oEnclosure;
+                    out.field(Rss.Enclosures.URL, enclosure.getUrl());
+                    out.field(Rss.Enclosures.TYPE, enclosure.getType());
+                    out.field(Rss.Enclosures.LENGTH, enclosure.getLength());
+                    out.endObject();
+                }
+            }
+            out.endArray();
+        }
+
         if (riverName != null) {
             out.field("river", riverName);
         }
@@ -89,7 +125,7 @@ public class RssToJson {
 
         xbMapping.startObject("properties");
 
-        // Doc content
+        // feed document
         addNotAnalyzedString(xbMapping, Rss.FEEDNAME);
         addAnalyzedString(xbMapping, Rss.TITLE);
         addAnalyzedString(xbMapping, Rss.AUTHOR);
@@ -98,6 +134,14 @@ public class RssToJson {
         addAnalyzedString(xbMapping, Rss.SOURCE);
         addDate(xbMapping, Rss.PUBLISHED_DATE);
         addGeopoint(xbMapping, Rss.LOCATION);
+        addNotAnalyzedString(xbMapping, Rss.CATEGORIES);
+
+        // Enclosures
+        xbMapping.startObject(Rss.ENCLOSURES).startObject("properties");
+        addNotIndexedString(xbMapping, Rss.Enclosures.URL);
+        addNotAnalyzedString(xbMapping, Rss.Enclosures.TYPE);
+        addNotIndexedLong(xbMapping, Rss.Enclosures.LENGTH);
+        xbMapping.endObject().endObject(); // End Enclosures
 
         xbMapping.endObject().endObject().endObject(); // End Type
         return xbMapping;
@@ -119,6 +163,13 @@ public class RssToJson {
     private static void addNotIndexedString(XContentBuilder xcb, String fieldName) throws IOException {
         xcb.startObject(fieldName)
                 .field("type", "string")
+                .field("index", "no")
+                .endObject();
+    }
+
+    private static void addNotIndexedLong(XContentBuilder xcb, String fieldName) throws IOException {
+        xcb.startObject(fieldName)
+                .field("type", "long")
                 .field("index", "no")
                 .endObject();
     }

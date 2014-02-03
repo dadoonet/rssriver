@@ -4,6 +4,9 @@
 
 	<body>
         <release date="2014-02-03" description="Update for elasticsearch 1.0.0" version="1.0.0.RC1">
+            <action issue="16" dev="dadoonet" type="update" due-to="LeStef">
+                Support enclosure and category tags.
+            </action>
             <action issue="21" dev="dadoonet" type="update">
                 Use BulkProcessor feature.
             </action>
