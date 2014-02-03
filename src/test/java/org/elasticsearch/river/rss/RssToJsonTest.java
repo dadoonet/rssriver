@@ -30,11 +30,12 @@ import org.junit.Test;
 import java.io.IOException;
 
 import static org.elasticsearch.river.rss.RssToJson.toJson;
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.*;
 
 public class RssToJsonTest {
 
-    public static final String JSON = "{\"feedname\":null,\"title\":\"title\",\"author\":\"\",\"description\":\"desc\",\"link\":\"http://link.com/abc\",\"publishedDate\":\"2011-11-10T06:29:02.000Z\",\"source\":null,\"location\":{\"lon\":12.4839019775391,\"lat\":41.8947384616695}}";
+    public static final String JSON = "{\"feedname\":null,\"title\":\"title\",\"author\":\"\",\"description\":\"desc\",\"link\":\"http://link.com/abc\",\"publishedDate\":\"2011-11-10T06:29:02.000Z\",\"source\":null,\"location\":{\"lat\":41.8947384616695,\"lon\":12.4839019775391}}";
 
     @Test /* this test should be moved somewhere else */
 	public void shouldParseRss() throws Exception {
@@ -60,6 +61,12 @@ public class RssToJsonTest {
         SyndFeedInput input = new SyndFeedInput();
         SyndFeed feed = input.build(new XmlReader(getClass().getResource("/rss.xml")));
         return (SyndEntryImpl) feed.getEntries().get(0);
+    }
+
+    @Test
+    public void mappingShouldNotfail() throws Exception {
+        XContentBuilder page = RssToJson.buildRssMapping("page");
+        assertThat(page, notNullValue());
     }
 
 }

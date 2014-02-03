@@ -4,6 +4,9 @@
 
 	<body>
         <release date="2014-02-03" description="Update for elasticsearch 1.0.0" version="1.0.0.RC1">
+            <action issue="20" dev="dadoonet" type="update">
+                Define a default mapping for RSS documents.
+            </action>
             <action issue="19" dev="dadoonet" type="update">
                 Update Rome to new official repository.
             </action>

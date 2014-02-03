@@ -26,43 +26,114 @@ import com.sun.syndication.feed.synd.SyndEntry;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 public class RssToJson {
+    static public final class Rss {
+        public static final String FEEDNAME = "feedname";
+        public static final String AUTHOR = "author";
+        public static final String TITLE = "title";
+        public static final String DESCRIPTION = "description";
+        public static final String LINK = "link";
+        public static final String PUBLISHED_DATE = "publishedDate";
+        public static final String SOURCE = "source";
+
+        public static final String LOCATION = "location";
+        static public final class Location {
+            public static final String LAT = "lat";
+            public static final String LON = "lon";
+        }
+    }
+
 	public static XContentBuilder toJson(SyndEntry message, String riverName, String feedname) throws IOException {
         XContentBuilder out = jsonBuilder()
 	    	.startObject()
-	    		.field("feedname", feedname)
-	    		.field("title", message.getTitle())
-	    		.field("author", message.getAuthor())
-	    		.field("description", message.getDescription() != null ? message.getDescription().getValue() : null)
-	    		.field("link", message.getLink())
-	    		.field("publishedDate", message.getPublishedDate())
-	    		.field("source", message.getSource());
+	    		.field(Rss.FEEDNAME, feedname)
+	    		.field(Rss.TITLE, message.getTitle())
+	    		.field(Rss.AUTHOR, message.getAuthor())
+	    		.field(Rss.DESCRIPTION, message.getDescription() != null ? message.getDescription().getValue() : null)
+	    		.field(Rss.LINK, message.getLink())
+	    		.field(Rss.PUBLISHED_DATE, message.getPublishedDate())
+	    		.field(Rss.SOURCE, message.getSource());
 
-        final Map<String, Object> latitude = getPosition(message);
-        if (latitude.size() > 0) {
-            out.field("location", latitude);
-        }
-        if (riverName != null) {
-            out.field("river", riverName);
-        }
-        return out.endObject();
-	}
-
-    private static Map<String, Object> getPosition(SyndEntry message) {
         GeoRSSModule geoRSSModule = GeoRSSUtils.getGeoRSS(message);
-        final Map<String, Object> latitude = new HashMap<String, Object>();
         if (geoRSSModule != null) {
             final Position position = geoRSSModule.getPosition();
             if (position != null) {
-                latitude.put("lat", position.getLatitude());
-                latitude.put("lon", position.getLongitude());
+                out.startObject(Rss.LOCATION);
+                out.field(Rss.Location.LAT, position.getLatitude());
+                out.field(Rss.Location.LON, position.getLongitude());
+                out.endObject();
             }
         }
-        return latitude;
+
+        if (riverName != null) {
+            out.field("river", riverName);
+        }
+
+        return out.endObject();
+	}
+
+    /**
+     * Build the mapping for RSS content
+     * @param type elasticsearch type you will use
+     * @return a mapping
+     * @throws Exception
+     */
+    public static XContentBuilder buildRssMapping(String type) throws Exception {
+        XContentBuilder xbMapping = jsonBuilder().prettyPrint().startObject();
+
+        // Type
+        xbMapping.startObject(type);
+
+        xbMapping.startObject("properties");
+
+        // Doc content
+        addNotAnalyzedString(xbMapping, Rss.FEEDNAME);
+        addAnalyzedString(xbMapping, Rss.TITLE);
+        addAnalyzedString(xbMapping, Rss.AUTHOR);
+        addAnalyzedString(xbMapping, Rss.DESCRIPTION);
+        addNotIndexedString(xbMapping, Rss.LINK);
+        addAnalyzedString(xbMapping, Rss.SOURCE);
+        addDate(xbMapping, Rss.PUBLISHED_DATE);
+        addGeopoint(xbMapping, Rss.LOCATION);
+
+        xbMapping.endObject().endObject().endObject(); // End Type
+        return xbMapping;
+    }
+
+    private static void addAnalyzedString(XContentBuilder xcb, String fieldName) throws IOException {
+        xcb.startObject(fieldName)
+                .field("type", "string")
+                .endObject();
+    }
+
+    private static void addNotAnalyzedString(XContentBuilder xcb, String fieldName) throws IOException {
+        xcb.startObject(fieldName)
+                .field("type", "string")
+                .field("index", "not_analyzed")
+                .endObject();
+    }
+
+    private static void addNotIndexedString(XContentBuilder xcb, String fieldName) throws IOException {
+        xcb.startObject(fieldName)
+                .field("type", "string")
+                .field("index", "no")
+                .endObject();
+    }
+
+    private static void addDate(XContentBuilder xcb, String fieldName) throws IOException {
+        xcb.startObject(fieldName)
+                .field("type", "date")
+                .field("format", "dateOptionalTime")
+                .field("store", "yes")
+                .endObject();
+    }
+
+    private static void addGeopoint(XContentBuilder xcb, String fieldName) throws IOException {
+        xcb.startObject(fieldName)
+                .field("type", "geo_point")
+                .endObject();
     }
 }
