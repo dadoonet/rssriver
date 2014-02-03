@@ -290,6 +290,6 @@ Many many things to do :
 
 * As `<pubDate>` tag is optional, we have to check if RSS River is working in that case and parse each feed message
 * Support more RSS `<channel>` sub-elements, such as `<category>`, `<skipDays>`, `<skipHours>`
-* Support more RSS `<item>` sub-elements, such as `<category>`, `<enclosure>`, `<pubDate>`
+* Support more RSS `<item>` sub-elements, such as `<pubDate>`
 * Support for multi-channel (one per language for instance)
 * Use `<guid>` as the text to encode to generate `ID`
