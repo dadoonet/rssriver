@@ -3,6 +3,12 @@
           xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
 
 	<body>
+        <release date="2014-02-03" description="Update for elasticsearch 1.0.0" version="1.0.0.RC1">
+            <action issue="18" dev="dadoonet" type="update">
+                Update to elasticsearch 1.0.0.RC1. Test infra moved as well to elasticsearch test framework.
+            </action>
+        </release>
+
         <release date="2013-10-18" description="Move to ES 0.90.5" version="0.2.0">
             <action issue="15" dev="dadoonet" type="update">
                 Upgrade to elasticsearch 0.90.5.

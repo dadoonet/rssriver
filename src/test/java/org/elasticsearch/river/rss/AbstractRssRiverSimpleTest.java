@@ -22,43 +22,52 @@ package org.elasticsearch.river.rss;
 import org.elasticsearch.action.count.CountResponse;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.common.base.Predicate;
 import org.elasticsearch.common.xcontent.support.XContentMapValues;
 import org.elasticsearch.index.query.QueryBuilders;
-import org.junit.Assert;
+import org.elasticsearch.river.RiverIndexName;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertTrue;
+import static org.hamcrest.Matchers.equalTo;
 
 
 public abstract class AbstractRssRiverSimpleTest extends AbstractRssRiverTest {
 
-	/**
-	 * We wait for 5 seconds before each test
-	 */
-	@Override
-	public long waitingTime() throws Exception {
-		return 5;
-	}
+	protected void searchTestHelper(final String feedname) throws InterruptedException {
+        // Make sure that everything is committed before testing.
+        refresh();
 
-	protected void searchTestHelper(String feedname) {
-		// Let's search for entries for darkreading
-		SearchResponse searchResponse = node.client().prepareSearch(indexName())
-				.setQuery(QueryBuilders.fieldQuery("feedname", feedname)).execute().actionGet();
-		Assert.assertTrue("We should have at least one doc for " + feedname + "...", searchResponse.getHits().getTotalHits() > 1);
+        // Let's search for entries for darkreading
+        logger.info("-->  checking that we have at least some docs in {}", indexName());
+        assertThat(awaitBusy(new Predicate<Object>() {
+            public boolean apply(Object obj) {
+                SearchResponse searchResponse = client().prepareSearch(indexName())
+                        .setQuery(QueryBuilders.queryString(feedname).defaultField("feedname")).execute().actionGet();
+                return searchResponse.getHits().getTotalHits() > 1;
+            }
+        }, 5, TimeUnit.SECONDS), equalTo(true));
 	}
 	
 	public void countTestHelper() throws Exception {
+        // Make sure that everything is committed before testing.
+        refresh();
+
 		// Let's search for entries
-		CountResponse response = node.client().prepareCount(indexName())
-				.setQuery(QueryBuilders.matchAllQuery()).execute().actionGet();
-		Assert.assertTrue("We should have at least one doc...", response.getCount() > 1);
+        logger.info("-->  checking that we have at least some docs in {}", indexName());
+        assertThat(awaitBusy(new Predicate<Object>() {
+            public boolean apply(Object obj) {
+                CountResponse response = client().prepareCount(indexName())
+                        .setQuery(QueryBuilders.matchAllQuery()).execute().actionGet();
+                return response.getCount() > 1;
+            }
+        }, 5, TimeUnit.SECONDS), equalTo(true));
 	}
 
     public void checkUpdateRateHelper(int expectedRate, boolean equals) {
-        GetResponse getResponse = node.client().prepareGet("_river", indexName(), "_meta").execute().actionGet();
+        GetResponse getResponse = client().prepareGet(RiverIndexName.Conf.DEFAULT_INDEX_NAME, indexName(), "_meta").execute().actionGet();
         Map<String, Object> source = getResponse.getSourceAsMap();
 
         boolean array = XContentMapValues.isArray(source.get("rss.feeds"));
