@@ -26,14 +26,19 @@ import com.sun.syndication.io.FeedException;
 import com.sun.syndication.io.SyndFeedInput;
 import com.sun.syndication.io.XmlReader;
 import org.elasticsearch.ExceptionsHelper;
+import org.elasticsearch.action.admin.indices.mapping.put.PutMappingResponse;
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.Client;
+import org.elasticsearch.cluster.ClusterState;
 import org.elasticsearch.cluster.block.ClusterBlockException;
+import org.elasticsearch.cluster.metadata.IndexMetaData;
+import org.elasticsearch.cluster.metadata.MappingMetaData;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.joda.time.format.ISODateTimeFormat;
 import org.elasticsearch.common.util.concurrent.EsExecutors;
+import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.support.XContentMapValues;
 import org.elasticsearch.indices.IndexAlreadyExistsException;
 import org.elasticsearch.river.AbstractRiverComponent;
@@ -147,8 +152,16 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				return;
 			}
 		}
-		
-		// We create as many Threads as there are feeds
+
+        try {
+            pushMapping(indexName, typeName, RssToJson.buildRssMapping(typeName));
+        } catch (Exception e) {
+            logger.warn("failed to create mapping for [{}/{}], disabling river...",
+                    e, indexName, typeName);
+            return;
+        }
+
+        // We create as many Threads as there are feeds
 		threads = new ArrayList<Thread>(feedsDefinition.size());
 		int threadNumber = 0;
 		for (RssRiverFeedDefinition feedDefinition : feedsDefinition) {
@@ -195,7 +208,58 @@ public class RssRiver extends AbstractRiverComponent implements River {
 		
 		return null;
 	}
-	
+
+    /**
+     * Check if a mapping already exists in an index
+     * @param index Index name
+     * @param type Mapping name
+     * @return true if mapping exists
+     */
+    private boolean isMappingExist(String index, String type) {
+        ClusterState cs = client.admin().cluster().prepareState().setIndices(index).execute().actionGet().getState();
+        IndexMetaData imd = cs.getMetaData().index(index);
+
+        if (imd == null) return false;
+
+        MappingMetaData mdd = imd.mapping(type);
+
+        if (mdd != null) return true;
+        return false;
+    }
+
+    private void pushMapping(String index, String type, XContentBuilder xcontent) throws Exception {
+        if (logger.isTraceEnabled()) logger.trace("pushMapping("+index+","+type+")");
+
+        // If type does not exist, we create it
+        boolean mappingExist = isMappingExist(index, type);
+        if (!mappingExist) {
+            logger.debug("Mapping ["+index+"]/["+type+"] doesn't exist. Creating it.");
+
+            // Read the mapping json file if exists and use it
+            if (xcontent != null) {
+                if (logger.isTraceEnabled()) logger.trace("Mapping for ["+index+"]/["+type+"]="+xcontent.string());
+                // Create type and mapping
+                PutMappingResponse response = client.admin().indices()
+                        .preparePutMapping(index)
+                        .setType(type)
+                        .setSource(xcontent)
+                        .execute().actionGet();
+                if (!response.isAcknowledged()) {
+                    throw new Exception("Could not define mapping for type ["+index+"]/["+type+"].");
+                } else {
+                    if (logger.isDebugEnabled()) {
+                        logger.debug("Mapping definition for ["+index+"]/["+type+"] succesfully created.");
+                    }
+                }
+            } else {
+                if (logger.isDebugEnabled()) logger.debug("No mapping definition for ["+index+"]/["+type+"]. Ignoring.");
+            }
+        } else {
+            if (logger.isDebugEnabled()) logger.debug("Mapping ["+index+"]/["+type+"] already exists.");
+        }
+        if (logger.isTraceEnabled()) logger.trace("/pushMapping("+index+","+type+")");
+    }
+
 	private class RSSParser implements Runnable {
 		private String url;
 		private int updateRate;

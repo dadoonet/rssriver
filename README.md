@@ -141,7 +141,46 @@ $ curl -XPUT 'localhost:9200/_river/actus/_meta' -d '{
 Working with mappings
 ---------------------
 
-When you create your index, you can specify the mapping you want to use as follow :
+If you don't define an explicit mapping before starting RSS river, one will be created by default:
+
+```javascript
+{
+  "page" : {
+    "properties" : {
+      "feedname" : {
+        "type" : "string",
+        "index" : "not_analyzed"
+      },
+      "title" : {
+        "type" : "string"
+      },
+      "author" : {
+        "type" : "string"
+      },
+      "description" : {
+        "type" : "string"
+      },
+      "link" : {
+        "type" : "string",
+        "index" : "no"
+      },
+      "source" : {
+        "type" : "string"
+      },
+      "publishedDate" : {
+        "type" : "date",
+        "format" : "dateOptionalTime",
+        "store" : "yes"
+      },
+      "location" : {
+        "type" : "geo_point"
+      }
+    }
+  }
+}
+```
+
+If you want to define your own mapping, push it to elasticsearch before RSS river starts:
 
 ```sh
 $ curl -XPUT 'http://localhost:9200/lefigaro/' -d '{}'
