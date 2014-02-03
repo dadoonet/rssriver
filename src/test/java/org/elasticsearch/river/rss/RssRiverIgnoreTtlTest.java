@@ -25,7 +25,7 @@ import org.junit.Test;
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 public class RssRiverIgnoreTtlTest extends AbstractRssRiverSimpleTest {
-    private static final int update_rate = 10 * 1000;
+    private static final int update_rate = 10;
 	/**
 	 * Overriding mapping with french content
 	 */
@@ -66,25 +66,8 @@ public class RssRiverIgnoreTtlTest extends AbstractRssRiverSimpleTest {
 	 * </ul>
 	 */
 	@Override
-	public XContentBuilder rssRiver() throws Exception {
-		// We create a rss feed on lemonde with a refresh every ten minutes
-		// int updateRate = 10 * 60 * 1000;
-		
-		String url = "http://www.lemonde.fr/rss/une.xml";
-		XContentBuilder xb = jsonBuilder()
-				.startObject()
-					.field("type", "rss")
-					.startObject("rss")
-						.startArray("feeds")
-							.startObject()
-								.field("url", url)
-								.field("update_rate", update_rate)
-                                .field("ignore_ttl", true)
-							.endObject()
-						.endArray()
-					.endObject()
-				.endObject();
-		return xb;
+	public void addFeeds(XContentBuilder xcb) {
+        addRiver(xcb, "http://www.lemonde.fr/rss/une.xml", null, 10, true);
 	}
 	
 
