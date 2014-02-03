@@ -87,7 +87,7 @@ public abstract class AbstractRssRiverTest extends ElasticsearchIntegrationTest 
         try {
             xcb.startObject()
                     .field("url", url)
-                    .field("update_rate", updateRate);
+                    .field("update_rate", updateRate * 1000);
             if (ignoreTtl != null) {
                 xcb.field("ignore_ttl", ignoreTtl);
             }
