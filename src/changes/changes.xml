@@ -4,6 +4,9 @@
 
 	<body>
         <release date="2014-02-03" description="Update for elasticsearch 1.0.0" version="1.0.0.RC1">
+            <action issue="19" dev="dadoonet" type="update">
+                Update Rome to new official repository.
+            </action>
             <action issue="18" dev="dadoonet" type="update">
                 Update to elasticsearch 1.0.0.RC1. Test infra moved as well to elasticsearch test framework.
             </action>
