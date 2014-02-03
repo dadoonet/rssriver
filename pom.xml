@@ -15,7 +15,7 @@ governing permissions and limitations under the License. -->
     <groupId>fr.pilato.elasticsearch.river</groupId>
 	<artifactId>rssriver</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0.RC1-SNAPSHOT</version>
+	<version>1.0.0.RC1</version>
 	<name>RSS River Plugin for ElasticSearch</name>
 	<url>http://www.pilato.fr/rssriver</url>
     <description>
@@ -44,8 +44,8 @@ See full documentation on Github: https://github.com/dadoonet/rssriver
         <tests.jvms>1</tests.jvms>
         <tests.shuffle>true</tests.shuffle>
         <tests.output>onerror</tests.output>
-        <tests.client.ratio></tests.client.ratio>
-        <tests.jvm.argline></tests.jvm.argline>
+        <tests.client.ratio />
+        <tests.jvm.argline />
         <es.logger.level>INFO</es.logger.level>
         <es.config>${project.build.testOutputDirectory}/elasticsearch.yml</es.config>
     </properties>
@@ -204,27 +204,17 @@ See full documentation on Github: https://github.com/dadoonet/rssriver
                             <jvmOutputAction>pipe,warn</jvmOutputAction>
                             <leaveTemporary>true</leaveTemporary>
                             <listeners>
-                                <report-ant-xml mavenExtensions="true"
-                                                dir="${project.build.directory}/surefire-reports"/>
-                                <report-text
-                                        showThrowable="true"
-                                        showStackTraces="true"
-                                        showOutput="${tests.output}"
-                                        showStatusOk="false"
-                                        showStatusError="true"
-                                        showStatusFailure="true"
-                                        showStatusIgnored="true"
-                                        showSuiteSummary="true"
-                                        timestamps="false"/>
-                                <report-execution-times file="${basedir}/.local-execution-hints.log"/>
+                                <report-ant-xml mavenExtensions="true" dir="${project.build.directory}/surefire-reports" />
+                                <report-text showThrowable="true" showStackTraces="true" showOutput="${tests.output}" showStatusOk="false" showStatusError="true" showStatusFailure="true" showStatusIgnored="true" showSuiteSummary="true" timestamps="false" />
+                                <report-execution-times file="${basedir}/.local-execution-hints.log" />
                             </listeners>
                             <assertions>
-                                <enable/>
+                                <enable />
                             </assertions>
                             <parallelism>${tests.jvms}</parallelism>
                             <balancers>
                                 <execution-times>
-                                    <fileset dir="${basedir}" includes=".local-execution-hints.log"/>
+                                    <fileset dir="${basedir}" includes=".local-execution-hints.log" />
                                 </execution-times>
                             </balancers>
                             <includes>
