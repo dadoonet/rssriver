@@ -25,6 +25,7 @@ import com.sun.syndication.feed.synd.SyndFeed;
 import com.sun.syndication.io.FeedException;
 import com.sun.syndication.io.SyndFeedInput;
 import com.sun.syndication.io.XmlReader;
+
 import org.elasticsearch.ExceptionsHelper;
 import org.elasticsearch.action.admin.indices.mapping.put.PutMappingResponse;
 import org.elasticsearch.action.bulk.*;
@@ -49,6 +50,7 @@ import org.elasticsearch.river.RiverSettings;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
@@ -87,7 +89,6 @@ public class RssRiver extends AbstractRiverComponent implements River {
 			throws MalformedURLException {
 		super(riverName, settings);
 		this.client = client;
-
 		if (settings.settings().containsKey("rss")) {
 			Map<String, Object> rssSettings = (Map<String, Object>) settings.settings().get("rss");
 			
@@ -239,9 +240,11 @@ public class RssRiver extends AbstractRiverComponent implements River {
 	private SyndFeed getFeed(String url) {
 		try {
 			URL feedUrl = new URL(url);
+			URLConnection openConnection = feedUrl.openConnection();
+	        openConnection.addRequestProperty("User-Agent", "RSS River for Elasticsearch (https://github.com/dadoonet/rssriver)"); 
 			SyndFeedInput input = new SyndFeedInput();
             input.setPreserveWireFeed(true);
-			SyndFeed feed = input.build(new XmlReader(feedUrl));
+			SyndFeed feed = input.build(new XmlReader(openConnection));
 			return feed;
 		} catch (MalformedURLException e) {
 			logger.error("RSS Url is incorrect : [{}].", url);
