@@ -9,8 +9,9 @@ Versions
 
 |      RSS River Plugin      |    elasticsearch    | Release date |
 |----------------------------|---------------------|:------------:|
-| 1.0.0-SNAPSHOT (master)    | 1.0.0.RC1 - master  |              |
-| 1.0.0.RC1                  | 1.0.0.RC1 - master  |  2014-02-03  |
+| 1.1.0-SNAPSHOT (master)    | 1.0 - master        |              |
+| 1.0.0                      | 1.0                 |  2014-02-14  |
+| 1.0.0.RC1                  | 1.0                 |  2014-02-03  |
 | 0.2.0                      | 0.90.4 - 0.90       |  2013-10-18  |
 | 0.1.0                      | 0.90.0 - 0.90.3     |  2013-02-26  |
 | 0.0.6                      | 0.19                |  2012-02-07  |
@@ -35,16 +36,16 @@ Installation
 Just type :
 
 ```sh
-$ bin/plugin -install fr.pilato.elasticsearch.river/rssriver/1.0.0.RC1
+$ bin/plugin -install fr.pilato.elasticsearch.river/rssriver/1.0.0
 ```
 
 This will do the job...
 
 ```
--> Installing fr.pilato.elasticsearch.river/rssriver/1.0.0.RC1...
-Trying http://download.elasticsearch.org/fr.pilato.elasticsearch.river/rssriver/rssriver-1.0.0.RC1.zip...
-Trying http://search.maven.org/remotecontent?filepath=fr/pilato/elasticsearch/rssriver/rssriver/1.0.0.RC1/fsriver-1.0.0.RC1.zip...
-Trying https://oss.sonatype.org/service/local/repositories/releases/content/fr/pilato/elasticsearch/river/rssriver/1.0.0.RC1/rssriver-1.0.0.RC1.zip...
+-> Installing fr.pilato.elasticsearch.river/rssriver/1.0.0...
+Trying http://download.elasticsearch.org/fr.pilato.elasticsearch.river/rssriver/rssriver-1.0.0.zip...
+Trying http://search.maven.org/remotecontent?filepath=fr/pilato/elasticsearch/rssriver/rssriver/1.0.0/fsriver-1.0.0.zip...
+Trying https://oss.sonatype.org/service/local/repositories/releases/content/fr/pilato/elasticsearch/river/rssriver/1.0.0/rssriver-1.0.0.zip...
 Downloading ......DONE
 Installed rssriver
 ```
