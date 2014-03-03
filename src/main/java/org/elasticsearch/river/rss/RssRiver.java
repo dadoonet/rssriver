@@ -225,7 +225,9 @@ public class RssRiver extends AbstractRiverComponent implements River {
 	public void close() {
 		if (logger.isInfoEnabled()) logger.info("Closing rss river");
 		closed = true;
-		
+
+        bulkProcessor.close();
+
 		// We have to close each Thread
 		if (threads != null) {
 			for (Thread thread : threads) {
