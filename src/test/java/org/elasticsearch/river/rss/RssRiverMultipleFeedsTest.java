@@ -69,29 +69,12 @@ public class RssRiverMultipleFeedsTest extends AbstractRssRiverSimpleTest {
 	 *   <li>http://rss.lefigaro.fr/lefigaro/laune every 15 seconds
 	 * </ul>
 	 */
-	@Override
-	public XContentBuilder rssRiver() throws Exception {
-		XContentBuilder xb = jsonBuilder()
-				.startObject()
-					.field("type", "rss")
-					.startObject("rss")
-						.startArray("feeds")
-							.startObject()
-								.field("name", "lemonde")
-								.field("url", "http://www.lemonde.fr/rss/une.xml")
-								.field("update_rate", 10 * 1000)
-							.endObject()
-							.startObject()
-								.field("name", "lefigaro")
-								.field("url", "http://rss.lefigaro.fr/lefigaro/laune")
-								.field("update_rate", 15 * 1000)
-							.endObject()
-						.endArray()
-					.endObject()
-				.endObject();
-		return xb;
-	}
-	
+    @Override
+    public void addFeeds(XContentBuilder xcb) {
+        addRiver(xcb, "http://www.lemonde.fr/rss/une.xml", "lemonde", 10);
+        addRiver(xcb, "http://rss.lefigaro.fr/lefigaro/laune", "lefigaro", 15);
+    }
+
 	@Test
 	public void rss_feed_is_not_empty() throws Exception {
 		countTestHelper();

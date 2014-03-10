@@ -27,8 +27,7 @@ import com.sun.syndication.io.SyndFeedInput;
 import com.sun.syndication.io.XmlReader;
 import org.elasticsearch.ExceptionsHelper;
 import org.elasticsearch.action.admin.indices.mapping.put.PutMappingResponse;
-import org.elasticsearch.action.bulk.BulkRequestBuilder;
-import org.elasticsearch.action.bulk.BulkResponse;
+import org.elasticsearch.action.bulk.*;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.cluster.ClusterState;
@@ -37,6 +36,7 @@ import org.elasticsearch.cluster.metadata.IndexMetaData;
 import org.elasticsearch.cluster.metadata.MappingMetaData;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.joda.time.format.ISODateTimeFormat;
+import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.common.util.concurrent.EsExecutors;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.support.XContentMapValues;
@@ -69,7 +69,13 @@ public class RssRiver extends AbstractRiverComponent implements River {
 
 	private final String typeName;
 
-	private volatile ArrayList<Thread> threads;
+    private final int bulkSize;
+    private final int maxConcurrentBulk;
+    private final TimeValue bulkFlushInterval;
+
+    private volatile BulkProcessor bulkProcessor;
+
+    private volatile ArrayList<Thread> threads;
 
 	private volatile boolean closed = false;
 
@@ -125,10 +131,18 @@ public class RssRiver extends AbstractRiverComponent implements River {
 					indexSettings.get("index"), riverName.name());
 			typeName = XContentMapValues.nodeStringValue(
 					indexSettings.get("type"), "page");
-		} else {
+            bulkSize = XContentMapValues.nodeIntegerValue(
+                    indexSettings.get("bulk_size"), 25);
+            bulkFlushInterval = TimeValue.parseTimeValue(XContentMapValues.nodeStringValue(
+                    indexSettings.get("flush_interval"), "5s"), TimeValue.timeValueSeconds(5));
+            maxConcurrentBulk = XContentMapValues.nodeIntegerValue(indexSettings.get("max_concurrent_bulk"), 1);
+        } else {
 			indexName = riverName.name();
 			typeName = "page";
-		}
+            bulkSize = 100;
+            maxConcurrentBulk = 1;
+            bulkFlushInterval = TimeValue.timeValueSeconds(5);
+        }
 	}
 
 	@Override
@@ -160,6 +174,39 @@ public class RssRiver extends AbstractRiverComponent implements River {
                     e, indexName, typeName);
             return;
         }
+
+        // Creating bulk processor
+        this.bulkProcessor = BulkProcessor.builder(client, new BulkProcessor.Listener() {
+            @Override
+            public void beforeBulk(long executionId, BulkRequest request) {
+                logger.debug("Going to execute new bulk composed of {} actions", request.numberOfActions());
+            }
+
+            @Override
+            public void afterBulk(long executionId, BulkRequest request, BulkResponse response) {
+                logger.debug("Executed bulk composed of {} actions", request.numberOfActions());
+                if (response.hasFailures()) {
+                    logger.warn("There was failures while executing bulk", response.buildFailureMessage());
+                    if (logger.isDebugEnabled()) {
+                        for (BulkItemResponse item : response.getItems()) {
+                            if (item.isFailed()) {
+                                logger.debug("Error for {}/{}/{} for {} operation: {}", item.getIndex(),
+                                        item.getType(), item.getId(), item.getOpType(), item.getFailureMessage());
+                            }
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void afterBulk(long executionId, BulkRequest request, Throwable failure) {
+                logger.warn("Error executing bulk", failure);
+            }
+        })
+                .setBulkActions(bulkSize)
+                .setConcurrentRequests(maxConcurrentBulk)
+                .setFlushInterval(bulkFlushInterval)
+                .build();
 
         // We create as many Threads as there are feeds
 		threads = new ArrayList<Thread>(feedsDefinition.size());
@@ -304,7 +351,6 @@ public class RssRiver extends AbstractRiverComponent implements River {
                         // We have to send results to ES
                         if (logger.isTraceEnabled()) logger.trace("Feed is updated : {}", feed);
 
-                        BulkRequestBuilder bulk = client.prepareBulk();
                         try {
                             // We have now to send each feed to ES
                             for (SyndEntry message : (Iterable<SyndEntry>) feed.getEntries()) {
@@ -319,7 +365,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
                                 // Let's look if object already exists
                                 GetResponse oldMessage = client.prepareGet(indexName, typeName, id).execute().actionGet();
                                 if (!oldMessage.isExists()) {
-                                    bulk.add(indexRequest(indexName).type(typeName).id(id).source(toJson(message, riverName.getName(), feedname)));
+                                    bulkProcessor.add(indexRequest(indexName).type(typeName).id(id).source(toJson(message, riverName.getName(), feedname)));
 
                                     if (logger.isDebugEnabled()) logger.debug("FeedMessage update detected for source [{}]", feedname != null ? feedname : "undefined");
                                     if (logger.isTraceEnabled()) logger.trace("FeedMessage is : {}", message);
@@ -332,22 +378,11 @@ public class RssRiver extends AbstractRiverComponent implements River {
                                 logger.trace("processing [_seq  ]: [{}]/[{}]/[{}], last_seq [{}]", indexName, riverName.name(), lastupdateField, feedDate);
                             }
                             // We store the lastupdate date
-                            bulk.add(indexRequest("_river").type(riverName.name()).id(lastupdateField)
+                            bulkProcessor.add(indexRequest("_river").type(riverName.name()).id(lastupdateField)
                                     .source(jsonBuilder().startObject().startObject("rss").field(lastupdateField, feedDate).endObject().endObject()));
                         } catch (IOException e) {
                             logger.warn("failed to add feed message entry to bulk indexing");
                         }
-
-                        try {
-                            BulkResponse response = bulk.execute().actionGet();
-                            if (response.hasFailures()) {
-                                // TODO write to exception queue?
-                                logger.warn("failed to execute" + response.buildFailureMessage());
-                            }
-                        } catch (Exception e) {
-                            logger.warn("failed to execute bulk", e);
-                        }
-
                     } else {
                         // Nothing new... Just relax !
                         if (logger.isDebugEnabled()) logger.debug("Nothing new in the feed... Relaxing...");

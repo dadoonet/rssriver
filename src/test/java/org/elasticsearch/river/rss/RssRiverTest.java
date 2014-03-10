@@ -36,21 +36,21 @@ public class RssRiverTest extends AbstractRssRiverSimpleTest {
 				.startObject()
 					.startObject("page")
 						.startObject("properties")
-							.startObject("source")
+							.startObject(RssToJson.Rss.SOURCE)
 								.field("type", "string")
 							.endObject()
-							.startObject("title")
-								.field("type", "string")
-								.field("analyzer", "french")
-							.endObject()
-							.startObject("description")
+							.startObject(RssToJson.Rss.TITLE)
 								.field("type", "string")
 								.field("analyzer", "french")
 							.endObject()
-							.startObject("author")
+							.startObject(RssToJson.Rss.DESCRIPTION)
+								.field("type", "string")
+								.field("analyzer", "french")
+							.endObject()
+							.startObject(RssToJson.Rss.AUTHOR)
 								.field("type", "string")
 							.endObject()
-							.startObject("link")
+							.startObject(RssToJson.Rss.LINK)
 								.field("type", "string")
 							.endObject()
 						.endObject()
@@ -66,25 +66,8 @@ public class RssRiverTest extends AbstractRssRiverSimpleTest {
 	 * </ul>
 	 */
 	@Override
-	public XContentBuilder rssRiver() throws Exception {
-		// We create a rss feed on lemonde with a refresh every ten minutes
-		// int updateRate = 10 * 60 * 1000;
-		
-		String url = "http://www.lemonde.fr/rss/une.xml";
-		int updateRate = 10 * 1000;
-		XContentBuilder xb = jsonBuilder()
-				.startObject()
-					.field("type", "rss")
-					.startObject("rss")
-						.startArray("feeds")
-							.startObject()
-								.field("url", url)
-								.field("update_rate", updateRate)
-							.endObject()
-						.endArray()
-					.endObject()
-				.endObject();
-		return xb;
+	public void addFeeds(XContentBuilder xcb) {
+		addRiver(xcb, "http://www.lemonde.fr/rss/une.xml", null, 10);
 	}
 	
 

@@ -28,6 +28,7 @@ import org.junit.Before;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 import static org.hamcrest.Matchers.equalTo;
 
 public abstract class AbstractRssRiverTest extends ElasticsearchIntegrationTest {
@@ -45,13 +46,61 @@ public abstract class AbstractRssRiverTest extends ElasticsearchIntegrationTest 
 	 * @return The mapping to use
 	 */
 	abstract public XContentBuilder mapping() throws Exception;
-	
-	/**
+
+    /**
+     * Add feeds to river
+     * @param xcb current xcontent builder
+     */
+    protected abstract void addFeeds(XContentBuilder xcb);
+
+    /**
 	 * Define the Rss River settings
 	 * @return Rss River Settings
 	 */
-	abstract public XContentBuilder rssRiver() throws Exception;
-	
+	public XContentBuilder rssRiver() throws Exception {
+     		XContentBuilder xcb = jsonBuilder()
+				.startObject()
+					.field("type", "rss")
+					.startObject("rss")
+						.startArray("feeds");
+
+        addFeeds(xcb);
+
+		xcb.endArray().endObject();
+
+        xcb.startObject("index").field("flush_interval", "1s").endObject();
+
+        xcb.endObject();
+
+        return xcb;
+    }
+
+    /**
+     * Add a river definition
+     * @param xcb current xcontent builder
+     * @param url URL to add
+     * @param name feed name (can be null)
+     * @param updateRate update rate in seconds
+     * @param ignoreTtl by default we don't ignore RSS TTL. We can override it.
+     */
+    protected void addRiver(XContentBuilder xcb, String url, String name, int updateRate, boolean... ignoreTtl) {
+        try {
+            xcb.startObject()
+                    .field("url", url)
+                    .field("update_rate", updateRate);
+            if (ignoreTtl != null) {
+                xcb.field("ignore_ttl", ignoreTtl);
+            }
+            if (name != null) {
+                xcb.field("name", name);
+            }
+            xcb.endObject();
+        } catch (Exception e) {
+            logger.error("fail to add river feed url [{}], updateRate [{}]", url, updateRate * 1000);
+            fail("fail to add river feed");
+        }
+    }
+
     private void checkRiverIsStarted(final String riverName) throws InterruptedException {
         logger.info("-->  checking that river [{}] was created", riverName);
         assertThat(awaitBusy(new Predicate<Object>() {

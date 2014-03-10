@@ -22,8 +22,6 @@ package org.elasticsearch.river.rss;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.junit.Test;
 
-import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
-
 public class RssRiverMCappTest extends AbstractRssRiverSimpleTest {
 
 	/**
@@ -42,26 +40,9 @@ public class RssRiverMCappTest extends AbstractRssRiverSimpleTest {
 	 * </ul>
 	 */
 	@Override
-	public XContentBuilder rssRiver() throws Exception {
-		XContentBuilder xb = jsonBuilder()
-				.startObject()
-					.field("type", "rss")
-					.startObject("rss")
-						.startArray("feeds")
-							.startObject()
-								.field("name", "malwaredomains")
-								.field("url", "http://www.malwaredomains.com/wordpress/?feed=rss")
-								.field("update_rate", 10 * 1000)
-							.endObject()
-							.startObject()
-								.field("name", "darkreading")
-								.field("url", "http://www.darkreading.com/rss/all.xml")
-								.field("update_rate", 10 * 1000)
-							.endObject()
-						.endArray()
-					.endObject()
-				.endObject();
-		return xb;
+	public void addFeeds(XContentBuilder xcb) {
+        addRiver(xcb, "http://www.malwaredomains.com/wordpress/?feed=rss", "malwaredomains", 10);
+        addRiver(xcb, "http://www.darkreading.com/rss/all.xml", "darkreading", 10);
 	}
 	
 	@Test

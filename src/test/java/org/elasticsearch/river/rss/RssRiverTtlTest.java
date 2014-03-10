@@ -65,25 +65,9 @@ public class RssRiverTtlTest extends AbstractRssRiverSimpleTest {
 	 *   <li>http://www.lemonde.fr/rss/une.xml every 10 seconds and ignoring Ttl
 	 * </ul>
 	 */
-	@Override
-	public XContentBuilder rssRiver() throws Exception {
-		// We create a rss feed on lemonde with a refresh every ten minutes
-		// int updateRate = 10 * 60 * 1000;
-		
-		String url = "http://www.lemonde.fr/rss/une.xml";
-		XContentBuilder xb = jsonBuilder()
-				.startObject()
-					.field("type", "rss")
-					.startObject("rss")
-						.startArray("feeds")
-							.startObject()
-								.field("url", url)
-								.field("update_rate", update_rate)
-							.endObject()
-						.endArray()
-					.endObject()
-				.endObject();
-		return xb;
+    @Override
+    public void addFeeds(XContentBuilder xcb) {
+        addRiver(xcb, "http://www.lemonde.fr/rss/une.xml", null, update_rate);
 	}
 	
 

@@ -78,9 +78,9 @@ public abstract class AbstractRssRiverSimpleTest extends AbstractRssRiverTest {
 
             int updateRate = XContentMapValues.nodeIntegerValue(feed.get("update_rate"));
             if (equals) {
-                assertEquals(expectedRate, updateRate);
+                assertEquals(expectedRate * 1000, updateRate);
             } else {
-                assertTrue(updateRate > expectedRate);
+                assertTrue(updateRate > expectedRate * 1000);
             }
         }
     }

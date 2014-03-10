@@ -212,6 +212,31 @@ $ curl -XPUT 'localhost:9200/_river/lefigaro/_meta' -d '{
 }'
 ```
 
+Bulk settings
+-------------
+
+By default, documents are indexed every `25` *feed documents* or every `5` seconds in `river name` index under a `page` type.
+You can change those settings when creating the river:
+
+```sh
+$ curl -XPUT 'localhost:9200/_river/lemonde/_meta' -d '{
+  "type": "rss",
+  "rss": {
+    "feeds" : [ {
+    	"name": "lemonde",
+    	"url": "http://www.lemonde.fr/rss/une.xml"
+    	}
+    ]
+  },
+  "index": {
+    "index": "myindexname",
+    "type": "mycontent",
+    "bulk_size": 100,
+    "flush_interval": "30s"
+  }
+}'
+```
+
 Behind the scene
 ================
 
