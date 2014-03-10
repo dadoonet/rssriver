@@ -33,7 +33,7 @@ governing permissions and limitations under the License. -->
 
 
 	<root>
-		<priority value="debug" />
+		<priority value="error" />
 		<appender-ref ref="console" />
 	</root>
 

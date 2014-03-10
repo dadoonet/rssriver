@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+        >
+
+    <channel>
+        <title>DNS-BH - Malware Domain Blocklist</title>
+        <atom:link href="http://www.malwaredomains.com/wordpress/?feed=rss2" rel="self" type="application/rss+xml"/>
+        <link>http://www.malwaredomains.com</link>
+        <description>Malware Prevention through Domain Blocking (Black Hole DNS Sinkhole)</description>
+        <lastBuildDate>Sat, 01 Mar 2014 02:13:31 +0000</lastBuildDate>
+        <language>en-US</language>
+        <sy:updatePeriod>hourly</sy:updatePeriod>
+        <sy:updateFrequency>1</sy:updateFrequency>
+        <generator>http://wordpress.org/?v=3.6.1</generator>
+        <item>
+            <title>Botnet spam, Zeus, BHEK, iframes&#8230;</title>
+            <link>http://www.malwaredomains.com/?p=3557</link>
+            <comments>http://www.malwaredomains.com/?p=3557#comments</comments>
+            <pubDate>Fri, 28 Feb 2014 02:12:32 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3557</guid>
+            <description>
+                <![CDATA[Added 200 domains on 2/22 and 2/24 associated with Black Hole Exploit Kit, Botnet Spam, malicious iframes, etc. Please update your blocklist and follow our terms of use]]></description>
+            <content:encoded><![CDATA[<p>Added 200 domains on 2/22 and 2/24 associated with Black Hole Exploit Kit, Botnet Spam, malicious iframes, etc. Please update your blocklist and follow our terms of use</p>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3557</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+        <item>
+            <title>ru8080, Neutrino, Malvertising, AnglerEK domains</title>
+            <link>http://www.malwaredomains.com/?p=3551</link>
+            <comments>http://www.malwaredomains.com/?p=3551#comments</comments>
+            <pubDate>Fri, 21 Feb 2014 02:52:44 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3551</guid>
+            <description>
+                <![CDATA[Added 294 domains (malspam, malvertising, Angler Exploit Kit, ru 8080, etc) domains on 2/17 and 2/19. Sources include app.webinspector.com, blog.dynamoo.com, www.webroot.com (All domains and sources are listed in our domains.txt file.) * Please help to keep this site free and donate whatever you can: All donations go to hosting and infrastructure costs * twitter page: https://twitter.com/malwaredomains * These [&#8230;]]]></description>
+            <content:encoded><![CDATA[<p>Added 294 domains (malspam, malvertising, Angler Exploit Kit, ru 8080, etc) domains on 2/17 and 2/19. Sources include app.webinspector.com, blog.dynamoo.com, www.webroot.com (All domains and sources are listed in our <a href="http://malwaredomains.lehigh.edu/files/domains.txt" target="_blank">domains.txt</a> file.)</p>
+<p>* Please help to keep this site free and donate whatever you can: All donations go to hosting and infrastructure costs<br />
+* twitter page: <a href="https://twitter.com/malwaredomains" target="_blank">https://twitter.com/malwaredomains</a></p>
+<h6>* These malware block lists provided here are for free for noncommercial use as part of the fight against malware. Any use of this list commercially is strictly prohibited without prior approval.<br />
+* Please use the “datestamp” and “timestamp” file to determine if the list has been updated and ONLY pull the files you need – abusers will be banned! Use wget -N”!<br />
+* Yearly sponsorships are available. Full acknowledgment, an icon, and link back to your site will be placed in the left sidebar.<br />
+* Domains.txt file is the complete list along with original reference. Justdomains contains list of only the domain names. BOOT file is in MS DNS format. Malwaredomains.zones file is in BIND format.<br />
+* Also Available in AdBlock, ISA, and MaraDNS formats. A trusted source on the WOT-the Web of Trust . Used by SURBL, MOREnet, SANs, and others…<br />
+* We also have a mirror dedicated to research and Open Source Projects – please contact us for details.</h6>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3551</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+        <item>
+            <title>341 New Domains&#8230;</title>
+            <link>http://www.malwaredomains.com/?p=3549</link>
+            <comments>http://www.malwaredomains.com/?p=3549#comments</comments>
+            <pubDate>Mon, 17 Feb 2014 13:55:39 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3549</guid>
+            <description>
+                <![CDATA[Added 341 new domains. Please update your blocklist and follow our terms of use]]></description>
+            <content:encoded><![CDATA[<p>Added 341 new domains. Please update your blocklist and follow our terms of use</p>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3549</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+        <item>
+            <title>341 new domains (cryptolocker, asprox,carto,jackPOS,etc)</title>
+            <link>http://www.malwaredomains.com/?p=3545</link>
+            <comments>http://www.malwaredomains.com/?p=3545#comments</comments>
+            <pubDate>Thu, 13 Feb 2014 14:10:10 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3545</guid>
+            <description>
+                <![CDATA[Added 341 new domains (cryptolocker, asprox carto, jackPOS, etc.) While some of the domains and C&#38;C servers may have been taken down or sinkholed,  adding these domains to your internal DNS server resolving to your own web server will help you identify which of your clients are infected on your local network. Sources include blog.dynamoo.com, [&#8230;]]]></description>
+            <content:encoded><![CDATA[<p>Added 341 new domains (cryptolocker, asprox carto, jackPOS, etc.) While some of the domains and C&amp;C servers may have been taken down or sinkholed,  adding these domains to your internal DNS server resolving to your own web server will help you identify which of your clients are infected on your local network.</p>
+<p>Sources include blog.dynamoo.com, community.emc.com, malwareurls.joxeankoret.com, rebsnippets.blogspot.com (All domains and sources are listed in our <a href="http://malwaredomains.lehigh.edu/files/domains.txt" target="_blank">domains.txt</a> file.)</p>
+<p>* Please help to keep this site free and donate whatever you can: All donations go to hosting and infrastructure costs<br />
+* twitter page: <a href="https://twitter.com/malwaredomains" target="_blank">https://twitter.com/malwaredomains</a></p>
+<h6>* These malware block lists provided here are for free for noncommercial use as part of the fight against malware. Any use of this list commercially is strictly prohibited without prior approval.<br />
+* Please use the “datestamp” and “timestamp” file to determine if the list has been updated and ONLY pull the files you need – abusers will be banned! Use wget -N”!<br />
+* Yearly sponsorships are available. Full acknowledgment, an icon, and link back to your site will be placed in the left sidebar.<br />
+* Domains.txt file is the complete list along with original reference. Justdomains contains list of only the domain names. BOOT file is in MS DNS format. Malwaredomains.zones file is in BIND format.<br />
+* Also Available in AdBlock, ISA, and MaraDNS formats. A trusted source on the WOT-the Web of Trust . Used by SURBL, MOREnet, SANs, and others…<br />
+* We also have a mirror dedicated to research and Open Source Projects – please contact us for details.</h6>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3545</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+        <item>
+            <title>ransonware, malicious js, linkup domains</title>
+            <link>http://www.malwaredomains.com/?p=3543</link>
+            <comments>http://www.malwaredomains.com/?p=3543#comments</comments>
+            <pubDate>Tue, 11 Feb 2014 03:28:01 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3543</guid>
+            <description>
+                <![CDATA[Huge update of over 550 domains associated with linkup, iframes, malicious javascript, ransonware, etc. Sources include malwaredomainlist.com, totalhash.com, labs.sucuri.net, malwr.com,joxeankoret.com and others (All domains and sources are listed in our domains.txt file.) * Please help to keep this site free and donate whatever you can: All donations go to hosting and infrastructure costs * twitter page: https://twitter.com/malwaredomains * [&#8230;]]]></description>
+            <content:encoded><![CDATA[<p>Huge update of over 550 domains associated with linkup, iframes, malicious javascript, ransonware, etc. Sources include malwaredomainlist.com, totalhash.com, labs.sucuri.net, malwr.com,joxeankoret.com and others (All domains and sources are listed in our <a href="http://malwaredomains.lehigh.edu/files/domains.txt" target="_blank">domains.txt</a> file.)</p>
+<p>* Please help to keep this site free and donate whatever you can: All donations go to hosting and infrastructure costs<br />
+* twitter page: <a href="https://twitter.com/malwaredomains" target="_blank">https://twitter.com/malwaredomains</a></p>
+<h6>* These malware block lists provided here are for free for noncommercial use as part of the fight against malware. Any use of this list commercially is strictly prohibited without prior approval.<br />
+* Please use the “datestamp” and “timestamp” file to determine if the list has been updated and ONLY pull the files you need – abusers will be banned! Use wget -N”!<br />
+* Yearly sponsorships are available. Full acknowledgment, an icon, and link back to your site will be placed in the left sidebar.<br />
+* Domains.txt file is the complete list along with original reference. Justdomains contains list of only the domain names. BOOT file is in MS DNS format. Malwaredomains.zones file is in BIND format.<br />
+* Also Available in AdBlock, ISA, and MaraDNS formats. A trusted source on the WOT-the Web of Trust . Used by SURBL, MOREnet, SANs, and others…<br />
+* We also have a mirror dedicated to research and Open Source Projects – please contact us for details.</h6>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3543</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+        <item>
+            <title>200+ browserlock/ransomware domains added</title>
+            <link>http://www.malwaredomains.com/?p=3540</link>
+            <comments>http://www.malwaredomains.com/?p=3540#comments</comments>
+            <pubDate>Thu, 06 Feb 2014 13:26:31 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3540</guid>
+            <description>
+                <![CDATA[Added over 400 domains in total&#8230; Over 200 were associated with browserlock, ransomware, browlock, etc.  Please update your blocklists and follow our terms of use.]]></description>
+            <content:encoded><![CDATA[<p>Added over 400 domains in total&#8230; Over 200 were associated with browserlock, ransomware, browlock, etc.  Please update your blocklists and follow our terms of use.</p>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3540</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+        <item>
+            <title>Another Big Update: 437 Domains</title>
+            <link>http://www.malwaredomains.com/?p=3536</link>
+            <comments>http://www.malwaredomains.com/?p=3536#comments</comments>
+            <pubDate>Mon, 03 Feb 2014 12:00:37 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3536</guid>
+            <description>
+                <![CDATA[Another big update, 437 domains. Sources include: www.spamhaus.org, malwareurls.joxeankoret.com, www.nictasoft.com (All domains and sources are listed in our domains.txt file.) * Please help to keep this site free and donate whatever you can: All donations go to hosting and infrastructure costs * twitter page: https://twitter.com/malwaredomains * These malware block lists provided here are for free for noncommercial use [&#8230;]]]></description>
+            <content:encoded><![CDATA[<p>Another big update, 437 domains. Sources include: www.spamhaus.org, malwareurls.joxeankoret.com, www.nictasoft.com (All domains and sources are listed in our <a href="http://malwaredomains.lehigh.edu/files/domains.txt" target="_blank">domains.txt</a> file.)</p>
+<p>* Please help to keep this site free and donate whatever you can: All donations go to hosting and infrastructure costs<br />
+* twitter page: <a href="https://twitter.com/malwaredomains" target="_blank">https://twitter.com/malwaredomains</a></p>
+<h6>* These malware block lists provided here are for free for noncommercial use as part of the fight against malware. Any use of this list commercially is strictly prohibited without prior approval.<br />
+* Please use the “datestamp” and “timestamp” file to determine if the list has been updated and ONLY pull the files you need – abusers will be banned! Use wget -N”!<br />
+* Yearly sponsorships are available. Full acknowledgment, an icon, and link back to your site will be placed in the left sidebar.<br />
+* Domains.txt file is the complete list along with original reference. Justdomains contains list of only the domain names. BOOT file is in MS DNS format. Malwaredomains.zones file is in BIND format.<br />
+* Also Available in AdBlock, ISA, and MaraDNS formats. A trusted source on the WOT-the Web of Trust . Used by SURBL, MOREnet, SANs, and others…<br />
+* We also have a mirror dedicated to research and Open Source Projects – please contact us for details.</h6>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3536</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+        <item>
+            <title>Big update: 430 domains</title>
+            <link>http://www.malwaredomains.com/?p=3532</link>
+            <comments>http://www.malwaredomains.com/?p=3532#comments</comments>
+            <pubDate>Sat, 01 Feb 2014 05:15:51 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3532</guid>
+            <description>
+                <![CDATA[Added 430 domains from the usual great sources (malwareurls.joxeankoret.com, zeustracker.abuse.ch, blog.dynamoo.com, etc.) These domains are associated with exploit kits, zeus, redkit, iframes, etc &#8211; nothing you&#8217;d want your browser to access. (All domains and sources are listed in our domains.txt file.) * Please help to keep this site free and donate whatever you can: All donations go [&#8230;]]]></description>
+            <content:encoded><![CDATA[<p>Added 430 domains from the usual great sources (malwareurls.joxeankoret.com, zeustracker.abuse.ch, blog.dynamoo.com, etc.) These domains are associated with exploit kits, zeus, redkit, iframes, etc &#8211; nothing you&#8217;d want your browser to access. (All domains and sources are listed in our <a href="http://malwaredomains.lehigh.edu/files/domains.txt" target="_blank">domains.txt</a> file.)</p>
+<p>* Please help to keep this site free and donate whatever you can: All donations go to hosting and infrastructure costs<br />
+* twitter page: <a href="https://twitter.com/malwaredomains" target="_blank">https://twitter.com/malwaredomains</a> (may be down, we are testing)</p>
+<h6>* These malware block lists provided here are for free for noncommercial use as part of the fight against malware. Any use of this list commercially is strictly prohibited without prior approval.<br />
+* Please use the “datestamp” and “timestamp” file to determine if the list has been updated and ONLY pull the files you need – abusers will be banned! Use wget -N”!<br />
+* Yearly sponsorships are available. Full acknowledgment, an icon, and link back to your site will be placed in the left sidebar.<br />
+* Domains.txt file is the complete list along with original reference. Justdomains contains list of only the domain names. BOOT file is in MS DNS format. Malwaredomains.zones file is in BIND format.<br />
+* Also Available in AdBlock, ISA, and MaraDNS formats. A trusted source on the WOT-the Web of Trust . Used by SURBL, MOREnet, SANs, and others…<br />
+* We also have a mirror dedicated to research and Open Source Projects – please contact us for details.</h6>
+<p>&nbsp;</p>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3532</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+        <item>
+            <title>250+ malvertising and malspam domains</title>
+            <link>http://www.malwaredomains.com/?p=3529</link>
+            <comments>http://www.malwaredomains.com/?p=3529#comments</comments>
+            <pubDate>Sat, 25 Jan 2014 01:44:16 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3529</guid>
+            <description>
+                <![CDATA[Added over 250 malvertising and malspam domains. Please update your blocklists and follow our terms of use.]]></description>
+            <content:encoded><![CDATA[<p>Added over 250 malvertising and malspam domains. Please update your blocklists and follow our terms of use.</p>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3529</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+        <item>
+            <title>Adding Sinkholed Domains to the List</title>
+            <link>http://www.malwaredomains.com/?p=3523</link>
+            <comments>http://www.malwaredomains.com/?p=3523#comments</comments>
+            <pubDate>Wed, 22 Jan 2014 23:22:21 +0000</pubDate>
+            <dc:creator>dglosser</dc:creator>
+            <category><![CDATA[New Domains]]></category>
+
+            <guid isPermaLink="false">http://www.malwaredomains.com/?p=3523</guid>
+            <description>
+                <![CDATA[We&#8217;ve received several requests to add domains already-sinkholed to this list. We&#8217;ve also received other requests to remove a domain as it&#8217;s already sinkholed. We&#8217;ve appreciate any thoughts on the matter. Thanks.]]></description>
+            <content:encoded><![CDATA[<p>We&#8217;ve received several requests to add domains already-sinkholed to this list.</p>
+<p>We&#8217;ve also received other requests to remove a domain as it&#8217;s already sinkholed.</p>
+<p>We&#8217;ve appreciate any thoughts on the matter. Thanks.</p>
+]]></content:encoded>
+            <wfw:commentRss>http://www.malwaredomains.com/?feed=rss2&#038;p=3523</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+        </item>
+    </channel>
+</rss>
