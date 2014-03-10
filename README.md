@@ -26,11 +26,11 @@ Please read documentation relative to the version you are using:
 * [0.3.0-SNAPSHOT](https://github.com/dadoonet/rssriver/blob/es-0.90/README.md)
 * [0.2.0](https://github.com/dadoonet/rssriver/blob/rssriver-0.2.0/README.md)
 * [0.1.0](https://github.com/dadoonet/rssriver/blob/rssriver-0.1.0/README.md)
-* [0.0.6](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.6/README.md)
-* [0.0.5](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.5/README.md)
-* [0.0.4](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.4/README.md)
-* [0.0.3](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.3/README.md)
-* [0.0.2](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.2/README.md)
+* [0.0.6](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.6/README.textile)
+* [0.0.5](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.5/README.textile)
+* [0.0.4](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.4/README.textile)
+* [0.0.3](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.3/README.textile)
+* [0.0.2](https://github.com/dadoonet/rssriver/blob/rssriver-0.0.2/README.textile)
 
 
 Build Status
