@@ -1,0 +1,1593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2frenchfull.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://rss.lefigaro.fr/~d/styles/itemcontent.css"?>
+<rss
+        xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+    <channel>
+        <title>Le Figaro : A la Une</title>
+        <link>http://www.lefigaro.fr/</link>
+        <description>A la Une : Retrouvez toute l'actualité en France, à l'international, l'actualité économique et
+            politique avec Le Figaro
+        </description>
+        <language>fr</language>
+        <copyright>Droits de reproduction et de diffusion réservés © lefigaro.fr</copyright>
+        <pubDate>Mon, 10 Mar 2014 18:43:01 GMT</pubDate>
+        <lastBuildDate>Mon, 10 Mar 2014 18:43:01 GMT</lastBuildDate>
+        <ttl>2</ttl>
+        <image>
+            <title>LE FIGARO - Le Figaro - Actualité en direct et informations en continu</title>
+            <url>http://www.lefigaro.fr/rss/img/logo_figaro.gif</url>
+            <link>http://www.lefigaro.fr/</link>
+            <description>A la Une : Retrouvez toute l'actualité en France, à l'international, l'actualité économique et
+                politique avec Le Figaro
+            </description>
+        </image>
+        <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml"
+                     href="http://rss.lefigaro.fr/lefigaro/laune"/>
+        <feedburner:info uri="lefigaro/laune"/>
+        <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/"/>
+        <thespringbox:skin xmlns:thespringbox="http://www.thespringbox.com/dtds/thespringbox-1.0.dtd">
+            http://rss.lefigaro.fr/lefigaro/laune?format=skin
+        </thespringbox:skin>
+        <feedburner:feedFlare
+                href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://www.newsgator.com/images/ngsub1.gif">Subscribe with NewsGator
+        </feedburner:feedFlare>
+        <feedburner:feedFlare href="http://www.bloglines.com/sub/http://rss.lefigaro.fr/lefigaro/laune"
+                              src="http://www.bloglines.com/images/sub_modern11.gif">Subscribe with Bloglines
+        </feedburner:feedFlare>
+        <feedburner:feedFlare
+                href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://www.netvibes.com/img/add2netvibes.gif">Subscribe with Netvibes
+        </feedburner:feedFlare>
+        <feedburner:feedFlare
+                href="http://fusion.google.com/add?feedurl=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://buttons.googlesyndication.com/fusion/add.gif">Subscribe with Google
+        </feedburner:feedFlare>
+        <feedburner:feedFlare
+                href="http://www.pageflakes.com/subscribe.aspx?url=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://www.pageflakes.com/ImageFile.ashx?instanceId=Static_4&amp;fileName=ATP_blu_91x17.gif">
+            Subscribe with Pageflakes
+        </feedburner:feedFlare>
+        <feedburner:feedFlare href="http://www.plusmo.com/add?url=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                              src="http://plusmo.com/res/graphics/fbplusmo.gif">Subscribe with Plusmo
+        </feedburner:feedFlare>
+        <feedburner:feedFlare
+                href="http://my.feedlounge.com/external/subscribe?url=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://static.feedlounge.com/buttons/subscribe_0.gif">Subscribe with FeedLounge
+        </feedburner:feedFlare>
+        <feedburner:feedFlare
+                href="http://www.thefreedictionary.com/_/hp/AddRSS.aspx?http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://img.tfd.com/hp/addToTheFreeDictionary.gif">Subscribe with The Free Dictionary
+        </feedburner:feedFlare>
+        <feedburner:feedFlare href="http://www.inclue.com/client/1?feed=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                              src="http://www.inclue.com/friends/chicklet.gif">Subscribe with inclue!
+        </feedburner:feedFlare>
+        <feedburner:feedFlare
+                href="http://www.bitty.com/manual/?contenttype=rssfeed&amp;contentvalue=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://www.bitty.com/img/bittychicklet_91x17.gif">Subscribe with Bitty Browser
+        </feedburner:feedFlare>
+        <feedburner:feedFlare href="http://www.newsalloy.com/?rss=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                              src="http://www.newsalloy.com/subrss3.gif">Subscribe with NewsAlloy
+        </feedburner:feedFlare>
+        <feedburner:feedFlare href="http://www.live.com/?add=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                              src="http://tkfiles.storage.msn.com/x1piYkpqHC_35nIp1gLE68-wvzLZO8iXl_JMledmJQXP-XTBOLfmQv4zhj4MhcWEJh_GtoBIiAl1Mjh-ndp9k47If7hTaFno0mxW9_i3p_5qQw">
+            Subscribe with Live.com
+        </feedburner:feedFlare>
+        <feedburner:feedFlare
+                href="http://odeo.com/listen/subscribe?feed=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://odeo.com/img/badge-channel-black.gif">Subscribe with ODEO
+        </feedburner:feedFlare>
+        <feedburner:feedFlare href="http://www.podnova.com/add.srf?url=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                              src="http://www.podnova.com/img_chicklet_podnova.gif">Subscribe with Podnova
+        </feedburner:feedFlare>
+        <feedburner:feedFlare
+                href="http://add.my.yahoo.com/content?lg=fr&amp;url=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://us.i1.yimg.com/us.yimg.com/i/us/my/bn/intatm_fr_1.gif">Subscribe with Mon Yahoo!
+        </feedburner:feedFlare>
+        <feedburner:feedFlare href="http://mix.excite.eu/add?feedurl=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                              src="http://image.excite.co.uk/mix/addtomix.gif">Subscribe with Excite MIX
+        </feedburner:feedFlare>
+        <feedburner:feedFlare
+                href="http://www.yourminis.com/subscribe.aspx?u=http%3A%2F%2Frss.lefigaro.fr%2Flefigaro%2Flaune"
+                src="http://www.yourminis.com/images/addtoyourminisbadge.gif">Subscribe with Yourminis.com
+        </feedburner:feedFlare>
+        <item>
+            <title>L'alerte à la pollution en Ile-de-France va se poursuivre mardi</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/5vLDRFAij40/story01.htm</link>
+            <description>Le climat, exceptionnel pour la saison, est responsable de la prolongation de cet épisode de
+                pollution de l'air aux particules, le plus long depuis décembre 2013. Pollution aux particules : trois
+                associations portent plainte De nombreux records de douceur battus ce dimanche&lt;img width='1'
+                height='1' src='http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401a/sc/37/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsciences%2F2014%2F03%2F10%2F01008-20140310ARTFIG00303-l-alerte-a-la-pollution-en-ile-de-france-va-se-poursuivre-mardi.php&amp;t=L%27alerte+%C3%A0+la+pollution+en+Ile-de-France+va+se+poursuivre+mardi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsciences%2F2014%2F03%2F10%2F01008-20140310ARTFIG00303-l-alerte-a-la-pollution-en-ile-de-france-va-se-poursuivre-mardi.php&amp;t=L%27alerte+%C3%A0+la+pollution+en+Ile-de-France+va+se+poursuivre+mardi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsciences%2F2014%2F03%2F10%2F01008-20140310ARTFIG00303-l-alerte-a-la-pollution-en-ile-de-france-va-se-poursuivre-mardi.php&amp;t=L%27alerte+%C3%A0+la+pollution+en+Ile-de-France+va+se+poursuivre+mardi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsciences%2F2014%2F03%2F10%2F01008-20140310ARTFIG00303-l-alerte-a-la-pollution-en-ile-de-france-va-se-poursuivre-mardi.php&amp;t=L%27alerte+%C3%A0+la+pollution+en+Ile-de-France+va+se+poursuivre+mardi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsciences%2F2014%2F03%2F10%2F01008-20140310ARTFIG00303-l-alerte-a-la-pollution-en-ile-de-france-va-se-poursuivre-mardi.php&amp;t=L%27alerte+%C3%A0+la+pollution+en+Ile-de-France+va+se+poursuivre+mardi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801389923/u/49/f/438190/c/32266/s/3803401a/sc/37/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801389923/u/49/f/438190/c/32266/s/3803401a/sc/37/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801389923/u/49/f/438190/c/32266/s/3803401a/sc/37/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801389923/u/49/f/438190/c/32266/s/3803401a/sc/37/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801389923/u/49/f/438190/c/32266/s/3803401a/sc/37/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801389923/u/49/f/438190/c/32266/s/3803401a/sc/37/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801389923/u/49/f/438190/c/32266/s/3803401a/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801389923/u/49/f/438190/c/32266/s/3803401a/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801389923/u/49/f/438190/c/32266/s/3803401a/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=5vLDRFAij40:QyWGqWypAGU:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=5vLDRFAij40:QyWGqWypAGU:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=5vLDRFAij40:QyWGqWypAGU:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=5vLDRFAij40:QyWGqWypAGU:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=5vLDRFAij40:QyWGqWypAGU:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=5vLDRFAij40:QyWGqWypAGU:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=5vLDRFAij40:QyWGqWypAGU:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=5vLDRFAij40:QyWGqWypAGU:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/5vLDRFAij40" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/3803401a/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHOf637b8f20Ea870A0E11e30Ea0Af70E50Ac29d4a47ff0E245x160A0Bjpg/PHOf637b8f2-a870-11e3-a0f7-50c29d4a47ff-245x160.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Sciences &amp; Environnnement</category>
+            <pubDate>Mon, 10 Mar 2014 18:39:00 GMT</pubDate>
+            <author>lefigaro.fr lefigaro.fr</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401a/sc/37/l/0L0Slefigaro0Bfr0Csciences0C20A140C0A30C10A0C0A10A0A80E20A140A310AARTFIG0A0A30A30El0Ealerte0Ea0Ela0Epollution0Een0Eile0Ede0Efrance0Eva0Ese0Epoursuivre0Emardi0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401a/sc/37/l/0L0Slefigaro0Bfr0Csciences0C20A140C0A30C10A0C0A10A0A80E20A140A310AARTFIG0A0A30A30El0Ealerte0Ea0Ela0Epollution0Een0Eile0Ede0Efrance0Eva0Ese0Epoursuivre0Emardi0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Le hit-parade des voitures les plus fiables</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/VZ6-2DQr6Zk/story01.htm</link>
+            <description>L'Utac vient de publier les résultats des contrôles techniques 2013. Sur les 16,2 millions de
+                véhicules contrôlés, seulement 19,05&amp;#160;% ont fait l'objet d'une contre-visite.&lt;img width='1'
+                height='1' src='http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401d/sc/37/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00286-le-hit-parade-des-voitures-les-plus-fiables.php&amp;t=Le+hit-parade+des+voitures+les+plus+fiables"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00286-le-hit-parade-des-voitures-les-plus-fiables.php&amp;t=Le+hit-parade+des+voitures+les+plus+fiables"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00286-le-hit-parade-des-voitures-les-plus-fiables.php&amp;t=Le+hit-parade+des+voitures+les+plus+fiables"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00286-le-hit-parade-des-voitures-les-plus-fiables.php&amp;t=Le+hit-parade+des+voitures+les+plus+fiables"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00286-le-hit-parade-des-voitures-les-plus-fiables.php&amp;t=Le+hit-parade+des+voitures+les+plus+fiables"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801389922/u/49/f/438190/c/32266/s/3803401d/sc/37/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801389922/u/49/f/438190/c/32266/s/3803401d/sc/37/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801389922/u/49/f/438190/c/32266/s/3803401d/sc/37/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801389922/u/49/f/438190/c/32266/s/3803401d/sc/37/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801389922/u/49/f/438190/c/32266/s/3803401d/sc/37/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801389922/u/49/f/438190/c/32266/s/3803401d/sc/37/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801389922/u/49/f/438190/c/32266/s/3803401d/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801389922/u/49/f/438190/c/32266/s/3803401d/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801389922/u/49/f/438190/c/32266/s/3803401d/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=VZ6-2DQr6Zk:AEfnF_glG40:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=VZ6-2DQr6Zk:AEfnF_glG40:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=VZ6-2DQr6Zk:AEfnF_glG40:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=VZ6-2DQr6Zk:AEfnF_glG40:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=VZ6-2DQr6Zk:AEfnF_glG40:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=VZ6-2DQr6Zk:AEfnF_glG40:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=VZ6-2DQr6Zk:AEfnF_glG40:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=VZ6-2DQr6Zk:AEfnF_glG40:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/VZ6-2DQr6Zk" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/3803401d/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHO2258bd140Ea86c0E11e30Ea77e0Ebcd98d1d50A680E245x160A0Bjpg/PHO2258bd14-a86c-11e3-a77e-bcd98d1d5068-245x160.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Automobile</category>
+            <pubDate>Mon, 10 Mar 2014 18:26:00 GMT</pubDate>
+            <author>Sylvain Reisser</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401d/sc/37/l/0L0Slefigaro0Bfr0Cautomobile0C20A140C0A30C10A0C30A0A0A20E20A140A310AARTFIG0A0A2860Ele0Ehit0Eparade0Edes0Evoitures0Eles0Eplus0Efiables0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401d/sc/37/l/0L0Slefigaro0Bfr0Cautomobile0C20A140C0A30C10A0C30A0A0A20E20A140A310AARTFIG0A0A2860Ele0Ehit0Eparade0Edes0Evoitures0Eles0Eplus0Efiables0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>François Hollande : du gangsta-rap à l'Élysée</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/tOsDsx3ZYXU/story01.htm</link>
+            <description>Le président de la République vient de recruter une nouvelle plume pour écrire ses discours.
+                Pierre -Yves Bocquet présente la particularité d'être à la fois énarque et spécialiste d'un rap dur
+                importé des États-Unis.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d81/sc/41/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00289-francois-hollande-signe-un-pacte-avec-pierre-le-diable.php&amp;t=Fran%C3%A7ois+Hollande+%3A+du+gangsta-rap+%C3%A0+l%27%C3%89lys%C3%A9e"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00289-francois-hollande-signe-un-pacte-avec-pierre-le-diable.php&amp;t=Fran%C3%A7ois+Hollande+%3A+du+gangsta-rap+%C3%A0+l%27%C3%89lys%C3%A9e"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00289-francois-hollande-signe-un-pacte-avec-pierre-le-diable.php&amp;t=Fran%C3%A7ois+Hollande+%3A+du+gangsta-rap+%C3%A0+l%27%C3%89lys%C3%A9e"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00289-francois-hollande-signe-un-pacte-avec-pierre-le-diable.php&amp;t=Fran%C3%A7ois+Hollande+%3A+du+gangsta-rap+%C3%A0+l%27%C3%89lys%C3%A9e"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00289-francois-hollande-signe-un-pacte-avec-pierre-le-diable.php&amp;t=Fran%C3%A7ois+Hollande+%3A+du+gangsta-rap+%C3%A0+l%27%C3%89lys%C3%A9e"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801201796/u/49/f/438190/c/32266/s/38028d81/sc/41/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801201796/u/49/f/438190/c/32266/s/38028d81/sc/41/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801201796/u/49/f/438190/c/32266/s/38028d81/sc/41/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801201796/u/49/f/438190/c/32266/s/38028d81/sc/41/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801201796/u/49/f/438190/c/32266/s/38028d81/sc/41/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801201796/u/49/f/438190/c/32266/s/38028d81/sc/41/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801201796/u/49/f/438190/c/32266/s/38028d81/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801201796/u/49/f/438190/c/32266/s/38028d81/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801201796/u/49/f/438190/c/32266/s/38028d81/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=tOsDsx3ZYXU:7mcNwPVnepE:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=tOsDsx3ZYXU:7mcNwPVnepE:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=tOsDsx3ZYXU:7mcNwPVnepE:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=tOsDsx3ZYXU:7mcNwPVnepE:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=tOsDsx3ZYXU:7mcNwPVnepE:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=tOsDsx3ZYXU:7mcNwPVnepE:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=tOsDsx3ZYXU:7mcNwPVnepE:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=tOsDsx3ZYXU:7mcNwPVnepE:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/tOsDsx3ZYXU" height="1"
+                width="1"/&gt;</description>
+            <category domain="">Culture</category>
+            <pubDate>Mon, 10 Mar 2014 18:14:00 GMT</pubDate>
+            <author>Bertrand Guyard</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d81/sc/41/l/0L0Slefigaro0Bfr0Cculture0C20A140C0A30C10A0C0A30A0A40E20A140A310AARTFIG0A0A2890Efrancois0Ehollande0Esigne0Eun0Epacte0Eavec0Epierre0Ele0Ediable0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d81/sc/41/l/0L0Slefigaro0Bfr0Cculture0C20A140C0A30C10A0C0A30A0A40E20A140A310AARTFIG0A0A2890Efrancois0Ehollande0Esigne0Eun0Epacte0Eavec0Epierre0Ele0Ediable0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>«3 opérateurs téléphoniques, ce sera l'envolée des prix!»</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/X942TuclbxA/story01.htm</link>
+            <description>VOTRE&amp;#160;AVIS - La guerre des opérateurs télécom est relancée avec le possible rachat de
+                SFR par Bouygues Télécom. Les internautes du Figaro.fr se méfient de cette acquisition et craignent le
+                retour d'une entente sur les prix.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/3801eb29/sc/46/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsecteur%2Fhigh-tech%2F2014%2F03%2F10%2F01007-20140310ARTFIG00235-3-operateurs-telephoniques-ce-sera-l-envolee-des-prix.php&amp;t=%C2%AB3+op%C3%A9rateurs+t%C3%A9l%C3%A9phoniques%2C+ce+sera+l%27envol%C3%A9e+des+prix%21%C2%BB"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsecteur%2Fhigh-tech%2F2014%2F03%2F10%2F01007-20140310ARTFIG00235-3-operateurs-telephoniques-ce-sera-l-envolee-des-prix.php&amp;t=%C2%AB3+op%C3%A9rateurs+t%C3%A9l%C3%A9phoniques%2C+ce+sera+l%27envol%C3%A9e+des+prix%21%C2%BB"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsecteur%2Fhigh-tech%2F2014%2F03%2F10%2F01007-20140310ARTFIG00235-3-operateurs-telephoniques-ce-sera-l-envolee-des-prix.php&amp;t=%C2%AB3+op%C3%A9rateurs+t%C3%A9l%C3%A9phoniques%2C+ce+sera+l%27envol%C3%A9e+des+prix%21%C2%BB"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsecteur%2Fhigh-tech%2F2014%2F03%2F10%2F01007-20140310ARTFIG00235-3-operateurs-telephoniques-ce-sera-l-envolee-des-prix.php&amp;t=%C2%AB3+op%C3%A9rateurs+t%C3%A9l%C3%A9phoniques%2C+ce+sera+l%27envol%C3%A9e+des+prix%21%C2%BB"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsecteur%2Fhigh-tech%2F2014%2F03%2F10%2F01007-20140310ARTFIG00235-3-operateurs-telephoniques-ce-sera-l-envolee-des-prix.php&amp;t=%C2%AB3+op%C3%A9rateurs+t%C3%A9l%C3%A9phoniques%2C+ce+sera+l%27envol%C3%A9e+des+prix%21%C2%BB"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801201794/u/49/f/438190/c/32266/s/3801eb29/sc/46/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801201794/u/49/f/438190/c/32266/s/3801eb29/sc/46/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801201794/u/49/f/438190/c/32266/s/3801eb29/sc/46/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801201794/u/49/f/438190/c/32266/s/3801eb29/sc/46/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801201794/u/49/f/438190/c/32266/s/3801eb29/sc/46/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801201794/u/49/f/438190/c/32266/s/3801eb29/sc/46/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801201794/u/49/f/438190/c/32266/s/3801eb29/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801201794/u/49/f/438190/c/32266/s/3801eb29/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801201794/u/49/f/438190/c/32266/s/3801eb29/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=X942TuclbxA:81ezuigZ1zs:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=X942TuclbxA:81ezuigZ1zs:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=X942TuclbxA:81ezuigZ1zs:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=X942TuclbxA:81ezuigZ1zs:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=X942TuclbxA:81ezuigZ1zs:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=X942TuclbxA:81ezuigZ1zs:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=X942TuclbxA:81ezuigZ1zs:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=X942TuclbxA:81ezuigZ1zs:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/X942TuclbxA" height="1"
+                width="1"/&gt;</description>
+            <category domain="">High-Tech</category>
+            <pubDate>Mon, 10 Mar 2014 18:14:00 GMT</pubDate>
+            <author>Jennifer Padjemi</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3801eb29/sc/46/l/0L0Slefigaro0Bfr0Csecteur0Chigh0Etech0C20A140C0A30C10A0C0A10A0A70E20A140A310AARTFIG0A0A2350E30Eoperateurs0Etelephoniques0Ece0Esera0El0Eenvolee0Edes0Eprix0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3801eb29/sc/46/l/0L0Slefigaro0Bfr0Csecteur0Chigh0Etech0C20A140C0A30C10A0C0A10A0A70E20A140A310AARTFIG0A0A2350E30Eoperateurs0Etelephoniques0Ece0Esera0El0Eenvolee0Edes0Eprix0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Sarkozy et financement de Libye : Me Ceccaldi répond à Yves Thréard</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/2R21WbOJWYw/story01.htm</link>
+            <description>VIDÉO - Chaque jour, Yves Thréard interpelle une personnalité. Notre éditorialiste s'adresse
+                aujourd'hui à Me Marcel Ceccaldi, avocat français de l'État libyen jusqu'à la chute du régime de
+                Kadhafi, à propos du financement de la campagne de Nicolas Sarkozy en 2007.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38001f68/sc/3/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fpolitique%2F2014%2F03%2F10%2F01002-20140310ARTFIG00160-sarkozy-et-financement-lybien-me-ceccaldi-repondez-moi.php&amp;t=Sarkozy+et+financement+de+Libye+%3A+Me+Ceccaldi+r%C3%A9pond+%C3%A0+Yves+Thr%C3%A9ard"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fpolitique%2F2014%2F03%2F10%2F01002-20140310ARTFIG00160-sarkozy-et-financement-lybien-me-ceccaldi-repondez-moi.php&amp;t=Sarkozy+et+financement+de+Libye+%3A+Me+Ceccaldi+r%C3%A9pond+%C3%A0+Yves+Thr%C3%A9ard"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fpolitique%2F2014%2F03%2F10%2F01002-20140310ARTFIG00160-sarkozy-et-financement-lybien-me-ceccaldi-repondez-moi.php&amp;t=Sarkozy+et+financement+de+Libye+%3A+Me+Ceccaldi+r%C3%A9pond+%C3%A0+Yves+Thr%C3%A9ard"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fpolitique%2F2014%2F03%2F10%2F01002-20140310ARTFIG00160-sarkozy-et-financement-lybien-me-ceccaldi-repondez-moi.php&amp;t=Sarkozy+et+financement+de+Libye+%3A+Me+Ceccaldi+r%C3%A9pond+%C3%A0+Yves+Thr%C3%A9ard"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fpolitique%2F2014%2F03%2F10%2F01002-20140310ARTFIG00160-sarkozy-et-financement-lybien-me-ceccaldi-repondez-moi.php&amp;t=Sarkozy+et+financement+de+Libye+%3A+Me+Ceccaldi+r%C3%A9pond+%C3%A0+Yves+Thr%C3%A9ard"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801189181/u/49/f/438190/c/32266/s/38001f68/sc/3/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801189181/u/49/f/438190/c/32266/s/38001f68/sc/3/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801189181/u/49/f/438190/c/32266/s/38001f68/sc/3/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801189181/u/49/f/438190/c/32266/s/38001f68/sc/3/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801189181/u/49/f/438190/c/32266/s/38001f68/sc/3/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801189181/u/49/f/438190/c/32266/s/38001f68/sc/3/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801189181/u/49/f/438190/c/32266/s/38001f68/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801189181/u/49/f/438190/c/32266/s/38001f68/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801189181/u/49/f/438190/c/32266/s/38001f68/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=2R21WbOJWYw:jDEgs3zrfNA:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=2R21WbOJWYw:jDEgs3zrfNA:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=2R21WbOJWYw:jDEgs3zrfNA:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=2R21WbOJWYw:jDEgs3zrfNA:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=2R21WbOJWYw:jDEgs3zrfNA:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=2R21WbOJWYw:jDEgs3zrfNA:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=2R21WbOJWYw:jDEgs3zrfNA:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=2R21WbOJWYw:jDEgs3zrfNA:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/2R21WbOJWYw" height="1"
+                width="1"/&gt;</description>
+            <category domain="">Politique</category>
+            <pubDate>Mon, 10 Mar 2014 17:56:00 GMT</pubDate>
+            <author>Yves Thréard</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38001f68/sc/3/l/0L0Slefigaro0Bfr0Cpolitique0C20A140C0A30C10A0C0A10A0A20E20A140A310AARTFIG0A0A160A0Esarkozy0Eet0Efinancement0Elybien0Eme0Ececcaldi0Erepondez0Emoi0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38001f68/sc/3/l/0L0Slefigaro0Bfr0Cpolitique0C20A140C0A30C10A0C0A10A0A20E20A140A310AARTFIG0A0A160A0Esarkozy0Eet0Efinancement0Elybien0Eme0Ececcaldi0Erepondez0Emoi0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Boeing disparu : les familles expriment leur colère et leur frustration</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/9x26ZUxtl-c/story01.htm</link>
+            <description>Trois jours après sa disparition mystérieuse, le Boeing 777 de Malaysia Airlines qui faisait la
+                liaison entre Kuala Lumpur et Pékin n'a toujours pas été localisé. Une situation difficile à supporter
+                pour les familles. Le point sur l'enquête.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/37f65b9a/sc/3/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Finternational%2F2014%2F03%2F09%2F01003-20140309ARTFIG00058-la-malaisie-examine-l-hypothese-terroriste-pour-le-boeing-disparu.php&amp;t=Boeing+disparu+%3A+les+familles+expriment+leur+col%C3%A8re+et+leur+frustration"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Finternational%2F2014%2F03%2F09%2F01003-20140309ARTFIG00058-la-malaisie-examine-l-hypothese-terroriste-pour-le-boeing-disparu.php&amp;t=Boeing+disparu+%3A+les+familles+expriment+leur+col%C3%A8re+et+leur+frustration"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Finternational%2F2014%2F03%2F09%2F01003-20140309ARTFIG00058-la-malaisie-examine-l-hypothese-terroriste-pour-le-boeing-disparu.php&amp;t=Boeing+disparu+%3A+les+familles+expriment+leur+col%C3%A8re+et+leur+frustration"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Finternational%2F2014%2F03%2F09%2F01003-20140309ARTFIG00058-la-malaisie-examine-l-hypothese-terroriste-pour-le-boeing-disparu.php&amp;t=Boeing+disparu+%3A+les+familles+expriment+leur+col%C3%A8re+et+leur+frustration"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Finternational%2F2014%2F03%2F09%2F01003-20140309ARTFIG00058-la-malaisie-examine-l-hypothese-terroriste-pour-le-boeing-disparu.php&amp;t=Boeing+disparu+%3A+les+familles+expriment+leur+col%C3%A8re+et+leur+frustration"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801336027/u/49/f/438190/c/32266/s/37f65b9a/sc/3/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801336027/u/49/f/438190/c/32266/s/37f65b9a/sc/3/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801336027/u/49/f/438190/c/32266/s/37f65b9a/sc/3/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801336027/u/49/f/438190/c/32266/s/37f65b9a/sc/3/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801336027/u/49/f/438190/c/32266/s/37f65b9a/sc/3/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801336027/u/49/f/438190/c/32266/s/37f65b9a/sc/3/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801336027/u/49/f/438190/c/32266/s/37f65b9a/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801336027/u/49/f/438190/c/32266/s/37f65b9a/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801336027/u/49/f/438190/c/32266/s/37f65b9a/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9x26ZUxtl-c:p7xmWeE9zEw:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9x26ZUxtl-c:p7xmWeE9zEw:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9x26ZUxtl-c:p7xmWeE9zEw:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9x26ZUxtl-c:p7xmWeE9zEw:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9x26ZUxtl-c:p7xmWeE9zEw:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9x26ZUxtl-c:p7xmWeE9zEw:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=9x26ZUxtl-c:p7xmWeE9zEw:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9x26ZUxtl-c:p7xmWeE9zEw:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/9x26ZUxtl-c" height="1"
+                width="1"/&gt;</description>
+            <category domain="">International</category>
+            <pubDate>Mon, 10 Mar 2014 17:42:00 GMT</pubDate>
+            <author>Le figaro.fr</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37f65b9a/sc/3/l/0L0Slefigaro0Bfr0Cinternational0C20A140C0A30C0A90C0A10A0A30E20A140A30A9ARTFIG0A0A0A580Ela0Emalaisie0Eexamine0El0Ehypothese0Eterroriste0Epour0Ele0Eboeing0Edisparu0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37f65b9a/sc/3/l/0L0Slefigaro0Bfr0Cinternational0C20A140C0A30C0A90C0A10A0A30E20A140A30A9ARTFIG0A0A0A580Ela0Emalaisie0Eexamine0El0Ehypothese0Eterroriste0Epour0Ele0Eboeing0Edisparu0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Le cinéma français fait ses adieux à Alain Resnais</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/RogTwFbKD5E/story01.htm</link>
+            <description>EN IMAGES - C'est sous un soleil éclatant qu'acteurs, réalisateurs et hommes politiques ont
+                adressé un dernier au revoir à Alain Resnais ce lundi matin.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d87/sc/3/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fcinema%2F2014%2F03%2F10%2F03002-20140310ARTFIG00261-le-cinema-francais-fait-ses-adieux-a-alain-resnais.php&amp;t=Le+cin%C3%A9ma+fran%C3%A7ais+fait+ses+adieux+%C3%A0+Alain+Resnais"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fcinema%2F2014%2F03%2F10%2F03002-20140310ARTFIG00261-le-cinema-francais-fait-ses-adieux-a-alain-resnais.php&amp;t=Le+cin%C3%A9ma+fran%C3%A7ais+fait+ses+adieux+%C3%A0+Alain+Resnais"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fcinema%2F2014%2F03%2F10%2F03002-20140310ARTFIG00261-le-cinema-francais-fait-ses-adieux-a-alain-resnais.php&amp;t=Le+cin%C3%A9ma+fran%C3%A7ais+fait+ses+adieux+%C3%A0+Alain+Resnais"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fcinema%2F2014%2F03%2F10%2F03002-20140310ARTFIG00261-le-cinema-francais-fait-ses-adieux-a-alain-resnais.php&amp;t=Le+cin%C3%A9ma+fran%C3%A7ais+fait+ses+adieux+%C3%A0+Alain+Resnais"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fcinema%2F2014%2F03%2F10%2F03002-20140310ARTFIG00261-le-cinema-francais-fait-ses-adieux-a-alain-resnais.php&amp;t=Le+cin%C3%A9ma+fran%C3%A7ais+fait+ses+adieux+%C3%A0+Alain+Resnais"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RogTwFbKD5E:VInjt4ZgRu8:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RogTwFbKD5E:VInjt4ZgRu8:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RogTwFbKD5E:VInjt4ZgRu8:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RogTwFbKD5E:VInjt4ZgRu8:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RogTwFbKD5E:VInjt4ZgRu8:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RogTwFbKD5E:VInjt4ZgRu8:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=RogTwFbKD5E:VInjt4ZgRu8:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RogTwFbKD5E:VInjt4ZgRu8:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/RogTwFbKD5E" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/38028d87/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHO30A320Ac340Ea8610E11e30Ea0Af70E50Ac29d4a47ff0E640Ax230A0Bjpg/PHO30320c34-a861-11e3-a0f7-50c29d4a47ff-640x230.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Cinéma</category>
+            <pubDate>Mon, 10 Mar 2014 17:14:00 GMT</pubDate>
+            <author>Pauline Le Gall</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d87/sc/3/l/0L0Slefigaro0Bfr0Ccinema0C20A140C0A30C10A0C0A30A0A20E20A140A310AARTFIG0A0A2610Ele0Ecinema0Efrancais0Efait0Eses0Eadieux0Ea0Ealain0Eresnais0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d87/sc/3/l/0L0Slefigaro0Bfr0Ccinema0C20A140C0A30C10A0C0A30A0A20E20A140A310AARTFIG0A0A2610Ele0Ecinema0Efrancais0Efait0Eses0Eadieux0Ea0Ealain0Eresnais0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Des postiers parisiens refusent de distribuer des tracts du FN</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/US8KIj0m6ZU/story01.htm</link>
+            <description>Face au mouvement initié dans le VIIe arrondissement de Paris, La Poste fait savoir qu'elle ne
+                peut refuser la distribution de propagande électorale que si le contenu «est contraire à l'ordre public
+                ou aux bonnes m&amp;#339;urs».&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/3801eb24/sc/3/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00246-des-postiers-parisiens-refusent-de-distribuer-des-tracts-du-fn.php&amp;t=Des+postiers+parisiens+refusent+de+distribuer+des+tracts+du+FN"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00246-des-postiers-parisiens-refusent-de-distribuer-des-tracts-du-fn.php&amp;t=Des+postiers+parisiens+refusent+de+distribuer+des+tracts+du+FN"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00246-des-postiers-parisiens-refusent-de-distribuer-des-tracts-du-fn.php&amp;t=Des+postiers+parisiens+refusent+de+distribuer+des+tracts+du+FN"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00246-des-postiers-parisiens-refusent-de-distribuer-des-tracts-du-fn.php&amp;t=Des+postiers+parisiens+refusent+de+distribuer+des+tracts+du+FN"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00246-des-postiers-parisiens-refusent-de-distribuer-des-tracts-du-fn.php&amp;t=Des+postiers+parisiens+refusent+de+distribuer+des+tracts+du+FN"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801003102/u/49/f/438190/c/32266/s/3801eb24/sc/3/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801003102/u/49/f/438190/c/32266/s/3801eb24/sc/3/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801003102/u/49/f/438190/c/32266/s/3801eb24/sc/3/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801003102/u/49/f/438190/c/32266/s/3801eb24/sc/3/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801003102/u/49/f/438190/c/32266/s/3801eb24/sc/3/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801003102/u/49/f/438190/c/32266/s/3801eb24/sc/3/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801003102/u/49/f/438190/c/32266/s/3801eb24/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801003102/u/49/f/438190/c/32266/s/3801eb24/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801003102/u/49/f/438190/c/32266/s/3801eb24/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=US8KIj0m6ZU:EUNm9K0Xva0:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=US8KIj0m6ZU:EUNm9K0Xva0:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=US8KIj0m6ZU:EUNm9K0Xva0:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=US8KIj0m6ZU:EUNm9K0Xva0:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=US8KIj0m6ZU:EUNm9K0Xva0:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=US8KIj0m6ZU:EUNm9K0Xva0:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=US8KIj0m6ZU:EUNm9K0Xva0:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=US8KIj0m6ZU:EUNm9K0Xva0:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/US8KIj0m6ZU" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/3801eb24/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHOb163b86e0Ea86d0E11e30Ea77e0Ebcd98d1d50A680E640Ax230A0Bjpg/PHOb163b86e-a86d-11e3-a77e-bcd98d1d5068-640x230.jpg"
+                    type="image/jpeg"/>
+            <category domain="">France</category>
+            <pubDate>Mon, 10 Mar 2014 17:04:00 GMT</pubDate>
+            <author>Le figaro.fr</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3801eb24/sc/3/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A2460Edes0Epostiers0Eparisiens0Erefusent0Ede0Edistribuer0Edes0Etracts0Edu0Efn0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3801eb24/sc/3/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A2460Edes0Epostiers0Eparisiens0Erefusent0Ede0Edistribuer0Edes0Etracts0Edu0Efn0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Amiante : rendez-vous le 10 avril pour Martine Aubry</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/77vZjMdOIxc/story01.htm</link>
+            <description>La maire de Lille entend faire annuler sa mise en examen pour homicides et blessures
+                involontaires.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401c/sc/10/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00252-amiante-rendez-vous-le-10avril-pour-martine-aubry.php&amp;t=Amiante%C2%A0%3A+rendez-vous+le+10%C2%A0avril+pour+Martine+Aubry"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00252-amiante-rendez-vous-le-10avril-pour-martine-aubry.php&amp;t=Amiante%C2%A0%3A+rendez-vous+le+10%C2%A0avril+pour+Martine+Aubry"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00252-amiante-rendez-vous-le-10avril-pour-martine-aubry.php&amp;t=Amiante%C2%A0%3A+rendez-vous+le+10%C2%A0avril+pour+Martine+Aubry"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00252-amiante-rendez-vous-le-10avril-pour-martine-aubry.php&amp;t=Amiante%C2%A0%3A+rendez-vous+le+10%C2%A0avril+pour+Martine+Aubry"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00252-amiante-rendez-vous-le-10avril-pour-martine-aubry.php&amp;t=Amiante%C2%A0%3A+rendez-vous+le+10%C2%A0avril+pour+Martine+Aubry"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=77vZjMdOIxc:xKjf6wBH3tg:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=77vZjMdOIxc:xKjf6wBH3tg:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=77vZjMdOIxc:xKjf6wBH3tg:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=77vZjMdOIxc:xKjf6wBH3tg:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=77vZjMdOIxc:xKjf6wBH3tg:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=77vZjMdOIxc:xKjf6wBH3tg:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=77vZjMdOIxc:xKjf6wBH3tg:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=77vZjMdOIxc:xKjf6wBH3tg:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/77vZjMdOIxc" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/3803401c/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHO397a195a0Ea86e0E11e30Ea77e0Ebcd98d1d50A680E245x160A0Bjpg/PHO397a195a-a86e-11e3-a77e-bcd98d1d5068-245x160.jpg"
+                    type="image/jpeg"/>
+            <category domain="">France</category>
+            <pubDate>Mon, 10 Mar 2014 17:03:00 GMT</pubDate>
+            <author>Anne Jouan, Jean-Yves Guérin</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401c/sc/10/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A2520Eamiante0Erendez0Evous0Ele0E10Aavril0Epour0Emartine0Eaubry0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401c/sc/10/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A2520Eamiante0Erendez0Evous0Ele0E10Aavril0Epour0Emartine0Eaubry0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Après des Vélib'et des Autolib', bientôt des Scootlib' à Paris ?</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/4lcU5OBWHdM/story01.htm</link>
+            <description>Des scooters électriques en libre-service à Paris, c'est l'une des propositions de Anne
+                Hidalgo, candidate socialiste à la Marie de Paris.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38034016/sc/3/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00236-apres-des-velib-et-des-autolib-bientot-des-scootlib-a-paris.php&amp;t=Apr%C3%A8s+des+V%C3%A9lib%27et+des+Autolib%27%2C+bient%C3%B4t+des+Scootlib%27+%C3%A0+Paris+%3F"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00236-apres-des-velib-et-des-autolib-bientot-des-scootlib-a-paris.php&amp;t=Apr%C3%A8s+des+V%C3%A9lib%27et+des+Autolib%27%2C+bient%C3%B4t+des+Scootlib%27+%C3%A0+Paris+%3F"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00236-apres-des-velib-et-des-autolib-bientot-des-scootlib-a-paris.php&amp;t=Apr%C3%A8s+des+V%C3%A9lib%27et+des+Autolib%27%2C+bient%C3%B4t+des+Scootlib%27+%C3%A0+Paris+%3F"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00236-apres-des-velib-et-des-autolib-bientot-des-scootlib-a-paris.php&amp;t=Apr%C3%A8s+des+V%C3%A9lib%27et+des+Autolib%27%2C+bient%C3%B4t+des+Scootlib%27+%C3%A0+Paris+%3F"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fautomobile%2F2014%2F03%2F10%2F30002-20140310ARTFIG00236-apres-des-velib-et-des-autolib-bientot-des-scootlib-a-paris.php&amp;t=Apr%C3%A8s+des+V%C3%A9lib%27et+des+Autolib%27%2C+bient%C3%B4t+des+Scootlib%27+%C3%A0+Paris+%3F"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=4lcU5OBWHdM:jrhpi4i2184:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=4lcU5OBWHdM:jrhpi4i2184:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=4lcU5OBWHdM:jrhpi4i2184:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=4lcU5OBWHdM:jrhpi4i2184:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=4lcU5OBWHdM:jrhpi4i2184:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=4lcU5OBWHdM:jrhpi4i2184:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=4lcU5OBWHdM:jrhpi4i2184:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=4lcU5OBWHdM:jrhpi4i2184:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/4lcU5OBWHdM" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/38034016/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHO273695260Ea8540E11e30Ea77e0Ebcd98d1d50A680E640Ax230A0Bjpg/PHO27369526-a854-11e3-a77e-bcd98d1d5068-640x230.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Automobile</category>
+            <pubDate>Mon, 10 Mar 2014 16:56:00 GMT</pubDate>
+            <author>Thierry Etienne</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38034016/sc/3/l/0L0Slefigaro0Bfr0Cautomobile0C20A140C0A30C10A0C30A0A0A20E20A140A310AARTFIG0A0A2360Eapres0Edes0Evelib0Eet0Edes0Eautolib0Ebientot0Edes0Escootlib0Ea0Eparis0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38034016/sc/3/l/0L0Slefigaro0Bfr0Cautomobile0C20A140C0A30C10A0C30A0A0A20E20A140A310AARTFIG0A0A2360Eapres0Edes0Evelib0Eet0Edes0Eautolib0Ebientot0Edes0Escootlib0Ea0Eparis0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Le patron du Bayern Munich avoue une énorme fraude fiscale</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/jQacOvrcHQk/story01.htm</link>
+            <description>Pour le premier jour de son procès, Uli Hoeness a reconnu avoir fraudé le fisc pour plus de 18
+                millions d'euros. Il risque jusqu'à dix ans de prison.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38020746/sc/12/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsport-business%2F2014%2F03%2F10%2F20006-20140310ARTFIG00223-le-patron-du-bayern-munich-avoue-une-enorme-fraude-fiscale.php&amp;t=Le+patron+du+Bayern+Munich+avoue+une+%C3%A9norme+fraude+fiscale"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsport-business%2F2014%2F03%2F10%2F20006-20140310ARTFIG00223-le-patron-du-bayern-munich-avoue-une-enorme-fraude-fiscale.php&amp;t=Le+patron+du+Bayern+Munich+avoue+une+%C3%A9norme+fraude+fiscale"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsport-business%2F2014%2F03%2F10%2F20006-20140310ARTFIG00223-le-patron-du-bayern-munich-avoue-une-enorme-fraude-fiscale.php&amp;t=Le+patron+du+Bayern+Munich+avoue+une+%C3%A9norme+fraude+fiscale"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsport-business%2F2014%2F03%2F10%2F20006-20140310ARTFIG00223-le-patron-du-bayern-munich-avoue-une-enorme-fraude-fiscale.php&amp;t=Le+patron+du+Bayern+Munich+avoue+une+%C3%A9norme+fraude+fiscale"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fsport-business%2F2014%2F03%2F10%2F20006-20140310ARTFIG00223-le-patron-du-bayern-munich-avoue-une-enorme-fraude-fiscale.php&amp;t=Le+patron+du+Bayern+Munich+avoue+une+%C3%A9norme+fraude+fiscale"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=jQacOvrcHQk:4TP6xrkoTJw:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=jQacOvrcHQk:4TP6xrkoTJw:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=jQacOvrcHQk:4TP6xrkoTJw:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=jQacOvrcHQk:4TP6xrkoTJw:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=jQacOvrcHQk:4TP6xrkoTJw:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=jQacOvrcHQk:4TP6xrkoTJw:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=jQacOvrcHQk:4TP6xrkoTJw:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=jQacOvrcHQk:4TP6xrkoTJw:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/jQacOvrcHQk" height="1"
+                width="1"/&gt;</description>
+            <category domain="">Sport Business</category>
+            <pubDate>Mon, 10 Mar 2014 16:46:00 GMT</pubDate>
+            <author>Guillaume Errard, AFP agence</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38020746/sc/12/l/0L0Slefigaro0Bfr0Csport0Ebusiness0C20A140C0A30C10A0C20A0A0A60E20A140A310AARTFIG0A0A2230Ele0Epatron0Edu0Ebayern0Emunich0Eavoue0Eune0Eenorme0Efraude0Efiscale0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38020746/sc/12/l/0L0Slefigaro0Bfr0Csport0Ebusiness0C20A140C0A30C10A0C20A0A0A60E20A140A310AARTFIG0A0A2230Ele0Epatron0Edu0Ebayern0Emunich0Eavoue0Eune0Eenorme0Efraude0Efiscale0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>24 heures photo</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/9AHD2BCrruA/story01.htm</link>
+            <description>EN IMAGES - Retrouvez les photographies les plus marquantes de la semaine, sélectionnées par la
+                rédaction du Figaro Magazine .&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401e/sc/19/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fphotos%2F2014%2F03%2F10%2F01013-20140310ARTFIG00245-24-heures-photo.php&amp;t=24+heures+photo"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fphotos%2F2014%2F03%2F10%2F01013-20140310ARTFIG00245-24-heures-photo.php&amp;t=24+heures+photo"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fphotos%2F2014%2F03%2F10%2F01013-20140310ARTFIG00245-24-heures-photo.php&amp;t=24+heures+photo"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fphotos%2F2014%2F03%2F10%2F01013-20140310ARTFIG00245-24-heures-photo.php&amp;t=24+heures+photo"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fphotos%2F2014%2F03%2F10%2F01013-20140310ARTFIG00245-24-heures-photo.php&amp;t=24+heures+photo"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9AHD2BCrruA:d9mKTBVxlFQ:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9AHD2BCrruA:d9mKTBVxlFQ:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9AHD2BCrruA:d9mKTBVxlFQ:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9AHD2BCrruA:d9mKTBVxlFQ:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9AHD2BCrruA:d9mKTBVxlFQ:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9AHD2BCrruA:d9mKTBVxlFQ:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=9AHD2BCrruA:d9mKTBVxlFQ:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=9AHD2BCrruA:d9mKTBVxlFQ:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/9AHD2BCrruA" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/3803401e/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHOd0A957ee60Ea86f0E11e30Ea4170E875a225c0Aa470E640Ax230A0Bjpg/PHOd0957ee6-a86f-11e3-a417-875a225c0a47-640x230.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Photos</category>
+            <pubDate>Mon, 10 Mar 2014 16:34:00 GMT</pubDate>
+            <author>Service photo Service photo du Figaro</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401e/sc/19/l/0L0Slefigaro0Bfr0Cphotos0C20A140C0A30C10A0C0A10A130E20A140A310AARTFIG0A0A2450E240Eheures0Ephoto0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3803401e/sc/19/l/0L0Slefigaro0Bfr0Cphotos0C20A140C0A30C10A0C0A10A130E20A140A310AARTFIG0A0A2450E240Eheures0Ephoto0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Saisie record de cannabis en Ile-de-France</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/MSmBNurmTHc/story01.htm</link>
+            <description>Une tonne et demie de drogue a été saisie en Seine-et-Marne samedi. Trois trafiquants ont été
+                interpellés. Leur butin est estimé à 11 millions d'euros.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/3801653a/sc/37/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00228-saisie-record-de-cannabis-en-ile-de-france.php&amp;t=Saisie+record+de+cannabis+en+Ile-de-France"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00228-saisie-record-de-cannabis-en-ile-de-france.php&amp;t=Saisie+record+de+cannabis+en+Ile-de-France"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00228-saisie-record-de-cannabis-en-ile-de-france.php&amp;t=Saisie+record+de+cannabis+en+Ile-de-France"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00228-saisie-record-de-cannabis-en-ile-de-france.php&amp;t=Saisie+record+de+cannabis+en+Ile-de-France"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00228-saisie-record-de-cannabis-en-ile-de-france.php&amp;t=Saisie+record+de+cannabis+en+Ile-de-France"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296330/u/49/f/438190/c/32266/s/3801653a/sc/37/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296330/u/49/f/438190/c/32266/s/3801653a/sc/37/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296330/u/49/f/438190/c/32266/s/3801653a/sc/37/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296330/u/49/f/438190/c/32266/s/3801653a/sc/37/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296330/u/49/f/438190/c/32266/s/3801653a/sc/37/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296330/u/49/f/438190/c/32266/s/3801653a/sc/37/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296330/u/49/f/438190/c/32266/s/3801653a/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296330/u/49/f/438190/c/32266/s/3801653a/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801296330/u/49/f/438190/c/32266/s/3801653a/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=MSmBNurmTHc:gqCFt4rkAfw:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=MSmBNurmTHc:gqCFt4rkAfw:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=MSmBNurmTHc:gqCFt4rkAfw:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=MSmBNurmTHc:gqCFt4rkAfw:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=MSmBNurmTHc:gqCFt4rkAfw:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=MSmBNurmTHc:gqCFt4rkAfw:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=MSmBNurmTHc:gqCFt4rkAfw:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=MSmBNurmTHc:gqCFt4rkAfw:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/MSmBNurmTHc" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/3801653a/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHOa334ccac0Ea86c0E11e30Ea4170E875a225c0Aa470E245x160A0Bjpg/PHOa334ccac-a86c-11e3-a417-875a225c0a47-245x160.jpg"
+                    type="image/jpeg"/>
+            <category domain="">France</category>
+            <pubDate>Mon, 10 Mar 2014 16:28:00 GMT</pubDate>
+            <author>Leslie Bourrelier, AFP agence</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3801653a/sc/37/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A2280Esaisie0Erecord0Ede0Ecannabis0Een0Eile0Ede0Efrance0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/3801653a/sc/37/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A2280Esaisie0Erecord0Ede0Ecannabis0Een0Eile0Ede0Efrance0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Amazon plagie impunément des critiques littéraires</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/nb02kfqzaI8/story01.htm</link>
+            <description>Le forum du réseau social du livre Babelio a été saisi par ses utilisateurs. Avec stupéfaction,
+                certains ont découvert la présence de leurs chroniques dans les commentaires de fiches produits
+                présentes sur le site de vente en ligne. L'enseigne américaine entend bien ne pas réagir.&lt;img
+                width='1' height='1' src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d93/sc/37/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Flivres%2F2014%2F03%2F10%2F03005-20140310ARTFIG00241-amazon-plagie-impunement-des-critiques-litteraires.php&amp;t=Amazon+plagie+impun%C3%A9ment+des+critiques+litt%C3%A9raires"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Flivres%2F2014%2F03%2F10%2F03005-20140310ARTFIG00241-amazon-plagie-impunement-des-critiques-litteraires.php&amp;t=Amazon+plagie+impun%C3%A9ment+des+critiques+litt%C3%A9raires"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Flivres%2F2014%2F03%2F10%2F03005-20140310ARTFIG00241-amazon-plagie-impunement-des-critiques-litteraires.php&amp;t=Amazon+plagie+impun%C3%A9ment+des+critiques+litt%C3%A9raires"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Flivres%2F2014%2F03%2F10%2F03005-20140310ARTFIG00241-amazon-plagie-impunement-des-critiques-litteraires.php&amp;t=Amazon+plagie+impun%C3%A9ment+des+critiques+litt%C3%A9raires"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Flivres%2F2014%2F03%2F10%2F03005-20140310ARTFIG00241-amazon-plagie-impunement-des-critiques-litteraires.php&amp;t=Amazon+plagie+impun%C3%A9ment+des+critiques+litt%C3%A9raires"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=nb02kfqzaI8:DCmFDQxKlJY:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=nb02kfqzaI8:DCmFDQxKlJY:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=nb02kfqzaI8:DCmFDQxKlJY:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=nb02kfqzaI8:DCmFDQxKlJY:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=nb02kfqzaI8:DCmFDQxKlJY:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=nb02kfqzaI8:DCmFDQxKlJY:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=nb02kfqzaI8:DCmFDQxKlJY:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=nb02kfqzaI8:DCmFDQxKlJY:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/nb02kfqzaI8" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/38028d93/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHO0A3f3cdbc0Ea8690E11e30Ea77e0Ebcd98d1d50A680E245x160A0Bjpg/PHO03f3cdbc-a869-11e3-a77e-bcd98d1d5068-245x160.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Livres</category>
+            <pubDate>Mon, 10 Mar 2014 16:24:00 GMT</pubDate>
+            <author>Sophie Legras</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d93/sc/37/l/0L0Slefigaro0Bfr0Clivres0C20A140C0A30C10A0C0A30A0A50E20A140A310AARTFIG0A0A2410Eamazon0Eplagie0Eimpunement0Edes0Ecritiques0Elitteraires0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d93/sc/37/l/0L0Slefigaro0Bfr0Clivres0C20A140C0A30C10A0C0A30A0A50E20A140A310AARTFIG0A0A2410Eamazon0Eplagie0Eimpunement0Edes0Ecritiques0Elitteraires0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Pollution aux particules : trois associations portent plainte</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/RiCK-GDbJP0/story01.htm</link>
+            <description>Alors que l'épisode de pollution aux particules qui touche l'Ile-de-France se prolonge, trois
+                ONG écologistes déposeront plainte contre X mardi pour mise en danger d'autrui, afin de dénoncer
+                l'inertie des autorités.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/37fe1f61/sc/3/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00104-pollution-aux-particules-trois-associations-portent-plainte.php&amp;t=Pollution+aux+particules+%3A+trois+associations+portent+plainte"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00104-pollution-aux-particules-trois-associations-portent-plainte.php&amp;t=Pollution+aux+particules+%3A+trois+associations+portent+plainte"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00104-pollution-aux-particules-trois-associations-portent-plainte.php&amp;t=Pollution+aux+particules+%3A+trois+associations+portent+plainte"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00104-pollution-aux-particules-trois-associations-portent-plainte.php&amp;t=Pollution+aux+particules+%3A+trois+associations+portent+plainte"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00104-pollution-aux-particules-trois-associations-portent-plainte.php&amp;t=Pollution+aux+particules+%3A+trois+associations+portent+plainte"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801371705/u/49/f/438190/c/32266/s/37fe1f61/sc/3/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801371705/u/49/f/438190/c/32266/s/37fe1f61/sc/3/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801371705/u/49/f/438190/c/32266/s/37fe1f61/sc/3/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801371705/u/49/f/438190/c/32266/s/37fe1f61/sc/3/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801371705/u/49/f/438190/c/32266/s/37fe1f61/sc/3/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801371705/u/49/f/438190/c/32266/s/37fe1f61/sc/3/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801371705/u/49/f/438190/c/32266/s/37fe1f61/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801371705/u/49/f/438190/c/32266/s/37fe1f61/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801371705/u/49/f/438190/c/32266/s/37fe1f61/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RiCK-GDbJP0:9UWqmGgW2nY:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RiCK-GDbJP0:9UWqmGgW2nY:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RiCK-GDbJP0:9UWqmGgW2nY:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RiCK-GDbJP0:9UWqmGgW2nY:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RiCK-GDbJP0:9UWqmGgW2nY:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RiCK-GDbJP0:9UWqmGgW2nY:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=RiCK-GDbJP0:9UWqmGgW2nY:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=RiCK-GDbJP0:9UWqmGgW2nY:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/RiCK-GDbJP0" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/37fe1f61/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHOb81bc580A0Ea8350E11e30Ea4170E875a225c0Aa470E245x160A0Bjpg/PHOb81bc580-a835-11e3-a417-875a225c0a47-245x160.jpg"
+                    type="image/jpeg"/>
+            <category domain="">France</category>
+            <pubDate>Mon, 10 Mar 2014 16:21:00 GMT</pubDate>
+            <author>Constance Jamet</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fe1f61/sc/3/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A10A40Epollution0Eaux0Eparticules0Etrois0Eassociations0Eportent0Eplainte0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fe1f61/sc/3/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A10A40Epollution0Eaux0Eparticules0Etrois0Eassociations0Eportent0Eplainte0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Rachat de SFR : craintes sur une future hausse des prix</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/UOL4T21cvts/story01.htm</link>
+            <description>VIDÉO - Les associations de consommateurs rappellent que les opérateurs téléphoniques avaient
+                été condamnés pour entente sur les prix avant l'arrivée sur le marché de Free Mobile.&lt;img width='1'
+                height='1' src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38002e19/sc/15/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconjoncture%2F2014%2F03%2F10%2F20002-20140310ARTFIG00070-rachat-de-sfr-craintes-sur-une-future-hausse-des-prix.php&amp;t=Rachat+de+SFR+%3A+craintes+sur+une+future+hausse+des+prix"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconjoncture%2F2014%2F03%2F10%2F20002-20140310ARTFIG00070-rachat-de-sfr-craintes-sur-une-future-hausse-des-prix.php&amp;t=Rachat+de+SFR+%3A+craintes+sur+une+future+hausse+des+prix"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconjoncture%2F2014%2F03%2F10%2F20002-20140310ARTFIG00070-rachat-de-sfr-craintes-sur-une-future-hausse-des-prix.php&amp;t=Rachat+de+SFR+%3A+craintes+sur+une+future+hausse+des+prix"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconjoncture%2F2014%2F03%2F10%2F20002-20140310ARTFIG00070-rachat-de-sfr-craintes-sur-une-future-hausse-des-prix.php&amp;t=Rachat+de+SFR+%3A+craintes+sur+une+future+hausse+des+prix"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconjoncture%2F2014%2F03%2F10%2F20002-20140310ARTFIG00070-rachat-de-sfr-craintes-sur-une-future-hausse-des-prix.php&amp;t=Rachat+de+SFR+%3A+craintes+sur+une+future+hausse+des+prix"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801297071/u/49/f/438190/c/32266/s/38002e19/sc/15/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801297071/u/49/f/438190/c/32266/s/38002e19/sc/15/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801297071/u/49/f/438190/c/32266/s/38002e19/sc/15/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801297071/u/49/f/438190/c/32266/s/38002e19/sc/15/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801297071/u/49/f/438190/c/32266/s/38002e19/sc/15/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801297071/u/49/f/438190/c/32266/s/38002e19/sc/15/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801297071/u/49/f/438190/c/32266/s/38002e19/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801297071/u/49/f/438190/c/32266/s/38002e19/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801297071/u/49/f/438190/c/32266/s/38002e19/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=UOL4T21cvts:7B_L7v_7OYY:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=UOL4T21cvts:7B_L7v_7OYY:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=UOL4T21cvts:7B_L7v_7OYY:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=UOL4T21cvts:7B_L7v_7OYY:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=UOL4T21cvts:7B_L7v_7OYY:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=UOL4T21cvts:7B_L7v_7OYY:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=UOL4T21cvts:7B_L7v_7OYY:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=UOL4T21cvts:7B_L7v_7OYY:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/UOL4T21cvts" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/38002e19/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHO311cfcfa0Ea84b0E11e30Ea77e0Ebcd98d1d50A680E640Ax230A0Bjpg/PHO311cfcfa-a84b-11e3-a77e-bcd98d1d5068-640x230.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Conjoncture</category>
+            <pubDate>Mon, 10 Mar 2014 16:10:00 GMT</pubDate>
+            <author>Le figaro.fr</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38002e19/sc/15/l/0L0Slefigaro0Bfr0Cconjoncture0C20A140C0A30C10A0C20A0A0A20E20A140A310AARTFIG0A0A0A70A0Erachat0Ede0Esfr0Ecraintes0Esur0Eune0Efuture0Ehausse0Edes0Eprix0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38002e19/sc/15/l/0L0Slefigaro0Bfr0Cconjoncture0C20A140C0A30C10A0C20A0A0A20E20A140A310AARTFIG0A0A0A70A0Erachat0Ede0Esfr0Ecraintes0Esur0Eune0Efuture0Ehausse0Edes0Eprix0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Électricité : 600.000 ménages menacés de coupures samedi</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/v3nbGs4Of5k/story01.htm</link>
+            <description>La fin de la trêve hivernale, prévue samedi, fait craindre à la CGT des tensions entre certains
+                ménages et les agents EDF. Certains maires négocient avec le fournisseur d'électricité pour reporter de
+                deux semaines la coupure.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38014582/sc/2/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconso%2F2014%2F03%2F10%2F05007-20140310ARTFIG00191-electricite-600000-menages-menaces-de-coupures-samedi.php&amp;t=%C3%89lectricit%C3%A9+%3A+600.000+m%C3%A9nages+menac%C3%A9s+de+coupures+samedi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconso%2F2014%2F03%2F10%2F05007-20140310ARTFIG00191-electricite-600000-menages-menaces-de-coupures-samedi.php&amp;t=%C3%89lectricit%C3%A9+%3A+600.000+m%C3%A9nages+menac%C3%A9s+de+coupures+samedi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconso%2F2014%2F03%2F10%2F05007-20140310ARTFIG00191-electricite-600000-menages-menaces-de-coupures-samedi.php&amp;t=%C3%89lectricit%C3%A9+%3A+600.000+m%C3%A9nages+menac%C3%A9s+de+coupures+samedi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconso%2F2014%2F03%2F10%2F05007-20140310ARTFIG00191-electricite-600000-menages-menaces-de-coupures-samedi.php&amp;t=%C3%89lectricit%C3%A9+%3A+600.000+m%C3%A9nages+menac%C3%A9s+de+coupures+samedi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fconso%2F2014%2F03%2F10%2F05007-20140310ARTFIG00191-electricite-600000-menages-menaces-de-coupures-samedi.php&amp;t=%C3%89lectricit%C3%A9+%3A+600.000+m%C3%A9nages+menac%C3%A9s+de+coupures+samedi"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296337/u/49/f/438190/c/32266/s/38014582/sc/2/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296337/u/49/f/438190/c/32266/s/38014582/sc/2/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296337/u/49/f/438190/c/32266/s/38014582/sc/2/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296337/u/49/f/438190/c/32266/s/38014582/sc/2/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296337/u/49/f/438190/c/32266/s/38014582/sc/2/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296337/u/49/f/438190/c/32266/s/38014582/sc/2/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296337/u/49/f/438190/c/32266/s/38014582/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296337/u/49/f/438190/c/32266/s/38014582/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801296337/u/49/f/438190/c/32266/s/38014582/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=v3nbGs4Of5k:-IiR94s53jI:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=v3nbGs4Of5k:-IiR94s53jI:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=v3nbGs4Of5k:-IiR94s53jI:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=v3nbGs4Of5k:-IiR94s53jI:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=v3nbGs4Of5k:-IiR94s53jI:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=v3nbGs4Of5k:-IiR94s53jI:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=v3nbGs4Of5k:-IiR94s53jI:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=v3nbGs4Of5k:-IiR94s53jI:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/v3nbGs4Of5k" height="1"
+                width="1"/&gt;</description>
+            <category domain="">Consommation</category>
+            <pubDate>Mon, 10 Mar 2014 16:03:00 GMT</pubDate>
+            <author>Le figaro.fr, AFP agence</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38014582/sc/2/l/0L0Slefigaro0Bfr0Cconso0C20A140C0A30C10A0C0A50A0A70E20A140A310AARTFIG0A0A1910Eelectricite0E60A0A0A0A0A0Emenages0Emenaces0Ede0Ecoupures0Esamedi0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38014582/sc/2/l/0L0Slefigaro0Bfr0Cconso0C20A140C0A30C10A0C0A50A0A70E20A140A310AARTFIG0A0A1910Eelectricite0E60A0A0A0A0A0Emenages0Emenaces0Ede0Ecoupures0Esamedi0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Michel et Catherine, prénoms les plus portés par les conseillers municipaux</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/qOjeFV7iCW0/story01.htm</link>
+            <description>INFOGRAPHIE - Le blog Idées libres a décortiqué la liste des plus de 500.000 élus membres d'un
+                conseil municipal. Le palmarès confirme la sous-représentation des femmes et des plus jeunes.&lt;img
+                width='1' height='1' src='http://feeds.lefigaro.fr/c/32266/f/438190/s/380124e5/sc/19/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00204-michel-et-catherine-prenoms-les-plus-portes-par-les-conseillers-municipaux.php&amp;t=Michel+et+Catherine%2C+pr%C3%A9noms+les+plus+port%C3%A9s+par+les+conseillers+municipaux"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00204-michel-et-catherine-prenoms-les-plus-portes-par-les-conseillers-municipaux.php&amp;t=Michel+et+Catherine%2C+pr%C3%A9noms+les+plus+port%C3%A9s+par+les+conseillers+municipaux"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00204-michel-et-catherine-prenoms-les-plus-portes-par-les-conseillers-municipaux.php&amp;t=Michel+et+Catherine%2C+pr%C3%A9noms+les+plus+port%C3%A9s+par+les+conseillers+municipaux"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00204-michel-et-catherine-prenoms-les-plus-portes-par-les-conseillers-municipaux.php&amp;t=Michel+et+Catherine%2C+pr%C3%A9noms+les+plus+port%C3%A9s+par+les+conseillers+municipaux"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Factualite-france%2F2014%2F03%2F10%2F01016-20140310ARTFIG00204-michel-et-catherine-prenoms-les-plus-portes-par-les-conseillers-municipaux.php&amp;t=Michel+et+Catherine%2C+pr%C3%A9noms+les+plus+port%C3%A9s+par+les+conseillers+municipaux"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296334/u/49/f/438190/c/32266/s/380124e5/sc/19/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296334/u/49/f/438190/c/32266/s/380124e5/sc/19/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296334/u/49/f/438190/c/32266/s/380124e5/sc/19/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296334/u/49/f/438190/c/32266/s/380124e5/sc/19/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296334/u/49/f/438190/c/32266/s/380124e5/sc/19/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296334/u/49/f/438190/c/32266/s/380124e5/sc/19/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801296334/u/49/f/438190/c/32266/s/380124e5/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801296334/u/49/f/438190/c/32266/s/380124e5/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801296334/u/49/f/438190/c/32266/s/380124e5/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=qOjeFV7iCW0:worvf_ou-4k:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=qOjeFV7iCW0:worvf_ou-4k:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=qOjeFV7iCW0:worvf_ou-4k:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=qOjeFV7iCW0:worvf_ou-4k:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=qOjeFV7iCW0:worvf_ou-4k:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=qOjeFV7iCW0:worvf_ou-4k:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=qOjeFV7iCW0:worvf_ou-4k:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=qOjeFV7iCW0:worvf_ou-4k:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/qOjeFV7iCW0" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/380124e5/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHO75a77e50A0Ea8590E11e30Ea77e0Ebcd98d1d50A680E640Ax230A0Bjpg/PHO75a77e50-a859-11e3-a77e-bcd98d1d5068-640x230.jpg"
+                    type="image/jpeg"/>
+            <category domain="">France</category>
+            <pubDate>Mon, 10 Mar 2014 16:03:00 GMT</pubDate>
+            <author>Julie Voisin, Service Infographie</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/380124e5/sc/19/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A20A40Emichel0Eet0Ecatherine0Eprenoms0Eles0Eplus0Eportes0Epar0Eles0Econseillers0Emunicipaux0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/380124e5/sc/19/l/0L0Slefigaro0Bfr0Cactualite0Efrance0C20A140C0A30C10A0C0A10A160E20A140A310AARTFIG0A0A20A40Emichel0Eet0Ecatherine0Eprenoms0Eles0Eplus0Eportes0Epar0Eles0Econseillers0Emunicipaux0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Pharrell Williams parraine la Journée mondiale du bonheur</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/HKjlZZnFMV8/story01.htm</link>
+            <description>VIDÉO - Avec son titre Happy , le chanteur incarne la joie de vivre et la bonne humeur. Rien
+                d'étonnant à ce qu'il ait été choisi pour représenter l'initiative des Nations unies.&lt;img width='1'
+                height='1' src='http://feeds.lefigaro.fr/c/32266/f/438190/s/37fff312/sc/19/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fmusique%2F2014%2F03%2F10%2F03006-20140310ARTFIG00147-pharrell-williams-parraine-la-journee-mondiale-du-bonheur.php&amp;t=Pharrell+Williams+parraine+la+Journ%C3%A9e+mondiale+du+bonheur"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fmusique%2F2014%2F03%2F10%2F03006-20140310ARTFIG00147-pharrell-williams-parraine-la-journee-mondiale-du-bonheur.php&amp;t=Pharrell+Williams+parraine+la+Journ%C3%A9e+mondiale+du+bonheur"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fmusique%2F2014%2F03%2F10%2F03006-20140310ARTFIG00147-pharrell-williams-parraine-la-journee-mondiale-du-bonheur.php&amp;t=Pharrell+Williams+parraine+la+Journ%C3%A9e+mondiale+du+bonheur"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fmusique%2F2014%2F03%2F10%2F03006-20140310ARTFIG00147-pharrell-williams-parraine-la-journee-mondiale-du-bonheur.php&amp;t=Pharrell+Williams+parraine+la+Journ%C3%A9e+mondiale+du+bonheur"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fmusique%2F2014%2F03%2F10%2F03006-20140310ARTFIG00147-pharrell-williams-parraine-la-journee-mondiale-du-bonheur.php&amp;t=Pharrell+Williams+parraine+la+Journ%C3%A9e+mondiale+du+bonheur"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801379117/u/49/f/438190/c/32266/s/37fff312/sc/19/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801379117/u/49/f/438190/c/32266/s/37fff312/sc/19/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801379117/u/49/f/438190/c/32266/s/37fff312/sc/19/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801379117/u/49/f/438190/c/32266/s/37fff312/sc/19/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801379117/u/49/f/438190/c/32266/s/37fff312/sc/19/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801379117/u/49/f/438190/c/32266/s/37fff312/sc/19/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801379117/u/49/f/438190/c/32266/s/37fff312/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801379117/u/49/f/438190/c/32266/s/37fff312/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801379117/u/49/f/438190/c/32266/s/37fff312/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=HKjlZZnFMV8:m5GFgn3Mn_4:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=HKjlZZnFMV8:m5GFgn3Mn_4:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=HKjlZZnFMV8:m5GFgn3Mn_4:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=HKjlZZnFMV8:m5GFgn3Mn_4:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=HKjlZZnFMV8:m5GFgn3Mn_4:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=HKjlZZnFMV8:m5GFgn3Mn_4:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=HKjlZZnFMV8:m5GFgn3Mn_4:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=HKjlZZnFMV8:m5GFgn3Mn_4:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/HKjlZZnFMV8" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/37fff312/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHO3736c14e0Ea84a0E11e30Ea4170E875a225c0Aa470E640Ax230A0Bjpg/PHO3736c14e-a84a-11e3-a417-875a225c0a47-640x230.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Musique</category>
+            <pubDate>Mon, 10 Mar 2014 16:00:00 GMT</pubDate>
+            <author>Eléonore Prieur</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fff312/sc/19/l/0L0Slefigaro0Bfr0Cmusique0C20A140C0A30C10A0C0A30A0A60E20A140A310AARTFIG0A0A1470Epharrell0Ewilliams0Eparraine0Ela0Ejournee0Emondiale0Edu0Ebonheur0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fff312/sc/19/l/0L0Slefigaro0Bfr0Cmusique0C20A140C0A30C10A0C0A30A0A60E20A140A310AARTFIG0A0A1470Epharrell0Ewilliams0Eparraine0Ela0Ejournee0Emondiale0Edu0Ebonheur0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Les personnes handicapées restent éloignées du marché du travail</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/OQuVO3jVTus/story01.htm</link>
+            <description>INFOGRAPHIE - Alors que la Semaine nationale des personnes handicapées physiques débute ce
+                lundi, le bilan sur l'accès à l'emploi des personnes reconnues handicapées en France reste contrasté .
+                Malgré les efforts fournis par les entreprises, leur taux de chômage reste élevé et leur insertion dans
+                le monde du travail, partielle.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/37fd8360/sc/37/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Femploi%2F2014%2F03%2F07%2F09005-20140307ARTFIG00447-les-personnes-handicapees-restent-eloignees-du-marche-du-travail.php&amp;t=Les+personnes+handicap%C3%A9es+restent+%C3%A9loign%C3%A9es+du+march%C3%A9+du+travail"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Femploi%2F2014%2F03%2F07%2F09005-20140307ARTFIG00447-les-personnes-handicapees-restent-eloignees-du-marche-du-travail.php&amp;t=Les+personnes+handicap%C3%A9es+restent+%C3%A9loign%C3%A9es+du+march%C3%A9+du+travail"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Femploi%2F2014%2F03%2F07%2F09005-20140307ARTFIG00447-les-personnes-handicapees-restent-eloignees-du-marche-du-travail.php&amp;t=Les+personnes+handicap%C3%A9es+restent+%C3%A9loign%C3%A9es+du+march%C3%A9+du+travail"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Femploi%2F2014%2F03%2F07%2F09005-20140307ARTFIG00447-les-personnes-handicapees-restent-eloignees-du-marche-du-travail.php&amp;t=Les+personnes+handicap%C3%A9es+restent+%C3%A9loign%C3%A9es+du+march%C3%A9+du+travail"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Femploi%2F2014%2F03%2F07%2F09005-20140307ARTFIG00447-les-personnes-handicapees-restent-eloignees-du-marche-du-travail.php&amp;t=Les+personnes+handicap%C3%A9es+restent+%C3%A9loign%C3%A9es+du+march%C3%A9+du+travail"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801368993/u/49/f/438190/c/32266/s/37fd8360/sc/37/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801368993/u/49/f/438190/c/32266/s/37fd8360/sc/37/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801368993/u/49/f/438190/c/32266/s/37fd8360/sc/37/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801368993/u/49/f/438190/c/32266/s/37fd8360/sc/37/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801368993/u/49/f/438190/c/32266/s/37fd8360/sc/37/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801368993/u/49/f/438190/c/32266/s/37fd8360/sc/37/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801368993/u/49/f/438190/c/32266/s/37fd8360/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801368993/u/49/f/438190/c/32266/s/37fd8360/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801368993/u/49/f/438190/c/32266/s/37fd8360/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=OQuVO3jVTus:NamfzZJzylY:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=OQuVO3jVTus:NamfzZJzylY:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=OQuVO3jVTus:NamfzZJzylY:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=OQuVO3jVTus:NamfzZJzylY:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=OQuVO3jVTus:NamfzZJzylY:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=OQuVO3jVTus:NamfzZJzylY:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=OQuVO3jVTus:NamfzZJzylY:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=OQuVO3jVTus:NamfzZJzylY:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/OQuVO3jVTus" height="1"
+                width="1"/&gt;</description>
+            <category domain="">Emploi</category>
+            <pubDate>Mon, 10 Mar 2014 16:00:00 GMT</pubDate>
+            <author>Caroline Piquet</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fd8360/sc/37/l/0L0Slefigaro0Bfr0Cemploi0C20A140C0A30C0A70C0A90A0A50E20A140A30A7ARTFIG0A0A4470Eles0Epersonnes0Ehandicapees0Erestent0Eeloignees0Edu0Emarche0Edu0Etravail0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fd8360/sc/37/l/0L0Slefigaro0Bfr0Cemploi0C20A140C0A30C0A70C0A90A0A50E20A140A30A7ARTFIG0A0A4470Eles0Epersonnes0Ehandicapees0Erestent0Eeloignees0Edu0Emarche0Edu0Etravail0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Le XV de France dans le flou à dix-huit mois de la Coupe du monde</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/P18tqRJLIaM/story01.htm</link>
+            <description>RUGBY - La Coupe du monde 2015 est le but de Philippe Saint-André, l'entraîneur critiqué des
+                Bleus toujours en lice pour remporter le Tournoi des six nations. Le calendrier s'accélère sans être
+                porteur de certitudes.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38016545/sc/13/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Frugby%2F2014%2F03%2F09%2F02002-20140309ARTSPO00184-trop-d-incertitudes-a-dix-huit-mois-de-la-coupe-du-monde.php&amp;t=Le+XV+de+France+dans+le+flou+%C3%A0+dix-huit+mois+de+la+Coupe+du+monde"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Frugby%2F2014%2F03%2F09%2F02002-20140309ARTSPO00184-trop-d-incertitudes-a-dix-huit-mois-de-la-coupe-du-monde.php&amp;t=Le+XV+de+France+dans+le+flou+%C3%A0+dix-huit+mois+de+la+Coupe+du+monde"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Frugby%2F2014%2F03%2F09%2F02002-20140309ARTSPO00184-trop-d-incertitudes-a-dix-huit-mois-de-la-coupe-du-monde.php&amp;t=Le+XV+de+France+dans+le+flou+%C3%A0+dix-huit+mois+de+la+Coupe+du+monde"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Frugby%2F2014%2F03%2F09%2F02002-20140309ARTSPO00184-trop-d-incertitudes-a-dix-huit-mois-de-la-coupe-du-monde.php&amp;t=Le+XV+de+France+dans+le+flou+%C3%A0+dix-huit+mois+de+la+Coupe+du+monde"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Frugby%2F2014%2F03%2F09%2F02002-20140309ARTSPO00184-trop-d-incertitudes-a-dix-huit-mois-de-la-coupe-du-monde.php&amp;t=Le+XV+de+France+dans+le+flou+%C3%A0+dix-huit+mois+de+la+Coupe+du+monde"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=P18tqRJLIaM:CdA3Aj-op8I:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=P18tqRJLIaM:CdA3Aj-op8I:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=P18tqRJLIaM:CdA3Aj-op8I:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=P18tqRJLIaM:CdA3Aj-op8I:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=P18tqRJLIaM:CdA3Aj-op8I:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=P18tqRJLIaM:CdA3Aj-op8I:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=P18tqRJLIaM:CdA3Aj-op8I:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=P18tqRJLIaM:CdA3Aj-op8I:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/P18tqRJLIaM" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/38016545/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C0A90C20A140A30A9PHOWWW0A0A3750Bjpg/20140309PHOWWW00375.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Rugby</category>
+            <pubDate>Mon, 10 Mar 2014 15:52:00 GMT</pubDate>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38016545/sc/13/l/0L0Slefigaro0Bfr0Crugby0C20A140C0A30C0A90C0A20A0A20E20A140A30A9ARTSPO0A0A1840Etrop0Ed0Eincertitudes0Ea0Edix0Ehuit0Emois0Ede0Ela0Ecoupe0Edu0Emonde0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38016545/sc/13/l/0L0Slefigaro0Bfr0Crugby0C20A140C0A30C0A90C0A20A0A20E20A140A30A9ARTSPO0A0A1840Etrop0Ed0Eincertitudes0Ea0Edix0Ehuit0Emois0Ede0Ela0Ecoupe0Edu0Emonde0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Valérie Trierweiler, Julie Gayet: la fuite vers l'étranger</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/PdBL5CJJ6wg/story01.htm</link>
+            <description>LES PEOPLE DE LENA - New York, l'île Maurice ou Monaco, elles ont trouvé refuge ailleurs, mais
+                font toujours la une des magazines people.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d99/sc/38/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00214-valerie-trierweiler-julie-gayet-et-carla-bruni-la-fuite-vers-l-etranger.php&amp;t=Val%C3%A9rie+Trierweiler%2C+Julie+Gayet%3A+la+fuite+vers+l%27%C3%A9tranger"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00214-valerie-trierweiler-julie-gayet-et-carla-bruni-la-fuite-vers-l-etranger.php&amp;t=Val%C3%A9rie+Trierweiler%2C+Julie+Gayet%3A+la+fuite+vers+l%27%C3%A9tranger"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00214-valerie-trierweiler-julie-gayet-et-carla-bruni-la-fuite-vers-l-etranger.php&amp;t=Val%C3%A9rie+Trierweiler%2C+Julie+Gayet%3A+la+fuite+vers+l%27%C3%A9tranger"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00214-valerie-trierweiler-julie-gayet-et-carla-bruni-la-fuite-vers-l-etranger.php&amp;t=Val%C3%A9rie+Trierweiler%2C+Julie+Gayet%3A+la+fuite+vers+l%27%C3%A9tranger"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fculture%2F2014%2F03%2F10%2F03004-20140310ARTFIG00214-valerie-trierweiler-julie-gayet-et-carla-bruni-la-fuite-vers-l-etranger.php&amp;t=Val%C3%A9rie+Trierweiler%2C+Julie+Gayet%3A+la+fuite+vers+l%27%C3%A9tranger"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=PdBL5CJJ6wg:aotHH3QTHPs:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=PdBL5CJJ6wg:aotHH3QTHPs:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=PdBL5CJJ6wg:aotHH3QTHPs:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=PdBL5CJJ6wg:aotHH3QTHPs:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=PdBL5CJJ6wg:aotHH3QTHPs:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=PdBL5CJJ6wg:aotHH3QTHPs:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=PdBL5CJJ6wg:aotHH3QTHPs:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=PdBL5CJJ6wg:aotHH3QTHPs:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/PdBL5CJJ6wg" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/38028d99/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHOdb5d50A30A0Ea8680E11e30Ea77e0Ebcd98d1d50A680E245x160A0Bjpg/PHOdb5d5030-a868-11e3-a77e-bcd98d1d5068-245x160.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Culture</category>
+            <pubDate>Mon, 10 Mar 2014 15:37:00 GMT</pubDate>
+            <author>Léna Lutaud, Bruno Jacquot</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d99/sc/38/l/0L0Slefigaro0Bfr0Cculture0C20A140C0A30C10A0C0A30A0A40E20A140A310AARTFIG0A0A2140Evalerie0Etrierweiler0Ejulie0Egayet0Eet0Ecarla0Ebruni0Ela0Efuite0Evers0El0Eetranger0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/38028d99/sc/38/l/0L0Slefigaro0Bfr0Cculture0C20A140C0A30C10A0C0A30A0A40E20A140A310AARTFIG0A0A2140Evalerie0Etrierweiler0Ejulie0Egayet0Eet0Ecarla0Ebruni0Ela0Efuite0Evers0El0Eetranger0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Pascal Lamy ne souhaite pas devenir ministre</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/6qkHq691uWk/story01.htm</link>
+            <description>L'ancien directeur général de l'Organisation mondiale du commerce (OMC) dit avoir «passé l'âge»
+                d'être candidat à un maroquin.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/37ffc002/sc/37/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fflash-eco%2F2014%2F03%2F10%2F97002-20140310FILWWW00155-pascal-lamy-ne-souhaite-pas-etre-ministre.php&amp;t=Pascal+Lamy+ne+souhaite+pas+devenir+ministre"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fflash-eco%2F2014%2F03%2F10%2F97002-20140310FILWWW00155-pascal-lamy-ne-souhaite-pas-etre-ministre.php&amp;t=Pascal+Lamy+ne+souhaite+pas+devenir+ministre"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fflash-eco%2F2014%2F03%2F10%2F97002-20140310FILWWW00155-pascal-lamy-ne-souhaite-pas-etre-ministre.php&amp;t=Pascal+Lamy+ne+souhaite+pas+devenir+ministre"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fflash-eco%2F2014%2F03%2F10%2F97002-20140310FILWWW00155-pascal-lamy-ne-souhaite-pas-etre-ministre.php&amp;t=Pascal+Lamy+ne+souhaite+pas+devenir+ministre"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fflash-eco%2F2014%2F03%2F10%2F97002-20140310FILWWW00155-pascal-lamy-ne-souhaite-pas-etre-ministre.php&amp;t=Pascal+Lamy+ne+souhaite+pas+devenir+ministre"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801114026/u/49/f/438190/c/32266/s/37ffc002/sc/37/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801114026/u/49/f/438190/c/32266/s/37ffc002/sc/37/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801114026/u/49/f/438190/c/32266/s/37ffc002/sc/37/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801114026/u/49/f/438190/c/32266/s/37ffc002/sc/37/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801114026/u/49/f/438190/c/32266/s/37ffc002/sc/37/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801114026/u/49/f/438190/c/32266/s/37ffc002/sc/37/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801114026/u/49/f/438190/c/32266/s/37ffc002/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801114026/u/49/f/438190/c/32266/s/37ffc002/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801114026/u/49/f/438190/c/32266/s/37ffc002/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=6qkHq691uWk:O_8c9i_-LeU:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=6qkHq691uWk:O_8c9i_-LeU:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=6qkHq691uWk:O_8c9i_-LeU:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=6qkHq691uWk:O_8c9i_-LeU:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=6qkHq691uWk:O_8c9i_-LeU:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=6qkHq691uWk:O_8c9i_-LeU:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=6qkHq691uWk:O_8c9i_-LeU:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=6qkHq691uWk:O_8c9i_-LeU:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/6qkHq691uWk" height="1"
+                width="1"/&gt;</description>
+            <category domain="">Flash Eco</category>
+            <pubDate>Mon, 10 Mar 2014 15:35:00 GMT</pubDate>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37ffc002/sc/37/l/0L0Slefigaro0Bfr0Cflash0Eeco0C20A140C0A30C10A0C970A0A20E20A140A310AFILWWW0A0A1550Epascal0Elamy0Ene0Esouhaite0Epas0Eetre0Eministre0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37ffc002/sc/37/l/0L0Slefigaro0Bfr0Cflash0Eeco0C20A140C0A30C10A0C970A0A20E20A140A310AFILWWW0A0A1550Epascal0Elamy0Ene0Esouhaite0Epas0Eetre0Eministre0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Clash Caron-Polony : pourquoi le divorce était inéluctable</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/diXkdHEtohs/story01.htm</link>
+            <description>FIGAROVOX - Nouveau clash dans l'émission de Laurent Ruquier, On n'est pas couché . Cette fois,
+                ce n'était pas un invité qui était visé par Aymeric Caron, mais sa collègue Natacha Polony. Entre les
+                deux chroniqueurs, le dialogue semble impossible.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/37fe0436/sc/19/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fvox%2Fmedias%2F2014%2F03%2F10%2F31008-20140310ARTFIG00096-clash-aymeric-caron-natacha-polony-pourquoi-le-divorce-etait-ineluctable.php&amp;t=Clash+Caron-Polony+%3A+pourquoi+le+divorce+%C3%A9tait+in%C3%A9luctable"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fvox%2Fmedias%2F2014%2F03%2F10%2F31008-20140310ARTFIG00096-clash-aymeric-caron-natacha-polony-pourquoi-le-divorce-etait-ineluctable.php&amp;t=Clash+Caron-Polony+%3A+pourquoi+le+divorce+%C3%A9tait+in%C3%A9luctable"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fvox%2Fmedias%2F2014%2F03%2F10%2F31008-20140310ARTFIG00096-clash-aymeric-caron-natacha-polony-pourquoi-le-divorce-etait-ineluctable.php&amp;t=Clash+Caron-Polony+%3A+pourquoi+le+divorce+%C3%A9tait+in%C3%A9luctable"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fvox%2Fmedias%2F2014%2F03%2F10%2F31008-20140310ARTFIG00096-clash-aymeric-caron-natacha-polony-pourquoi-le-divorce-etait-ineluctable.php&amp;t=Clash+Caron-Polony+%3A+pourquoi+le+divorce+%C3%A9tait+in%C3%A9luctable"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Fwww.lefigaro.fr%2Fvox%2Fmedias%2F2014%2F03%2F10%2F31008-20140310ARTFIG00096-clash-aymeric-caron-natacha-polony-pourquoi-le-divorce-etait-ineluctable.php&amp;t=Clash+Caron-Polony+%3A+pourquoi+le+divorce+%C3%A9tait+in%C3%A9luctable"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801107796/u/49/f/438190/c/32266/s/37fe0436/sc/19/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801107796/u/49/f/438190/c/32266/s/37fe0436/sc/19/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801107796/u/49/f/438190/c/32266/s/37fe0436/sc/19/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801107796/u/49/f/438190/c/32266/s/37fe0436/sc/19/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801107796/u/49/f/438190/c/32266/s/37fe0436/sc/19/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801107796/u/49/f/438190/c/32266/s/37fe0436/sc/19/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801107796/u/49/f/438190/c/32266/s/37fe0436/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801107796/u/49/f/438190/c/32266/s/37fe0436/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801107796/u/49/f/438190/c/32266/s/37fe0436/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=diXkdHEtohs:eIH2xtW7RiU:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=diXkdHEtohs:eIH2xtW7RiU:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=diXkdHEtohs:eIH2xtW7RiU:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=diXkdHEtohs:eIH2xtW7RiU:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=diXkdHEtohs:eIH2xtW7RiU:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=diXkdHEtohs:eIH2xtW7RiU:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=diXkdHEtohs:eIH2xtW7RiU:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=diXkdHEtohs:eIH2xtW7RiU:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/diXkdHEtohs" height="1"
+                width="1"/&gt;</description>
+            <enclosure
+                    url="http://feeds.lefigaro.fr/c/32266/f/438190/e/1/s/37fe0436/l/0L0Slefigaro0Bfr0Cmedias0C20A140C0A30C10A0CPHO741f333c0Ea8380E11e30Ea0Af70E50Ac29d4a47ff0E245x160A0Bjpg/PHO741f333c-a838-11e3-a0f7-50c29d4a47ff-245x160.jpg"
+                    type="image/jpeg"/>
+            <category domain="">Vox Medias</category>
+            <pubDate>Mon, 10 Mar 2014 15:33:00 GMT</pubDate>
+            <author>Christian Combaz</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fe0436/sc/19/l/0L0Slefigaro0Bfr0Cvox0Cmedias0C20A140C0A30C10A0C310A0A80E20A140A310AARTFIG0A0A0A960Eclash0Eaymeric0Ecaron0Enatacha0Epolony0Epourquoi0Ele0Edivorce0Eetait0Eineluctable0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fe0436/sc/19/l/0L0Slefigaro0Bfr0Cvox0Cmedias0C20A140C0A30C10A0C310A0A80E20A140A310AARTFIG0A0A0A960Eclash0Eaymeric0Ecaron0Enatacha0Epolony0Epourquoi0Ele0Edivorce0Eetait0Eineluctable0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+        <item>
+            <title>Marseille : Gaudin devance largement Mennucci au premier tour</title>
+            <link>http://rss.lefigaro.fr/~r/lefigaro/laune/~3/DsnrbgTUKEQ/story01.htm</link>
+            <description>Le combat s'annonce toutefois serré entre le maire UMP sortant et son rival socialiste, car
+                l'écart se resserre entre eux au deuxième tour, avec le Front national en arbitre, selon un sondage BVA
+                pour RTL, Orange et Le Parisien.&lt;img width='1' height='1'
+                src='http://feeds.lefigaro.fr/c/32266/f/438190/s/37fe1f5d/sc/3/mf.gif' border='0'/&gt;&lt;br
+                clear='all'/&gt;&lt;div class='mf-viral'&gt;&lt;table border='0'&gt;&lt;tr&gt;&lt;td valign='middle'&gt;&lt;a
+                href="http://share.feedsportal.com/share/twitter/?u=http%3A%2F%2Felections.lefigaro.fr%2Fmunicipales-2014%2F2014%2F03%2F10%2F01052-20140310ARTFIG00101-marseille-gaudin-devance-largement-mennucci-au-premier-tour.php&amp;t=Marseille+%3A+Gaudin+devance+largement+Mennucci+au+premier+tour"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/twitter.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/facebook/?u=http%3A%2F%2Felections.lefigaro.fr%2Fmunicipales-2014%2F2014%2F03%2F10%2F01052-20140310ARTFIG00101-marseille-gaudin-devance-largement-mennucci-au-premier-tour.php&amp;t=Marseille+%3A+Gaudin+devance+largement+Mennucci+au+premier+tour"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/facebook.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/linkedin/?u=http%3A%2F%2Felections.lefigaro.fr%2Fmunicipales-2014%2F2014%2F03%2F10%2F01052-20140310ARTFIG00101-marseille-gaudin-devance-largement-mennucci-au-premier-tour.php&amp;t=Marseille+%3A+Gaudin+devance+largement+Mennucci+au+premier+tour"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/linkedin.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/gplus/?u=http%3A%2F%2Felections.lefigaro.fr%2Fmunicipales-2014%2F2014%2F03%2F10%2F01052-20140310ARTFIG00101-marseille-gaudin-devance-largement-mennucci-au-premier-tour.php&amp;t=Marseille+%3A+Gaudin+devance+largement+Mennucci+au+premier+tour"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/googleplus.png" border="0" /&gt;&lt;/a&gt;
+                &lt;a
+                href="http://share.feedsportal.com/share/email/?u=http%3A%2F%2Felections.lefigaro.fr%2Fmunicipales-2014%2F2014%2F03%2F10%2F01052-20140310ARTFIG00101-marseille-gaudin-devance-largement-mennucci-au-premier-tour.php&amp;t=Marseille+%3A+Gaudin+devance+largement+Mennucci+au+premier+tour"
+                target="_blank"&gt;&lt;img src="http://res3.feedsportal.com/social/email.png" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;&lt;td
+                valign='middle'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801371704/u/49/f/438190/c/32266/s/37fe1f5d/sc/3/rc/1/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801371704/u/49/f/438190/c/32266/s/37fe1f5d/sc/3/rc/1/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801371704/u/49/f/438190/c/32266/s/37fe1f5d/sc/3/rc/2/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801371704/u/49/f/438190/c/32266/s/37fe1f5d/sc/3/rc/2/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801371704/u/49/f/438190/c/32266/s/37fe1f5d/sc/3/rc/3/rc.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801371704/u/49/f/438190/c/32266/s/37fe1f5d/sc/3/rc/3/rc.img"
+                border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+                href="http://da.feedsportal.com/r/191801371704/u/49/f/438190/c/32266/s/37fe1f5d/a2.htm"&gt;&lt;img
+                src="http://da.feedsportal.com/r/191801371704/u/49/f/438190/c/32266/s/37fe1f5d/a2.img" border="0"/&gt;&lt;/a&gt;&lt;img
+                width="1" height="1"
+                src="http://pi.feedsportal.com/r/191801371704/u/49/f/438190/c/32266/s/37fe1f5d/a2t.img" border="0"/&gt;&lt;div
+                class="feedflare"&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=DsnrbgTUKEQ:EuztFn87XbA:qj6IDK7rITs"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=DsnrbgTUKEQ:EuztFn87XbA:yIl2AUoC8zA"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=DsnrbgTUKEQ:EuztFn87XbA:3vssn5KQwAQ"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=3vssn5KQwAQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=DsnrbgTUKEQ:EuztFn87XbA:rfYFGETz4uk"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=rfYFGETz4uk" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=DsnrbgTUKEQ:EuztFn87XbA:k6bjsx_nfNI"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=k6bjsx_nfNI" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=DsnrbgTUKEQ:EuztFn87XbA:V_sGLiPBpWU"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?i=DsnrbgTUKEQ:EuztFn87XbA:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;a href="http://rss.lefigaro.fr/~ff/lefigaro/laune?a=DsnrbgTUKEQ:EuztFn87XbA:dnMXMwOfBR0"&gt;&lt;img
+                src="http://feeds.feedburner.com/~ff/lefigaro/laune?d=dnMXMwOfBR0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/lefigaro/laune/~4/DsnrbgTUKEQ" height="1"
+                width="1"/&gt;</description>
+            <category domain="">Municipales 2014</category>
+            <pubDate>Mon, 10 Mar 2014 15:06:00 GMT</pubDate>
+            <author>Marion Joseph</author>
+            <guid isPermaLink="false">
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fe1f5d/sc/3/l/0Lelections0Blefigaro0Bfr0Cmunicipales0E20A140C20A140C0A30C10A0C0A10A520E20A140A310AARTFIG0A0A10A10Emarseille0Egaudin0Edevance0Elargement0Emennucci0Eau0Epremier0Etour0Bphp/story01.htm
+            </guid>
+            <feedburner:origLink>
+                http://feeds.lefigaro.fr/c/32266/f/438190/s/37fe1f5d/sc/3/l/0Lelections0Blefigaro0Bfr0Cmunicipales0E20A140C20A140C0A30C10A0C0A10A520E20A140A310AARTFIG0A0A10A10Emarseille0Egaudin0Edevance0Elargement0Emennucci0Eau0Epremier0Etour0Bphp/story01.htm
+            </feedburner:origLink>
+        </item>
+    </channel>
+</rss>
