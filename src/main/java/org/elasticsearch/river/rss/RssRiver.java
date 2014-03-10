@@ -25,10 +25,12 @@ import com.sun.syndication.feed.synd.SyndFeed;
 import com.sun.syndication.io.FeedException;
 import com.sun.syndication.io.SyndFeedInput;
 import com.sun.syndication.io.XmlReader;
-
 import org.elasticsearch.ExceptionsHelper;
 import org.elasticsearch.action.admin.indices.mapping.put.PutMappingResponse;
-import org.elasticsearch.action.bulk.*;
+import org.elasticsearch.action.bulk.BulkItemResponse;
+import org.elasticsearch.action.bulk.BulkProcessor;
+import org.elasticsearch.action.bulk.BulkRequest;
+import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.cluster.ClusterState;
@@ -392,8 +394,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
                         // Nothing new... Just relax !
                         if (logger.isDebugEnabled()) logger.debug("Nothing new in the feed... Relaxing...");
                     }
-                }
-				try {
+
                     // #8 : Use the ttl rss field to auto adjust feed refresh rate
                     if (!ignoreTtl && feed.originalWireFeed() != null && feed.originalWireFeed() instanceof Channel) {
                         Channel channel = (Channel) feed.originalWireFeed();
@@ -406,7 +407,9 @@ public class RssRiver extends AbstractRiverComponent implements River {
                             }
                         }
                     }
+                }
 
+				try {
 					if (logger.isDebugEnabled()) logger.debug("Rss river is going to sleep for {} ms", updateRate);
 					Thread.sleep(updateRate);
 				} catch (InterruptedException e1) {
