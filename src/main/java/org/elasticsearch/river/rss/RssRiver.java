@@ -360,7 +360,28 @@ public class RssRiver extends AbstractRiverComponent implements River {
 
                         try {
                             // We have now to send each feed to ES
+                            Date mostRecentItemDate = null;
                             for (SyndEntry message : (Iterable<SyndEntry>) feed.getEntries()) {
+                                // We don't have a global date, so let's see if we have one in items
+                                if (feedDate == null) {
+                                    if (message.getUpdatedDate() != null) {
+                                        if (lastDate == null || message.getUpdatedDate().after(lastDate)) {
+                                            if (mostRecentItemDate == null || message.getUpdatedDate().after(mostRecentItemDate)) {
+                                                mostRecentItemDate = message.getUpdatedDate();
+                                                if (logger.isTraceEnabled()) logger.trace("No feed date. Using item updated date : {}", feedDate);
+                                            }
+                                        }
+                                    }
+                                    if (message.getPublishedDate() != null) {
+                                        if (lastDate == null || message.getPublishedDate().after(lastDate)) {
+                                            if (mostRecentItemDate == null || message.getPublishedDate().after(mostRecentItemDate)) {
+                                                mostRecentItemDate = message.getPublishedDate();
+                                                if (logger.isTraceEnabled()) logger.trace("No feed date. Using item published date : {}", feedDate);
+                                            }
+                                        }
+                                    }
+                                }
+
                                 String description = "";
                                 if (message.getDescription() != null) {
                                     description = message.getDescription().getValue();
@@ -379,6 +400,10 @@ public class RssRiver extends AbstractRiverComponent implements River {
                                 } else {
                                     if (logger.isTraceEnabled()) logger.trace("FeedMessage {} already exist. Ignoring", id);
                                 }
+                            }
+
+                            if (feedDate == null) {
+                                feedDate = mostRecentItemDate;
                             }
 
                             if (logger.isTraceEnabled()) {
