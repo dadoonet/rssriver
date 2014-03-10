@@ -110,12 +110,22 @@ See full documentation on Github: https://github.com/dadoonet/rssriver
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
             <version>${elasticsearch.version}</version>
+            <type>test-jar</type>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.geonames</groupId>
-            <artifactId>georss-rome</artifactId>
-            <version>0.9.8</version>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>1.3.RC2</version>
+            <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>1.3.RC2</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>

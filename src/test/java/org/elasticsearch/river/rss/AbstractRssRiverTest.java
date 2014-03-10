@@ -19,20 +19,18 @@
 
 package org.elasticsearch.river.rss;
 
-import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;
-import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
-import org.elasticsearch.common.io.FileSystemUtils;
-import org.elasticsearch.common.settings.ImmutableSettings;
+import org.elasticsearch.action.get.GetResponse;
+import org.elasticsearch.common.base.Predicate;
 import org.elasticsearch.common.xcontent.XContentBuilder;
-import org.elasticsearch.indices.IndexMissingException;
-import org.elasticsearch.node.Node;
-import org.elasticsearch.node.NodeBuilder;
+import org.elasticsearch.river.RiverIndexName;
+import org.elasticsearch.test.ElasticsearchIntegrationTest;
 import org.junit.Before;
-import org.junit.BeforeClass;
 
-import java.io.File;
+import java.util.concurrent.TimeUnit;
 
-public abstract class AbstractRssRiverTest {
+import static org.hamcrest.Matchers.equalTo;
+
+public abstract class AbstractRssRiverTest extends ElasticsearchIntegrationTest {
 
 	/**
 	 * Define a unique index name
@@ -54,68 +52,25 @@ public abstract class AbstractRssRiverTest {
 	 */
 	abstract public XContentBuilder rssRiver() throws Exception;
 	
-	/**
-	 * Define the waiting time in seconds before launching a test
-	 * @return Waiting time (in seconds)
-	 */
-	abstract public long waitingTime() throws Exception;
-	
-	protected static Node node;
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		if (node == null) {
-			// First we delete old datas...
-			File dataDir = new File("./target/es/data");
-			if(dataDir.exists()) {
-				FileSystemUtils.deleteRecursively(dataDir, true);
-			}
-			
-			// Then we start our node for tests
-			node = NodeBuilder
-					.nodeBuilder()
-					.settings(
-							ImmutableSettings.settingsBuilder()
-							.put("gateway.type", "local")
-							.put("path.data", "./target/es/data")		
-							.put("path.logs", "./target/es/logs")		
-							.put("path.work", "./target/es/work")		
-							).node();
-			
-			// We wait now for the yellow (or green) status
-			node.client().admin().cluster().prepareHealth().setWaitForYellowStatus().execute().actionGet(); 
-			
-			// We clean existing rivers
-			try {
-				node.client().admin().indices()
-						.delete(new DeleteIndexRequest("_river")).actionGet();
-				// We wait for one second to let ES delete the river
-				Thread.sleep(1000);
-			} catch (IndexMissingException e) {
-				// Index does not exist... Fine
-			}
-		}
-	}
+    private void checkRiverIsStarted(final String riverName) throws InterruptedException {
+        logger.info("-->  checking that river [{}] was created", riverName);
+        assertThat(awaitBusy(new Predicate<Object>() {
+            public boolean apply(Object obj) {
+                GetResponse response = client().prepareGet(RiverIndexName.Conf.DEFAULT_INDEX_NAME, riverName, "_status").get();
+                return response.isExists();
+            }
+        }, 5, TimeUnit.SECONDS), equalTo(true));
+    }
 
-	@Before
+    @Before
 	public void setUp() throws Exception {
-		// We delete the index before we start any test
-		try {
-			node.client().admin().indices()
-					.delete(new DeleteIndexRequest(indexName())).actionGet();
-			// We wait for one second to let ES delete the index
-			Thread.sleep(1000);
-		} catch (IndexMissingException e) {
-			// Index does not exist... Fine
-		}
-		
-		// Creating the index
-		node.client().admin().indices().create(new CreateIndexRequest(indexName())).actionGet();
-		Thread.sleep(1000);
+        super.setUp();
+
+        createIndex(indexName());
 
 		// If a mapping is defined, we will use it
 		if (mapping() != null) {
-			node.client().admin().indices()
+			client().admin().indices()
 			.preparePutMapping(indexName())
 			.setType("page")
 			.setSource(mapping())
@@ -123,11 +78,8 @@ public abstract class AbstractRssRiverTest {
 		}
 
 		if (rssRiver() == null) throw new Exception("Subclasses must provide an rss setup...");
-		node.client().prepareIndex("_river", indexName(), "_meta").setSource(rssRiver())
-				.execute().actionGet();
-		
-		// Let's wait x seconds 
-		Thread.sleep(waitingTime() * 1000);
+        index(RiverIndexName.Conf.DEFAULT_INDEX_NAME, indexName(), "_meta", rssRiver());
+        checkRiverIsStarted(indexName());
 	}
 
 }

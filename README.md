@@ -7,49 +7,16 @@ Welcome to the RSS River Plugin for [Elasticsearch](http://www.elasticsearch.org
 Versions
 --------
 
-<table>
-	<thead>
-		<tr>
-			<td>RSS River Plugin</td>
-			<td>ElasticSearch</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>0.3.0-SNAPSHOT (master)</td>
-			<td>0.90.4</td>
-		</tr>
-		<tr>
-			<td>0.2.0</td>
-			<td>0.90.4</td>
-		</tr>
-		<tr>
-			<td>0.1.0</td>
-			<td>0.90.0-0.90.3</td>
-		</tr>
-		<tr>
-			<td>0.0.6</td>
-			<td>0.19</td>
-		</tr>
-		<tr>
-			<td>0.0.5</td>
-			<td>0.18</td>
-		</tr>
-		<tr>
-			<td>0.0.4</td>
-			<td>0.18</td>
-		</tr>
-		<tr>
-			<td>0.0.3</td>
-			<td>0.18</td>
-		</tr>
-		<tr>
-			<td>0.0.2</td>
-			<td>0.17</td>
-		</tr>
-	</tbody>
-</table>
-
+|      RSS River Plugin      |    elasticsearch    | Release date |
+|----------------------------|---------------------|:------------:|
+| 1.0.0.RC1                  | 1.0.0.RC1 - master  |              |
+| 0.2.0                      | 0.90.4 - 0.90       |  2013-10-18  |
+| 0.1.0                      | 0.90.0 - 0.90.3     |  2013-02-26  |
+| 0.0.6                      | 0.19                |  2012-02-07  |
+| 0.0.5                      | 0.18                |  2011-12-15  |
+| 0.0.4                      | 0.18                |  2011-11-22  |
+| 0.0.3                      | 0.18                |  2011-11-16  |
+| 0.0.2                      | 0.17                |  2011-09-15  |
 
 Build Status
 ------------
@@ -255,36 +222,13 @@ It reads the optional `<pubDate>` tag and store it in Elastic Search to compare 
 
 Then, for each `<item>` tag, RSS river creates a new document within `page` type with the following properties :
 
-<table>
-	<thead>
-		<tr>
-			<td>XML Tag</td>
-			<td>ES Mapping</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>&lt;title&gt;</td>
-			<td>title</td>
-		</tr>
-		<tr>
-			<td>&lt;description&gt;</td>
-			<td>description</td>
-		</tr>
-		<tr>
-			<td>&lt;author&gt;</td>
-			<td>author</td>
-		</tr>
-		<tr>
-			<td>&lt;link&gt;</td>
-			<td>link</td>
-		</tr>
-		<tr>
-			<td>&lt;geo:lat&gt; &lt;geo:long&gt;</td>
-			<td>location</td>
-		</tr>
-    </tbody>
-</table>
+|      XML Tag             | ES Mapping  |
+|--------------------------|-------------|
+| `<title>`                | title       |
+| `<description>`          | description |
+| `<author>`               | author      |
+| `<link>`                 | link        |
+| `<geo:lat>` `<geo:long>` | location    |
 
 `ID` is generated from description using the [UUID](http://docs.oracle.com/javase/7/docs/api/java/util/UUID.html) generator. So, each message is indexed only once.
 
