@@ -16,12 +16,9 @@ governing permissions and limitations under the License. -->
 	<artifactId>rssriver</artifactId>
 	<packaging>jar</packaging>
 	<version>0.3.0-SNAPSHOT</version>
-	<name>RSS River Plugin for ElasticSearch</name>
-	<url>http://www.pilato.fr/rssriver</url>
-    <description>
-RSS River Plugin offers a simple way to index RSS feeds into Elasticsearch.
-See full documentation on Github: https://github.com/dadoonet/rssriver
-    </description>
+    <name>Elasticsearch RSS River Plugin</name>
+    <url>https://github.com/dadoonet/rssriver/</url>
+    <description>RSS River Plugin offers a simple way to index RSS feeds into elasticsearch.</description>
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -38,8 +35,8 @@ See full documentation on Github: https://github.com/dadoonet/rssriver
     </licenses>
 
     <properties>
-		<elasticsearch.version>0.90.10</elasticsearch.version>
-        <lucene.version>4.6.0</lucene.version>
+		<elasticsearch.version>0.90.11</elasticsearch.version>
+        <lucene.version>4.6.1</lucene.version>
         <tests.output>onerror</tests.output>
         <tests.jvms>1</tests.jvms>
         <tests.shuffle>true</tests.shuffle>
@@ -140,24 +137,6 @@ See full documentation on Github: https://github.com/dadoonet/rssriver
 				<artifactId>maven-source-plugin</artifactId>
 				<version>2.2.1</version>
 			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changes-plugin</artifactId>
-				<version>2.8</version>
-
-                <configuration>
-                    <smtpHost>smtp.free.fr</smtpHost>
-                    <smtpPort implementation="java.lang.Integer">25</smtpPort>
-                    <fromDeveloperId>dadoonet</fromDeveloperId>
-                    <toAddresses>
-                        <toAddress implementation="java.lang.String">elasticsearch@googlegroups.com</toAddress>
-                        <toAddress implementation="java.lang.String">elasticsearch-fr@googlegroups.com</toAddress>
-                    </toAddresses>
-                    <template>es-announcement.vm</template>
-                    <templateDirectory>changes</templateDirectory>
-                </configuration>
-			</plugin>
       		<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
@@ -204,27 +183,17 @@ See full documentation on Github: https://github.com/dadoonet/rssriver
                             <jvmOutputAction>pipe,warn</jvmOutputAction>
                             <leaveTemporary>true</leaveTemporary>
                             <listeners>
-                                <report-ant-xml mavenExtensions="true"
-                                                dir="${project.build.directory}/surefire-reports"/>
-                                <report-text
-                                        showThrowable="true"
-                                        showStackTraces="true"
-                                        showOutput="${tests.output}"
-                                        showStatusOk="false"
-                                        showStatusError="true"
-                                        showStatusFailure="true"
-                                        showStatusIgnored="true"
-                                        showSuiteSummary="true"
-                                        timestamps="false"/>
-                                <report-execution-times file="${basedir}/.local-execution-hints.log"/>
+                                <report-ant-xml mavenExtensions="true" dir="${project.build.directory}/surefire-reports" />
+                                <report-text showThrowable="true" showStackTraces="true" showOutput="${tests.output}" showStatusOk="false" showStatusError="true" showStatusFailure="true" showStatusIgnored="true" showSuiteSummary="true" timestamps="false" />
+                                <report-execution-times file="${basedir}/.local-execution-hints.log" />
                             </listeners>
                             <assertions>
-                                <enable/>
+                                <enable />
                             </assertions>
                             <parallelism>${tests.jvms}</parallelism>
                             <balancers>
                                 <execution-times>
-                                    <fileset dir="${basedir}" includes=".local-execution-hints.log"/>
+                                    <fileset dir="${basedir}" includes=".local-execution-hints.log" />
                                 </execution-times>
                             </balancers>
                             <includes>
