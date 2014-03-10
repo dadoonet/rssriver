@@ -7,18 +7,20 @@ Welcome to the RSS River Plugin for [Elasticsearch](http://www.elasticsearch.org
 Versions
 --------
 
+* For 1.0.x elasticsearch versions, look at [master branch](https://github.com/dadoonet/rssriver/tree/master).
+* For 0.90.x elasticsearch versions, look at [es-0.90 branch](https://github.com/dadoonet/rssriver/tree/es-0.90).
+
 |      RSS River Plugin      |    elasticsearch    | Release date |
 |----------------------------|---------------------|:------------:|
-| 1.1.0-SNAPSHOT (master)    | 1.0 - master        |              |
+| 1.1.0-SNAPSHOT             | 1.0 - master        |  XXXX-XX-XX  |
 | 1.0.0                      | 1.0                 |  2014-02-14  |
 | 1.0.0.RC1                  | 1.0                 |  2014-02-03  |
-| 0.2.0                      | 0.90.4 - 0.90       |  2013-10-18  |
-| 0.1.0                      | 0.90.0 - 0.90.3     |  2013-02-26  |
-| 0.0.6                      | 0.19                |  2012-02-07  |
-| 0.0.5                      | 0.18                |  2011-12-15  |
-| 0.0.4                      | 0.18                |  2011-11-22  |
-| 0.0.3                      | 0.18                |  2011-11-16  |
-| 0.0.2                      | 0.17                |  2011-09-15  |
+
+Please read documentation relative to the version you are using:
+
+* [1.1.0-SNAPSHOT](https://github.com/dadoonet/rssriver/blob/master/README.md)
+* [1.0.0](https://github.com/dadoonet/rssriver/blob/rssriver-1.0.0/README.md)
+* [1.0.0.RC1](https://github.com/dadoonet/rssriver/blob/rssriver-1.0.0.RC1/README.md)
 
 Build Status
 ------------
@@ -37,17 +39,6 @@ Just type :
 
 ```sh
 $ bin/plugin -install fr.pilato.elasticsearch.river/rssriver/1.0.0
-```
-
-This will do the job...
-
-```
--> Installing fr.pilato.elasticsearch.river/rssriver/1.0.0...
-Trying http://download.elasticsearch.org/fr.pilato.elasticsearch.river/rssriver/rssriver-1.0.0.zip...
-Trying http://search.maven.org/remotecontent?filepath=fr/pilato/elasticsearch/rssriver/rssriver/1.0.0/fsriver-1.0.0.zip...
-Trying https://oss.sonatype.org/service/local/repositories/releases/content/fr/pilato/elasticsearch/river/rssriver/1.0.0/rssriver-1.0.0.zip...
-Downloading ......DONE
-Installed rssriver
 ```
 
 Creating a RSS river
@@ -295,3 +286,24 @@ Many many things to do :
 * Support more RSS `<item>` sub-elements, such as `<pubDate>`
 * Support for multi-channel (one per language for instance)
 * Use `<guid>` as the text to encode to generate `ID`
+
+License
+=======
+
+```
+This software is licensed under the Apache 2 license, quoted below.
+
+Copyright 2011-2014 David Pilato
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy of
+the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations under
+the License.
+```
