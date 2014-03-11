@@ -72,6 +72,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
 	private final String indexName;
 
 	private final String typeName;
+    private final Boolean raw;
 
     private final int bulkSize;
     private final int maxConcurrentBulk;
@@ -117,13 +118,15 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				feedsDefinition = new ArrayList<RssRiverFeedDefinition>(1);
 				feedsDefinition.add(new RssRiverFeedDefinition(null, url, updateRate, ignoreTtl));
 			}
-			
-		} else {
+            raw = XContentMapValues.nodeBooleanValue(rssSettings.get("raw"), true);
+
+        } else {
 			String url = "http://www.lemonde.fr/rss/une.xml";
 			logger.warn("You didn't define the rss url. Switching to defaults : [{}]", url);
 			int updateRate = 15 * 60 * 1000;
 			feedsDefinition = new ArrayList<RssRiverFeedDefinition>(1);
 			feedsDefinition.add(new RssRiverFeedDefinition("lemonde", url, updateRate, false));
+            raw = true;
 		}
 
 		
@@ -171,7 +174,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
 		}
 
         try {
-            pushMapping(indexName, typeName, RssToJson.buildRssMapping(typeName));
+            pushMapping(indexName, typeName, RssToJson.buildRssMapping(typeName, raw));
         } catch (Exception e) {
             logger.warn("failed to create mapping for [{}/{}], disabling river...",
                     e, indexName, typeName);
@@ -393,7 +396,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
                                 // Let's look if object already exists
                                 GetResponse oldMessage = client.prepareGet(indexName, typeName, id).execute().actionGet();
                                 if (!oldMessage.isExists()) {
-                                    bulkProcessor.add(indexRequest(indexName).type(typeName).id(id).source(toJson(message, riverName.getName(), feedname)));
+                                    bulkProcessor.add(indexRequest(indexName).type(typeName).id(id).source(toJson(message, riverName.getName(), feedname, raw)));
 
                                     if (logger.isDebugEnabled()) logger.debug("FeedMessage update detected for source [{}]", feedname != null ? feedname : "undefined");
                                     if (logger.isTraceEnabled()) logger.trace("FeedMessage is : {}", message);

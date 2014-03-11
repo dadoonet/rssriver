@@ -141,6 +141,27 @@ $ curl -XPUT 'localhost:9200/_river/actus/_meta' -d '{
 }'
 ```
 
+Indexing raw encoded content
+----------------------------
+
+By default, any encoded content provided in `content:encoded` will be indexed under `raw.TYPE` field, where `TYPE`
+depends on encoded content type, for example `html`.
+
+You can disable this if you want to save some disk space for example, using `raw` setting:
+
+
+```sh
+$ curl -XPUT 'localhost:9200/_river/actus/_meta' -d '{
+  "type": "rss",
+  "rss": {
+    "raw" : false,
+    "feeds" : [ {
+			"url": "http://www.lemonde.fr/rss/une.xml"
+    	}
+    ]
+  }
+}'
+```
 
 Working with mappings
 ---------------------
@@ -195,6 +216,14 @@ If you don't define an explicit mapping before starting RSS river, one will be c
           },
           "length" : {
             "type" : "long",
+            "index" : "no"
+          }
+        }
+      },
+      "raw" : {
+        "properties" : {
+          "html" : {
+            "type" : "string",
             "index" : "no"
           }
         }
@@ -267,14 +296,15 @@ Behind the scene
 RSS river downloads RSS feed every `update_rate` milliseconds and check if there is new messages.
 
 At first, RSS river look at the `<channel>` tag.
-It reads the optional `<pubDate>` tag and store it in Elastic Search to compare it on next launch.
+It reads the optional `<pubDate>` tag and store it in Elasticsearch to compare it on next launch.
 
-Then, for each `<item>` tag, RSS river creates a new document with the following properties :
+Then, for each `<item>` tag, RSS river creates a new document with the following properties:
 
 |         XML Path         |     ES Mapping    |
 |--------------------------|-------------------|
 | `/title`                 | title             |
 | `/description`           | description       |
+| `/content:encoded`       | raw.html          |
 | `/author`                | author            |
 | `/link`                  | link              |
 | `/category`              | category          |
@@ -282,6 +312,8 @@ Then, for each `<item>` tag, RSS river creates a new document with the following
 | `/enclosures[@url]`      | enclosures.url    |
 | `/enclosures[@type]`     | enclosures.type   |
 | `/enclosures[@length]`   | enclosures.length |
+
+`<content:encoded>` tag will be stored in `raw` object. If `html` content, it will be stored as `raw.html`.
 
 `ID` is generated from description using the [UUID](http://docs.oracle.com/javase/7/docs/api/java/util/UUID.html) generator. So, each message is indexed only once.
 

@@ -21,10 +21,12 @@ package org.elasticsearch.river.rss.integration;
 
 import org.elasticsearch.action.count.CountResponse;
 import org.elasticsearch.action.get.GetResponse;
+import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.common.base.Predicate;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.river.rss.RssToJson;
 import org.elasticsearch.test.ElasticsearchIntegrationTest;
 import org.junit.After;
 import org.junit.Test;
@@ -37,27 +39,43 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.notNullValue;
 
 /**
  * Test all river settings
  */
-@ElasticsearchIntegrationTest.ClusterScope(scope = ElasticsearchIntegrationTest.Scope.SUITE, numNodes = 1)
+@ElasticsearchIntegrationTest.ClusterScope(scope = ElasticsearchIntegrationTest.Scope.SUITE)
 public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
 
-    private XContentBuilder startRiverDefinition() throws IOException {
-        return jsonBuilder().startObject()
+    private XContentBuilder createRiver(boolean raw, String... names) throws IOException {
+        XContentBuilder river = jsonBuilder().prettyPrint().startObject()
                 .field("type", "rss")
-                .startObject("rss")
-                    .startArray("feeds");
-    }
+                .startObject("rss");
 
-    private XContentBuilder endRiverDefinition(XContentBuilder xcb) throws IOException {
-        return xcb.endArray().endObject()
+        if (!raw) {
+            river.field("raw", raw);
+        }
+
+        if (names.length > 0) {
+            river.startArray("feeds");
+            for (String name : names) {
+                addLocalRiver(river, name);
+            }
+            river.endArray();
+        }
+
+        river.endObject()
                 .startObject("index")
-                .field("flush_interval", "500ms")
+                    .field("flush_interval", "500ms")
                 .endObject()
                 .endObject();
+
+        logger.info("  --> river meant to be created: {}", river.string());
+
+        return river;
     }
 
     private void startRiver(final String riverName, final String lastupdate_id, XContentBuilder river) throws InterruptedException {
@@ -129,14 +147,17 @@ public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
         return dataDir.toURI().toString();
     }
 
+    private String getLastUpdatedId(String name) throws IOException {
+        return "_lastupdated_" + UUID.nameUUIDFromBytes(getUrl(name + File.separator + "rss.xml").getBytes()).toString();
+    }
+
     /**
      * Add a river definition
      * @param xcb current xcontent builder
      * @param name feed name (optional)
-     * @return _lastupdated_ document id
      */
-    private String addLocalRiver(XContentBuilder xcb, String name) throws IOException {
-        return addRiver(xcb, getUrl(name + File.separator + "rss.xml"), name);
+    private void addLocalRiver(XContentBuilder xcb, String name) throws IOException {
+        addRiver(xcb, getUrl(name + File.separator + "rss.xml"), name);
     }
 
     /**
@@ -144,9 +165,8 @@ public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
      * @param xcb current xcontent builder
      * @param url URL to add
      * @param name feed name (optional)
-     * @return _lastupdated_ document id
      */
-    private String addRiver(XContentBuilder xcb, String url, String name) {
+    private void addRiver(XContentBuilder xcb, String url, String name) {
         try {
             xcb.startObject()
                     .field("url", url)
@@ -159,8 +179,6 @@ public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
             logger.error("fail to add river feed url [{}]", url);
             fail("fail to add river feed");
         }
-
-        return "_lastupdated_" + UUID.nameUUIDFromBytes(url.getBytes()).toString();
     }
 
     private void existSomeDocs(final String index) throws InterruptedException {
@@ -190,9 +208,7 @@ public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
      */
     @Test
     public void test_simple_river() throws IOException, InterruptedException {
-        XContentBuilder river = startRiverDefinition();
-        String lastupdate_id = addLocalRiver(river, "lemonde");
-        startRiver("simple", lastupdate_id, endRiverDefinition(river));
+        startRiver("simple", getLastUpdatedId("lemonde"), createRiver(true, "lemonde"));
 
         // We wait for some documents
         existSomeDocs("simple");
@@ -204,10 +220,7 @@ public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
      */
     @Test
     public void test_multiple_river() throws IOException, InterruptedException {
-        XContentBuilder river = startRiverDefinition();
-        String lastupdate_id = addLocalRiver(river, "lemonde");
-        addLocalRiver(river, "lefigaro");
-        startRiver("multiple", lastupdate_id, endRiverDefinition(river));
+        startRiver("multiple", getLastUpdatedId("lemonde"), createRiver(true, "lemonde", "lefigaro"));
 
         // We wait for some documents
         existSomeDocs("multiple", "lemonde");
@@ -220,13 +233,37 @@ public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
      */
     @Test
     public void test_mcapp_rivers() throws IOException, InterruptedException {
-        XContentBuilder river = startRiverDefinition();
-        String lastupdate_id = addLocalRiver(river, "malwaredomains");
-        addLocalRiver(river, "darkreading");
-        startRiver("mcapp", lastupdate_id, endRiverDefinition(river));
+        startRiver("mcapp", getLastUpdatedId("malwaredomains"), createRiver(true, "malwaredomains", "darkreading"));
 
         // We wait for some documents
         existSomeDocs("mcapp", "malwaredomains");
         existSomeDocs("mcapp", "darkreading");
+
+        SearchResponse response = client().prepareSearch("mcapp")
+                .setQuery(QueryBuilders.matchQuery("description", "domains"))
+                .addField(RssToJson.Rss.RAW + ".html")
+                .execute().actionGet();
+        assertThat(response.getHits().getTotalHits(), greaterThan(0L));
+        assertThat(response.getHits().getAt(0).field(RssToJson.Rss.RAW + ".html"), notNullValue());
+        assertThat(response.getHits().getAt(0).field(RssToJson.Rss.RAW + ".html").getValues(), notNullValue());
+    }
+
+    /**
+     * http://www.dcrainmaker.com/feed
+     * with raw: false
+     */
+    @Test
+    public void test_raw_false() throws IOException, InterruptedException {
+        startRiver("dcrainmaker", getLastUpdatedId("dcrainmaker"), createRiver(false, "dcrainmaker"));
+
+        // We wait for some documents
+        existSomeDocs("dcrainmaker", "dcrainmaker");
+
+        SearchResponse response = client().prepareSearch("dcrainmaker")
+                .setQuery(QueryBuilders.matchQuery("description", "friends"))
+                .addField(RssToJson.Rss.RAW + ".html")
+                .execute().actionGet();
+        assertThat(response.getHits().getTotalHits(), greaterThan(0L));
+        assertThat(response.getHits().getAt(0).field(RssToJson.Rss.RAW + ".html"), nullValue());
     }
 }
