@@ -88,7 +88,7 @@ If you want to set your own refresh rate (if not provided) and force it (even if
 We create the river with the following properties :
 
 * Feed URL: http://www.lemonde.fr/rss/une.xml
-* Update Rate: every 15 minutes (15 * 60 * 1000 = 900000 ms)
+* Update Rate: every 15 minutes
 * Ignore TTL : true
 
 ```sh
@@ -98,7 +98,7 @@ $ curl -XPUT 'localhost:9200/_river/lemonde/_meta' -d '{
     "feeds" : [ {
     	"name": "lemonde",
     	"url": "http://www.lemonde.fr/rss/une.xml",
-    	"update_rate": 900000,
+    	"update_rate": "15m",
     	"ignore_ttl": true
     	}
     ]
@@ -111,12 +111,12 @@ If you need to get multiple feeds, you can add them :
 Feed1
 
 * URL : http://www.lemonde.fr/rss/une.xml
-* Update Rate1 : every 15 minutes (15 * 60 * 1000 = 900000 ms) (will be modified by provided TTL)
+* Update Rate1 : every 15 minutes (will be modified by provided TTL)
 
 Feed2
 
 * URL : http://rss.lefigaro.fr/lefigaro/laune
-* Update Rate2 : every 30 minutes (30 * 60 * 1000 = 1800000 ms)
+* Update Rate2 : every 30 minutes
 * Ignore TTL : true
 
 
@@ -129,11 +129,11 @@ $ curl -XPUT 'localhost:9200/_river/actus/_meta' -d '{
     "feeds" : [ {
 			"name": "lemonde",
 			"url": "http://www.lemonde.fr/rss/une.xml",
-			"update_rate": 900000
+			"update_rate": "15m"
     	}, {
 			"name": "lefigaro",
 			"url": "http://rss.lefigaro.fr/lefigaro/laune",
-			"update_rate": 1800000,
+			"update_rate": "30m",
 			"ignore_ttl": true
     	}
     ]

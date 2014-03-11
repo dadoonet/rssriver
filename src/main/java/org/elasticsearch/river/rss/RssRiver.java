@@ -103,7 +103,8 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				for (Map<String, Object> feed : feeds) {
 					String feedname = XContentMapValues.nodeStringValue(feed.get("name"), null);
 					String url = XContentMapValues.nodeStringValue(feed.get("url"), null);
-					int updateRate  = XContentMapValues.nodeIntegerValue(feed.get("update_rate"), 15 * 60 * 1000);
+                    TimeValue updateRate = TimeValue.parseTimeValue(XContentMapValues.nodeStringValue(
+                            feed.get("update_rate"), null), TimeValue.timeValueMinutes(15));
                     boolean ignoreTtl = XContentMapValues.nodeBooleanValue(feed.get("ignore_ttl"), false);
 					feedsDefinition.add(new RssRiverFeedDefinition(feedname, url, updateRate, ignoreTtl));
 				}
@@ -112,7 +113,8 @@ public class RssRiver extends AbstractRiverComponent implements River {
 				logger.warn("rss.url and rss.update_rate have been deprecated. Use rss.feeds[].url and rss.feeds[].update_rate instead.");
 				logger.warn("See https://github.com/dadoonet/rssriver/issues/6 for more details...");
 				String url = XContentMapValues.nodeStringValue(rssSettings.get("url"), null);
-				int updateRate  = XContentMapValues.nodeIntegerValue(rssSettings.get("update_rate"), 15 * 60 * 1000);
+                TimeValue updateRate  = TimeValue.parseTimeValue(XContentMapValues.nodeStringValue(
+                        rssSettings.get("update_rate"), null), TimeValue.timeValueMinutes(15));
                 boolean ignoreTtl = XContentMapValues.nodeBooleanValue("ignore_ttl", false);
 
 				feedsDefinition = new ArrayList<RssRiverFeedDefinition>(1);
@@ -123,9 +125,8 @@ public class RssRiver extends AbstractRiverComponent implements River {
         } else {
 			String url = "http://www.lemonde.fr/rss/une.xml";
 			logger.warn("You didn't define the rss url. Switching to defaults : [{}]", url);
-			int updateRate = 15 * 60 * 1000;
 			feedsDefinition = new ArrayList<RssRiverFeedDefinition>(1);
-			feedsDefinition.add(new RssRiverFeedDefinition("lemonde", url, updateRate, false));
+			feedsDefinition.add(new RssRiverFeedDefinition("lemonde", url, TimeValue.timeValueMinutes(15), false));
             raw = true;
 		}
 
@@ -140,7 +141,7 @@ public class RssRiver extends AbstractRiverComponent implements River {
             bulkSize = XContentMapValues.nodeIntegerValue(
                     indexSettings.get("bulk_size"), 25);
             bulkFlushInterval = TimeValue.parseTimeValue(XContentMapValues.nodeStringValue(
-                    indexSettings.get("flush_interval"), "5s"), TimeValue.timeValueSeconds(5));
+                    indexSettings.get("flush_interval"), null), TimeValue.timeValueSeconds(5));
             maxConcurrentBulk = XContentMapValues.nodeIntegerValue(indexSettings.get("max_concurrent_bulk"), 1);
         } else {
 			indexName = riverName.name();
@@ -319,11 +320,11 @@ public class RssRiver extends AbstractRiverComponent implements River {
 
 	private class RSSParser implements Runnable {
 		private String url;
-		private int updateRate;
+		private TimeValue updateRate;
 		private String feedname;
         private boolean ignoreTtl;
 
-        public RSSParser(String feedname, String url, int updateRate, boolean ignoreTtl) {
+        public RSSParser(String feedname, String url, TimeValue updateRate, boolean ignoreTtl) {
 			this.feedname = feedname;
 			this.url = url;
 			this.updateRate = updateRate;
@@ -427,19 +428,19 @@ public class RssRiver extends AbstractRiverComponent implements River {
                     if (!ignoreTtl && feed.originalWireFeed() != null && feed.originalWireFeed() instanceof Channel) {
                         Channel channel = (Channel) feed.originalWireFeed();
                         if (channel.getTtl() > 0) {
-                            int ms = channel.getTtl() * 60 * 1000;
-                            if (ms != updateRate) {
-                                updateRate = ms;
+                            int minutes = channel.getTtl();
+                            if (minutes != updateRate.minutes()) {
+                                updateRate = TimeValue.timeValueMinutes(minutes);
                                 if (logger.isInfoEnabled())
-                                    logger.info("Auto adjusting update rate with provided ttl: {} mn", channel.getTtl());
+                                    logger.info("Auto adjusting update rate with provided ttl: {}", updateRate);
                             }
                         }
                     }
                 }
 
 				try {
-					if (logger.isDebugEnabled()) logger.debug("Rss river is going to sleep for {} ms", updateRate);
-					Thread.sleep(updateRate);
+					if (logger.isDebugEnabled()) logger.debug("Rss river is going to sleep for {}", updateRate);
+					Thread.sleep(updateRate.millis());
 				} catch (InterruptedException e1) {
 				}
 			}
