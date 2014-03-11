@@ -23,6 +23,7 @@ import com.sun.syndication.feed.module.georss.GeoRSSModule;
 import com.sun.syndication.feed.module.georss.GeoRSSUtils;
 import com.sun.syndication.feed.module.georss.geometries.Position;
 import com.sun.syndication.feed.synd.SyndCategory;
+import com.sun.syndication.feed.synd.SyndContentImpl;
 import com.sun.syndication.feed.synd.SyndEnclosure;
 import com.sun.syndication.feed.synd.SyndEntry;
 import org.elasticsearch.common.xcontent.XContentBuilder;
@@ -54,9 +55,14 @@ public class RssToJson {
             public static final String TYPE = "type";
             public static final String LENGTH = "length";
         }
+
+        public static final String RAW = "raw";
+        static public final class Raw {
+            public static final String HTML = "html";
+        }
     }
 
-	public static XContentBuilder toJson(SyndEntry message, String riverName, String feedname) throws IOException {
+	public static XContentBuilder toJson(SyndEntry message, String riverName, String feedname, boolean raw) throws IOException {
         XContentBuilder out = jsonBuilder()
 	    	.startObject()
 	    		.field(Rss.FEEDNAME, feedname)
@@ -66,6 +72,19 @@ public class RssToJson {
 	    		.field(Rss.LINK, message.getLink())
 	    		.field(Rss.PUBLISHED_DATE, message.getPublishedDate())
 	    		.field(Rss.SOURCE, message.getSource());
+
+        if (raw) {
+            if (message.getContents() != null) {
+                out.startObject(Rss.RAW);
+                for (Object o : message.getContents()) {
+                    if (o instanceof SyndContentImpl) {
+                        SyndContentImpl content = (SyndContentImpl) o;
+                        out.field(content.getType(), content.getValue());
+                    }
+                }
+                out.endObject();
+            }
+        }
 
         GeoRSSModule geoRSSModule = GeoRSSUtils.getGeoRSS(message);
         if (geoRSSModule != null) {
@@ -117,7 +136,7 @@ public class RssToJson {
      * @return a mapping
      * @throws Exception
      */
-    public static XContentBuilder buildRssMapping(String type) throws Exception {
+    public static XContentBuilder buildRssMapping(String type, boolean raw) throws Exception {
         XContentBuilder xbMapping = jsonBuilder().prettyPrint().startObject();
 
         // Type
@@ -142,6 +161,13 @@ public class RssToJson {
         addNotAnalyzedString(xbMapping, Rss.Enclosures.TYPE);
         addNotIndexedLong(xbMapping, Rss.Enclosures.LENGTH);
         xbMapping.endObject().endObject(); // End Enclosures
+
+        // Raw content:encoded
+        if (raw) {
+            xbMapping.startObject(Rss.RAW).startObject("properties");
+            addNotIndexedString(xbMapping, Rss.Raw.HTML);
+            xbMapping.endObject().endObject(); // End Raw
+        }
 
         xbMapping.endObject().endObject().endObject(); // End Type
         return xbMapping;
