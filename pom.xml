@@ -15,7 +15,7 @@ governing permissions and limitations under the License. -->
     <groupId>fr.pilato.elasticsearch.river</groupId>
 	<artifactId>rssriver</artifactId>
 	<packaging>jar</packaging>
-	<version>0.3.0-SNAPSHOT</version>
+	<version>0.3.0</version>
     <name>Elasticsearch RSS River Plugin</name>
     <url>https://github.com/dadoonet/rssriver/</url>
     <description>RSS River Plugin offers a simple way to index RSS feeds into elasticsearch.</description>
