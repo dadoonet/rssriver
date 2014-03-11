@@ -12,6 +12,7 @@ Versions
 
 |      RSS River Plugin      |    elasticsearch    | Release date |
 |----------------------------|---------------------|:------------:|
+| 0.4.0-SNAPSHOT             | 0.90.4 - 0.90       |  XXXX-XX-XX  |
 | 0.3.0                      | 0.90.4 - 0.90       |  2014-03-11  |
 | 0.2.0                      | 0.90.4 - 0.90       |  2013-10-18  |
 | 0.1.0                      | 0.90.0 - 0.90.3     |  2013-02-26  |
@@ -23,6 +24,7 @@ Versions
 
 Please read documentation relative to the version you are using:
 
+* [0.4.0-SNAPSHOT](https://github.com/dadoonet/rssriver/blob/es-0.90/README.md)
 * [0.3.0](https://github.com/dadoonet/rssriver/blob/rssriver-0.3.0/README.md)
 * [0.2.0](https://github.com/dadoonet/rssriver/blob/rssriver-0.2.0/README.md)
 * [0.1.0](https://github.com/dadoonet/rssriver/blob/rssriver-0.1.0/README.md)
