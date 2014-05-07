@@ -119,7 +119,7 @@ public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
     public void tearDown() throws Exception {
         logger.info("  --> stopping rivers");
         // We need to make sure that the _river is stopped
-        wipeIndices("_river");
+        cluster().wipeIndices("_river");
 
         // We have to wait a little because it could throw java.lang.RuntimeException
         Thread.sleep(1000);
