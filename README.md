@@ -7,19 +7,19 @@ Welcome to the RSS River Plugin for [Elasticsearch](http://www.elasticsearch.org
 Versions
 --------
 
-* For 1.0.x elasticsearch versions, look at [master branch](https://github.com/dadoonet/rssriver/tree/master).
+* For 1.0.x elasticsearch versions, look at [master branch](https://github.com/dadoonet/rssriver/tree/es-1.0).
 * For 0.90.x elasticsearch versions, look at [es-0.90 branch](https://github.com/dadoonet/rssriver/tree/es-0.90).
 
 |      RSS River Plugin      |    elasticsearch    | Release date |
 |----------------------------|---------------------|:------------:|
-| 1.2.0-SNAPSHOT             | 1.0 - master        |  XXXX-XX-XX  |
+| 1.1.1-SNAPSHOT             | 1.0 - master        |  XXXX-XX-XX  |
 | 1.1.0                      | 1.0 - master        |  2014-03-11  |
 | 1.0.0                      | 1.0                 |  2014-02-14  |
 | 1.0.0.RC1                  | 1.0                 |  2014-02-03  |
 
 Please read documentation relative to the version you are using:
 
-* [1.2.0-SNAPSHOT](https://github.com/dadoonet/rssriver/blob/master/README.md)
+* [1.1.1-SNAPSHOT](https://github.com/dadoonet/rssriver/blob/es-1.0/README.md)
 * [1.1.0](https://github.com/dadoonet/rssriver/blob/rssriver-1.1.0/README.md)
 * [1.0.0](https://github.com/dadoonet/rssriver/blob/rssriver-1.0.0/README.md)
 * [1.0.0.RC1](https://github.com/dadoonet/rssriver/blob/rssriver-1.0.0.RC1/README.md)
