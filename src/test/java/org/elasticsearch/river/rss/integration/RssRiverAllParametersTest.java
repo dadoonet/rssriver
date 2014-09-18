@@ -266,4 +266,18 @@ public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
         assertThat(response.getHits().getTotalHits(), greaterThan(0L));
         assertThat(response.getHits().getAt(0).field(RssToJson.Rss.RAW + ".html"), nullValue());
     }
+
+    /**
+     * Index http://www.feedforall.com/sample.xml sample
+     * Related to issue https://github.com/dadoonet/rssriver/issues/33
+     */
+    @Test
+    public void test_feedforall_33() throws IOException, InterruptedException {
+        startRiver("feedforall", getLastUpdatedId("feedforall"), createRiver(true, "feedforall"));
+
+        // We wait for some documents
+        existSomeDocs("feedforall");
+    }
+
+
 }
