@@ -3,30 +3,11 @@ RSS River for Elasticsearch
 
 Welcome to the RSS River Plugin for [Elasticsearch](http://www.elasticsearch.org/)
 
-In order to install the plugin, run: 
+## Version 1.3.0-SNAPSHOT for Elasticsearch: 1.3
 
-```sh
-bin/plugin -install fr.pilato.elasticsearch.river/rssriver/1.1.0
-```
+If you are looking for another version documentation, please refer to the 
+[compatibility matrix](https://github.com/dadoonet/rssriver/#rss-river-for-elasticsearch).
 
-You need to install a version matching your Elasticsearch version:
-
-|       Elasticsearch    |  RSS River Plugin |                                                            Docs                                                              |
-|------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------|
-|    master              | Build from source | See below                                                                                                                    |
-|    es-1.x              | Build from source | [1.4.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.x/#version-140-snapshot-for-elasticsearch-1x)                |
-|    es-1.3              | Build from source | [1.3.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.3/#version-130-snapshot-for-elasticsearch-13)                |
-|    es-1.1              |     1.1.0         | [1.1.0](https://github.com/dadoonet/rssriver/tree/v1.2.0/#rss-river-for-elasticsearch)                                       |
-|    es-1.0              |     1.0.0         | [1.0.0](https://github.com/dadoonet/rssriver/tree/v1.0.0/#rss-river-for-elasticsearch)                                       |
-|    es-0.90             |     0.3.0         | [0.3.0](https://github.com/dadoonet/rssriver/tree/v0.5.0/#rss-river-for-elasticsearch)                                       |
-
-To build a `SNAPSHOT` version, you need to build it with Maven:
-
-```bash
-mvn clean install
-plugin --install rssriver \ 
-       --url file:target/releases/rssriver-X.X.X-SNAPSHOT.zip
-```
 
 Build Status
 ------------
