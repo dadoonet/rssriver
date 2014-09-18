@@ -3,21 +3,30 @@ RSS River for Elasticsearch
 
 Welcome to the RSS River Plugin for [Elasticsearch](http://www.elasticsearch.org/)
 
+In order to install the plugin, run: 
 
-Versions
---------
+```sh
+bin/plugin -install fr.pilato.elasticsearch.river/rssriver/1.1.0
+```
 
-* For 1.2.x elasticsearch versions, look at [master branch](https://github.com/dadoonet/rssriver/tree/master).
-* For 1.0.x,1.1.x elasticsearch versions, look at [master branch](https://github.com/dadoonet/rssriver/tree/es-1.0).
-* For 0.90.x elasticsearch versions, look at [es-0.90 branch](https://github.com/dadoonet/rssriver/tree/es-0.90).
+You need to install a version matching your Elasticsearch version:
 
-|      RSS River Plugin      |    elasticsearch    | Release date |
-|----------------------------|---------------------|:------------:|
-| 1.2.0-SNAPSHOT             | 1.2 - master        |  XXXX-XX-XX  |
+|       Elasticsearch    |  RSS River Plugin |                                                            Docs                                                              |
+|------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------|
+|    master              | Build from source | See below                                                                                                                    |
+|    es-1.x              | Build from source | [1.4.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.x/#version-140-snapshot-for-elasticsearch-1x)                |
+|    es-1.3              | Build from source | [1.3.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.3/#version-130-snapshot-for-elasticsearch-13)                |
+|    es-1.1              |     1.1.0         | [1.1.0](https://github.com/dadoonet/rssriver/tree/v1.2.0/#rss-river-for-elasticsearch)                                       |
+|    es-1.0              |     1.0.0         | [1.0.0](https://github.com/dadoonet/rssriver/tree/v1.0.0/#rss-river-for-elasticsearch)                                       |
+|    es-0.90             |     0.3.0         | [0.3.0](https://github.com/dadoonet/rssriver/tree/v0.5.0/#rss-river-for-elasticsearch)                                       |
 
-Please read documentation relative to the version you are using:
+To build a `SNAPSHOT` version, you need to build it with Maven:
 
-* [1.2.0-SNAPSHOT](https://github.com/dadoonet/rssriver/blob/master/README.md)
+```bash
+mvn clean install
+plugin --install rssriver \ 
+       --url file:target/releases/rssriver-X.X.X-SNAPSHOT.zip
+```
 
 Build Status
 ------------
@@ -28,15 +37,6 @@ Thanks to cloudbees for the [build status](https://buildhive.cloudbees.com/job/d
 
 Getting Started
 ===============
-
-Installation
-------------
-
-Just type :
-
-```sh
-$ bin/plugin -install fr.pilato.elasticsearch.river/rssriver/1.1.0
-```
 
 Creating a RSS river
 --------------------
