@@ -9,13 +9,6 @@ If you are looking for another version documentation, please refer to the
 [compatibility matrix](https://github.com/dadoonet/rssriver/#rss-river-for-elasticsearch).
 
 
-Build Status
-------------
-
-Thanks to cloudbees for the [build status](https://buildhive.cloudbees.com/job/dadoonet/job/rssriver/) : 
-![build status](https://buildhive.cloudbees.com/job/dadoonet/job/rssriver/badge/icon "Build status")
-
-
 Getting Started
 ===============
 
