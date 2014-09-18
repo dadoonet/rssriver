@@ -279,5 +279,16 @@ public class RssRiverAllParametersTest extends ElasticsearchIntegrationTest {
         existSomeDocs("feedforall");
     }
 
+    /**
+     * Index http://rss.nytimes.com/services/xml/rss/nyt/InternationalHome.xml sample
+     * Related to issue https://github.com/dadoonet/rssriver/issues/34
+     * Create mapping for different 'content' and 'url' field
+     */
+    @Test
+    public void test_nytimes_34() throws IOException, InterruptedException {
+        startRiver("nytimes", getLastUpdatedId("nytimes"), createRiver(true, "nytimes"));
 
+        // We wait for some documents
+        existSomeDocs("nytimes");
+    }
 }

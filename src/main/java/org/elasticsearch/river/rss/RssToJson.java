@@ -22,6 +22,10 @@ package org.elasticsearch.river.rss;
 import com.rometools.modules.georss.GeoRSSModule;
 import com.rometools.modules.georss.GeoRSSUtils;
 import com.rometools.modules.georss.geometries.Position;
+import com.rometools.modules.mediarss.MediaEntryModule;
+import com.rometools.modules.mediarss.types.MediaContent;
+import com.rometools.modules.mediarss.types.PlayerReference;
+import com.rometools.modules.mediarss.types.UrlReference;
 import com.rometools.rome.feed.synd.SyndCategory;
 import com.rometools.rome.feed.synd.SyndContentImpl;
 import com.rometools.rome.feed.synd.SyndEnclosure;
@@ -29,6 +33,7 @@ import com.rometools.rome.feed.synd.SyndEntry;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 
 import java.io.IOException;
+import java.net.URI;
 
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
@@ -58,7 +63,14 @@ public class RssToJson {
 
         public static final String MEDIAS = "medias";
         static public final class Medias {
+            public static final String TYPE = "type";
+            public static final String REFERENCE = "reference";
+            public static final String LANGUAGE = "language";
+            public static final String TITLE = "title";
             public static final String DESCRIPTION = "description";
+            public static final String DURATION = "duration";
+            public static final String WIDTH = "width";
+            public static final String HEIGHT = "height";
         }
 
         public static final String RAW = "raw";
@@ -128,12 +140,61 @@ public class RssToJson {
             out.endArray();
         }
 
+        MediaEntryModule mediaEntryModule = (MediaEntryModule) message.getModule(MediaEntryModule.URI);
+        if (mediaEntryModule != null) {
+            out.startArray(Rss.MEDIAS);
+            for (MediaContent mediaContent : mediaEntryModule.getMediaContents()) {
+                out.startObject();
+                addFieldIfNotNull(out, Rss.Medias.TYPE, mediaContent.getType());
+
+                if (mediaContent.getReference() != null) {
+                    URI url = null;
+                    if (mediaContent.getReference() instanceof PlayerReference) {
+                        url = ((PlayerReference) mediaContent.getReference()).getUrl();
+                    }
+                    if (mediaContent.getReference() instanceof UrlReference) {
+                        url = ((UrlReference) mediaContent.getReference()).getUrl();
+                    }
+                    if (url != null) {
+                        addFieldIfNotNull(out, Rss.Medias.REFERENCE, url.toString());
+                    }
+                }
+
+                addFieldIfNotNull(out, Rss.Medias.LANGUAGE, mediaContent.getLanguage());
+                addFieldIfNotNull(out, Rss.Medias.TITLE, mediaContent.getMetadata().getTitle());
+                addFieldIfNotNull(out, Rss.Medias.DESCRIPTION, mediaContent.getMetadata().getDescription());
+                addFieldIfNotNull(out, Rss.Medias.DURATION, mediaContent.getDuration());
+                addFieldIfNotNull(out, Rss.Medias.WIDTH, mediaContent.getWidth());
+                addFieldIfNotNull(out, Rss.Medias.HEIGHT, mediaContent.getHeight());
+                out.endObject();
+            }
+            out.endArray();
+        }
+
         if (riverName != null) {
             out.field("river", riverName);
         }
 
         return out.endObject();
 	}
+
+    private static void addFieldIfNotNull(XContentBuilder xcb, String fieldName, String content) throws IOException {
+        if (content != null) {
+            xcb.field(fieldName, content);
+        }
+    }
+
+    private static void addFieldIfNotNull(XContentBuilder xcb, String fieldName, Integer content) throws IOException {
+        if (content != null) {
+            xcb.field(fieldName, content);
+        }
+    }
+
+    private static void addFieldIfNotNull(XContentBuilder xcb, String fieldName, Long content) throws IOException {
+        if (content != null) {
+            xcb.field(fieldName, content);
+        }
+    }
 
     /**
      * Build the mapping for RSS content
@@ -166,6 +227,18 @@ public class RssToJson {
         addNotAnalyzedString(xbMapping, Rss.Enclosures.TYPE);
         addNotIndexedLong(xbMapping, Rss.Enclosures.LENGTH);
         xbMapping.endObject().endObject(); // End Enclosures
+
+        // Medias
+        xbMapping.startObject(Rss.MEDIAS).startObject("properties");
+        addNotAnalyzedString(xbMapping, Rss.Medias.TYPE);
+        addNotIndexedString(xbMapping, Rss.Medias.REFERENCE);
+        addNotAnalyzedString(xbMapping, Rss.Medias.LANGUAGE);
+        addAnalyzedString(xbMapping, Rss.Medias.TITLE);
+        addAnalyzedString(xbMapping, Rss.Medias.DESCRIPTION);
+        addNotIndexedLong(xbMapping, Rss.Medias.DURATION);
+        addNotIndexedLong(xbMapping, Rss.Medias.WIDTH);
+        addNotIndexedLong(xbMapping, Rss.Medias.HEIGHT);
+        xbMapping.endObject().endObject(); // End Medias
 
         // Raw content:encoded
         if (raw) {
