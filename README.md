@@ -6,7 +6,7 @@ Welcome to the RSS River Plugin for [Elasticsearch](http://www.elasticsearch.org
 In order to install the plugin, run: 
 
 ```sh
-bin/plugin -install fr.pilato.elasticsearch.river/rssriver/1.1.0
+bin/plugin -install fr.pilato.elasticsearch.river/rssriver/1.3.0
 ```
 
 You need to install a version matching your Elasticsearch version:
@@ -16,7 +16,7 @@ You need to install a version matching your Elasticsearch version:
 |    master              | Build from source | See below                                                                                                                    |
 |    es-1.x              | Build from source | [1.5.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.x/#version-150-snapshot-for-elasticsearch-1x)                |
 |    es-1.4              | Build from source | [1.4.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.x/#version-140-snapshot-for-elasticsearch-14)                |
-|    es-1.3              | Build from source | [1.3.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.3/#version-130-snapshot-for-elasticsearch-13)                |
+|    es-1.3              |     1.3.0         | [1.3.0](https://github.com/dadoonet/rssriver/tree/v1.3.0/#version-130-for-elasticsearch-13)                  |
 |    es-1.1              |     1.1.0         | [1.1.0](https://github.com/dadoonet/rssriver/tree/v1.2.0/#rss-river-for-elasticsearch)                                       |
 |    es-1.0              |     1.0.0         | [1.0.0](https://github.com/dadoonet/rssriver/tree/v1.0.0/#rss-river-for-elasticsearch)                                       |
 |    es-0.90             |     0.3.0         | [0.3.0](https://github.com/dadoonet/rssriver/tree/v0.5.0/#rss-river-for-elasticsearch)                                       |
