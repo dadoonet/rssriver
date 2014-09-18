@@ -19,14 +19,14 @@
 
 package org.elasticsearch.river.rss.unit;
 
-import com.sun.syndication.feed.module.georss.GeoRSSModule;
-import com.sun.syndication.feed.module.georss.GeoRSSUtils;
-import com.sun.syndication.feed.module.georss.geometries.Position;
-import com.sun.syndication.feed.rss.Channel;
-import com.sun.syndication.feed.synd.SyndEntryImpl;
-import com.sun.syndication.feed.synd.SyndFeed;
-import com.sun.syndication.io.SyndFeedInput;
-import com.sun.syndication.io.XmlReader;
+import com.rometools.modules.georss.GeoRSSModule;
+import com.rometools.modules.georss.GeoRSSUtils;
+import com.rometools.modules.georss.geometries.Position;
+import com.rometools.rome.feed.rss.Channel;
+import com.rometools.rome.feed.synd.SyndEntryImpl;
+import com.rometools.rome.feed.synd.SyndFeed;
+import com.rometools.rome.io.SyndFeedInput;
+import com.rometools.rome.io.XmlReader;
 import org.elasticsearch.test.ElasticsearchTestCase;
 import org.junit.Test;
 

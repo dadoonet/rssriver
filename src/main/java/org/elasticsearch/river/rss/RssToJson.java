@@ -19,13 +19,13 @@
 
 package org.elasticsearch.river.rss;
 
-import com.sun.syndication.feed.module.georss.GeoRSSModule;
-import com.sun.syndication.feed.module.georss.GeoRSSUtils;
-import com.sun.syndication.feed.module.georss.geometries.Position;
-import com.sun.syndication.feed.synd.SyndCategory;
-import com.sun.syndication.feed.synd.SyndContentImpl;
-import com.sun.syndication.feed.synd.SyndEnclosure;
-import com.sun.syndication.feed.synd.SyndEntry;
+import com.rometools.modules.georss.GeoRSSModule;
+import com.rometools.modules.georss.GeoRSSUtils;
+import com.rometools.modules.georss.geometries.Position;
+import com.rometools.rome.feed.synd.SyndCategory;
+import com.rometools.rome.feed.synd.SyndContentImpl;
+import com.rometools.rome.feed.synd.SyndEnclosure;
+import com.rometools.rome.feed.synd.SyndEntry;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 
 import java.io.IOException;
@@ -54,6 +54,11 @@ public class RssToJson {
             public static final String URL = "url";
             public static final String TYPE = "type";
             public static final String LENGTH = "length";
+        }
+
+        public static final String MEDIAS = "medias";
+        static public final class Medias {
+            public static final String DESCRIPTION = "description";
         }
 
         public static final String RAW = "raw";
