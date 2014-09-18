@@ -187,6 +187,40 @@ If you don't define an explicit mapping before starting RSS river, one will be c
           }
         }
       },
+      "medias" : {
+        "properties" : {
+          "type" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "reference" : {
+            "type" : "string",
+            "index" : "no"
+          },
+          "language" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "title" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "duration" : {
+            "type" : "long",
+            "index" : "no"
+          },
+          "width" : {
+            "type" : "long",
+            "index" : "no"
+          },
+          "height" : {
+            "type" : "long",
+            "index" : "no"
+          }
+        }
+      },
       "raw" : {
         "properties" : {
           "html" : {
@@ -267,18 +301,26 @@ It reads the optional `<pubDate>` tag and store it in Elasticsearch to compare i
 
 Then, for each `<item>` tag, RSS river creates a new document with the following properties:
 
-|         XML Path         |     ES Mapping    |
-|--------------------------|-------------------|
-| `/title`                 | title             |
-| `/description`           | description       |
-| `/content:encoded`       | raw.html          |
-| `/author`                | author            |
-| `/link`                  | link              |
-| `/category`              | category          |
-| `/geo:lat` `/geo:long`   | location          |
-| `/enclosures[@url]`      | enclosures.url    |
-| `/enclosures[@type]`     | enclosures.type   |
-| `/enclosures[@length]`   | enclosures.length |
+|         XML Path           |     ES Mapping    |
+|----------------------------|-------------------|
+| `/title`                   | title             |
+| `/description`             | description       |
+| `/content:encoded`         | raw.html          |
+| `/author`                  | author            |
+| `/link`                    | link              |
+| `/category`                | category          |
+| `/geo:lat` `/geo:long`     | location          |
+| `/enclosures[@url]`        | enclosures.url    |
+| `/enclosures[@type]`       | enclosures.type   |
+| `/enclosures[@length]`     | enclosures.length |
+| `/media:content[@height]`  | medias.height     |
+| `/media:content[@width]`   | medias.width      |
+| `/media:content[@url]`     | medias.reference  |
+| `/media:content[@type]`    | medias.type       |
+| `/media:content[@duration]`| medias.duration   |
+| `/media:content[@lang]`    | medias.language   |
+| `/media:description`       | medias.description|
+| `/media:title`             | medias.title      |
 
 `<content:encoded>` tag will be stored in `raw` object. If `html` content, it will be stored as `raw.html`.
 

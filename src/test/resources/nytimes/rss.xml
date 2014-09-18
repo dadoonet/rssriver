@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='http://rss.nytimes.com/xsl/eng/rss.xsl'?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <atom:link href="http://www.nytimes.com/services/xml/rss/nyt/InternationalHome.xml" rel="self"
+                   type="application/rss+xml"/>
+        <title>NYT &gt; International Home</title>
+        <link>http://www.nytimes.com/pages/international/index.html?partner=rss&amp;emc=rss</link>
+        <description/>
+        <language>en-us</language>
+        <copyright>Copyright 2014 The New York Times Company</copyright>
+        <pubDate>Thu, 18 Sep 2014 12:06:02 GMT</pubDate>
+        <lastBuildDate>Thu, 18 Sep 2014 12:06:02 GMT</lastBuildDate>
+        <ttl>5</ttl>
+        <image>
+            <title>NYT &gt; International Home</title>
+            <url>http://graphics8.nytimes.com/images/misc/NYT_logo_rss_250x40.png</url>
+            <link>http://www.nytimes.com/pages/international/index.html?partner=rss&amp;emc=rss</link>
+        </image>
+        <item>
+            <atom:link
+                    href="http://www.nytimes.com/2014/09/21/arts/design/ai-weiwei-takes-his-work-to-a-prison.html?partner=rss&amp;emc=rss"
+                    rel="standout"/>
+            <title>Ai Weiwei Takes His Work to a Prison</title>
+            <link>
+                http://rss.nytimes.com/c/34625/f/667200/s/3e93d465/sc/38/l/0L0Snytimes0N0C20A140C0A90C210Carts0Cdesign0Cai0Eweiwei0Etakes0Ehis0Ework0Eto0Ea0Eprison0Bhtml0Dpartner0Frss0Gemc0Frss/story01.htm
+            </link>
+            <description>The Chinese artist and activist Ai Weiwei is taking his art to one of the most infamous
+                prisons, using Alcatraz as an inspiration.&lt;img width='1' height='1'
+                src='http://rss.nytimes.com/c/34625/f/667200/s/3e93d465/sc/38/mf.gif' border='0'/&gt;&lt;br clear='all'/&gt;</description>
+            <category domain="http://www.nytimes.com/namespaces/nyt_org_all">Twitter|TWTR|NYSE</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/des">Art</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Ai Weiwei</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Alcatraz (San Francisco)</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">San Francisco (Calif)</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">California</category>
+            <pubDate>Thu, 18 Sep 2014 04:01:01 GMT</pubDate>
+            <guid isPermaLink="false">
+                http://www.nytimes.com/2014/09/21/arts/design/ai-weiwei-takes-his-work-to-a-prison.html
+            </guid>
+            <dc:creator>By JORI FINKEL</dc:creator>
+            <media:content height="151" lang="" width="151"
+                           url="http://graphics8.nytimes.com/images/2014/09/21/arts/design/20140921-AWEIWEI-slide-1BA6/20140921-AWEIWEI-slide-1BA6-moth.jpg" />
+            <media:credit scheme="urn:ebu">Jan Stürmann/For-Site Foundation</media:credit>
+            <media:description type="plain">Ai Weiwei in his Beijing studio.</media:description>
+        </item>
+        <item>
+            <atom:link
+                    href="http://www.nytimes.com/2014/09/21/arts/design/ai-weiwei-takes-his-work-to-a-prison.html?partner=rss&amp;emc=rss"
+                    rel="standout"/>
+            <title>Ai Weiwei Takes His Work to a Prison</title>
+            <link>
+                http://rss.nytimes.com/c/34625/f/667200/s/3e93d465/sc/38/l/0L0Snytimes0N0C20A140C0A90C210Carts0Cdesign0Cai0Eweiwei0Etakes0Ehis0Ework0Eto0Ea0Eprison0Bhtml0Dpartner0Frss0Gemc0Frss/story01.htm
+            </link>
+            <description>The Chinese artist and activist Ai Weiwei is taking his art to one of the most infamous
+                prisons, using Alcatraz as an inspiration.&lt;img width='1' height='1'
+                src='http://rss.nytimes.com/c/34625/f/667200/s/3e93d465/sc/38/mf.gif' border='0'/&gt;&lt;br clear='all'/&gt;</description>
+            <category domain="http://www.nytimes.com/namespaces/nyt_org_all">Twitter|TWTR|NYSE</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/des">Art</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Ai Weiwei</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Alcatraz (San Francisco)</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">San Francisco (Calif)</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">California</category>
+            <pubDate>Thu, 18 Sep 2014 04:01:01 GMT</pubDate>
+            <guid isPermaLink="false">
+                http://www.nytimes.com/2014/09/21/arts/design/ai-weiwei-takes-his-work-to-a-prison.html
+            </guid>
+            <dc:creator>By JORI FINKEL</dc:creator>
+            <media:content height="151" lang="" width="151"
+                           url="http://graphics8.nytimes.com/images/2014/09/21/arts/design/20140921-AWEIWEI-slide-1BA6/20140921-AWEIWEI-slide-1BA6-moth.jpg">
+                <media:credit scheme="urn:ebu">Jan Stürmann/For-Site Foundation</media:credit>
+                <media:description type="plain">Ai Weiwei in his Beijing studio.</media:description>
+            </media:content>
+        </item>
+    </channel>
+</rss>
