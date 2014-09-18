@@ -3,7 +3,7 @@ RSS River for Elasticsearch
 
 Welcome to the RSS River Plugin for [Elasticsearch](http://www.elasticsearch.org/)
 
-## Version 1.4.0-SNAPSHOT for Elasticsearch: 1.4
+## Version 1.5.0-SNAPSHOT for Elasticsearch: 1.x
 
 If you are looking for another version documentation, please refer to the 
 [compatibility matrix](https://github.com/dadoonet/rssriver/#rss-river-for-elasticsearch).
