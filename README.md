@@ -14,7 +14,8 @@ You need to install a version matching your Elasticsearch version:
 |       Elasticsearch    |  RSS River Plugin |                                                            Docs                                                              |
 |------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------|
 |    master              | Build from source | See below                                                                                                                    |
-|    es-1.x              | Build from source | [1.4.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.x/#version-140-snapshot-for-elasticsearch-1x)                |
+|    es-1.x              | Build from source | [1.5.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.x/#version-150-snapshot-for-elasticsearch-1x)                |
+|    es-1.4              | Build from source | [1.4.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.x/#version-140-snapshot-for-elasticsearch-14)                |
 |    es-1.3              | Build from source | [1.3.0-SNAPSHOT](https://github.com/dadoonet/rssriver/tree/es-1.3/#version-130-snapshot-for-elasticsearch-13)                |
 |    es-1.1              |     1.1.0         | [1.1.0](https://github.com/dadoonet/rssriver/tree/v1.2.0/#rss-river-for-elasticsearch)                                       |
 |    es-1.0              |     1.0.0         | [1.0.0](https://github.com/dadoonet/rssriver/tree/v1.0.0/#rss-river-for-elasticsearch)                                       |
