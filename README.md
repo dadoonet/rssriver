@@ -1,4 +1,4 @@
-RSS River for Elasticsearch
+RSS River for Elasticsearch (PROJECT STOPPED)
 ===========================
 
 Welcome to the RSS River Plugin for [Elasticsearch](http://www.elasticsearch.org/)
